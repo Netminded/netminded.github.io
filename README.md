@@ -1,4 +1,4 @@
-# NetMinded Homepage React App
+# NetMinded Homepage Gatsby/React App
 
 Please review the `README.md` in the `development` branch for instructions on how to run the project.
 
