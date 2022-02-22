@@ -1,54 +1,24 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
+# NetMinded Website Gatsby/React App
 
-## 🚀 Quick start
+To use the project clone it then cd into to the `netminded-website` folder and checkout the development branch.
 
-1.  **Create a Gatsby site.**
+### `git checkout development`
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+Once on the `development` branch run the following to install necessary packages. Gatsby can be installed using `npm install -g gatsby-cli` if you don't already have it. 
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+### `npm install`
 
-2.  **Start developing.**
+To run the app in development mode and to view it in your browser at [http://localhost:8000](http://localhost:8000) run the following. 
+The browser will reload when you make changes. You may also see any lint errors in the console. 
+**Note - All changes to project files should be made to new branches e.g. `git checkout -b feature/feature-name` and merged into the `development` branch, not the `main` branch.** 
+To view and query the site data (which uses GraphQL), open [http://localhost:8000/___graphql](http://localhost:8000/___graphql) to use the GraphiQL browser IDE. 
 
-    Navigate into your new site’s directory and start it up.
+### `gatsby develop`
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+When ready to deploy the following can be run. As part of the deployment a build script runs building the app for production to the `public` folder. 
+Once complete the `public` folder is automatically deployed to the `main` branch on GitHub which has been configured in the `package.json` file.
 
-3.  **Open the code and start customizing!**
+### `npm run deploy`
 
-    Your site is now running at http://localhost:8000!
+**Note - Any changes to the `main` branch will appear live on the production website. So the `main` branch should only be used for deployment of the `build` static files and not have other branches merged into it or commits made to it directly.**
 
-    Edit `src/pages/index.js` to see your site update in real-time!
-
-4.  **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)

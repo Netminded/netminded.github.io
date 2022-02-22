@@ -441,6 +441,10 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
         margin: 0 auto 25px auto;
     }
   }
+
+  .gps-icon {
+      fill: #40A0F0;
+  }
   
   /* App */
   .app-container {
@@ -519,13 +523,16 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
         margin-top: 60px;
     }
   }
+
+  .app-text p {
+      display: flex;
+  }
   
   .app-container p {
     font-size: 20px;
     font-weight: 400;
     color: #4C4D55;
     margin-left: 45px;
-    overflow: hidden;
   }
   
   .app-container p span {
@@ -537,7 +544,6 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
     font-size: 58px;
     margin-top: -10px;
     margin-right: 8px;
-    float: left;
   }
   
   /* DASHBOARD SECTION */

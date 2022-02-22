@@ -38,5 +38,17 @@ module.exports = {
         display: 'swap'
       }
     },
+    {
+      resolve: `gatsby-plugin-gdpr-cookies`,
+      options: {
+        googleAnalytics: {
+          trackingId: 'UA-123068375-4',
+          cookieName: 'gatsby-gdpr-google-analytics',
+          anonymize: true,
+          allowAdFeatures: false
+        },
+        environments: ['production']
+      },
+    },
   ]
 };
