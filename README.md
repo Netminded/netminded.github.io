@@ -18,7 +18,7 @@ To view and query the site data (which uses GraphQL), open [http://localhost:800
 When ready to deploy the following can be run. As part of the deployment a build script runs building the app for production to the `public` folder. 
 Once complete the `public` folder is automatically deployed to the `main` branch on GitHub which has been configured in the `package.json` file.
 
-### `npm run deploy`
+### 🚀 `npm run deploy`
 
 **Note - Any changes to the `main` branch will appear live on the production website. So the `main` branch should only be used for deployment of the `build` static files and not have other branches merged into it or commits made to it directly.**
 
