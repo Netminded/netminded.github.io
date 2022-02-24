@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faCheck
 } from '@fortawesome/free-solid-svg-icons'
+import Cta from '../components/cta'
 
 const launchCalendar = (e) => {
   const calURL = 'https://calendly.com/seethru/seethru-demo'
@@ -366,16 +367,7 @@ const IndexPage = () => {
                     </div>
                 </div>
             </div>
-            <div className="cta-container">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-12 text-center">
-                            <h5 className="text-accent">Contact Us Today, Deploy Tomorrow</h5>
-                            <a className="btn" href="https://support.seethrunetworks.com" rel="noreferrer">Contact Us</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <Cta ctaText="Contact Us Today, Deploy Tomorrow" ctaBtnText="Contact Us" ctaBtnUrl="https://support.seethrunetworks.com"/>
     </Layout>
   )
 }
