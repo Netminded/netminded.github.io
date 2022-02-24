@@ -8,14 +8,15 @@ const CookieBanner = () => {
     const location = useLocation()
     return (
         <CookieConsent
+            disableButtonStyles={true}
+            buttonClasses='cookie-button cookie-button-right'
+            declineButtonClasses='cookie-button'
+            containerClasses='cookie-banner'
             location="bottom"
             buttonText="Accept"
             enableDeclineButton
             declineButtonText="Decline"
             cookieName="gatsby-gdpr-google-analytics"
-            style={{ background: "#4C4D55", fontFamily: "Karla, sans-serif" }}
-            buttonStyle={{ background: "#2897F3", color: "#FFFFFF", textTransform: "uppercase", fontFamily: "Poppins, sans-serif", fontWeight: "700", letterSpacing: 2, fontSize: "13px", borderRadius: "50px", padding: "10px 20px", marginRight: "100px" }}
-            declineButtonStyle={{ background: "#2897F3", color: "#FFFFFF", textTransform: "uppercase", fontFamily: "Poppins, sans-serif", fontWeight: "700", letterSpacing: 2, fontSize: "13px", borderRadius: "50px", padding: "10px 20px", marginRight: "0" }}
             expires={90}
             onAccept={() => initializeAndTrack(location)}
             >
