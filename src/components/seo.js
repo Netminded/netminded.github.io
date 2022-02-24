@@ -43,7 +43,7 @@ const SEO = ({ title, description, image, article, keywords }) => {
         <meta property="og:description" content={seo.description} />
       )}
       {seo.image && <meta property="og:image" content={seo.image} />}
-      <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/25589929.js"></script>
+      {/* <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/25589929.js"></script> */}
     </Helmet>
   )
 }
