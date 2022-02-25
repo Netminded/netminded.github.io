@@ -26,7 +26,7 @@ const Nav = ({simpleNav, isHero, scrollToProducts }) => {
                         <a className="nav-link text-accent" href="#" onClick={(e) => scrollToProducts(e)}>Solutions</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link text-accent" href="https://medium.com/netminded" target="_blank" rel="noreferrer">Blog</a>
+                        <Link className="nav-link text-accent" to="/blog">Blog</Link>
                     </li>
                     <li className="nav-item">
                         <a className="nav-link text-accent" href="#">Contact</a>
