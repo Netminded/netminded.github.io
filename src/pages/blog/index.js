@@ -20,6 +20,7 @@ const BlogPage = ({data}) => {
                             </h2>
                             <GatsbyImage image={getImage(node.frontmatter.hero_image)} alt={node.frontmatter.hero_image_alt} />
                             <p>Posted: {node.frontmatter.date}</p>
+                            <p>{node.excerpt}</p>
                           </article>
                         ))
                       }
@@ -47,6 +48,7 @@ export const query = graphql`
           }
         }
         id
+        excerpt
       }
     }
   }
