@@ -70,7 +70,7 @@ exports.createPages = async ({
     }
 
     // Create the blog posts list page with pagination
-    const postsPerPage = 5
+    const postsPerPage = 1
     const numPages = Math.ceil(posts.length / postsPerPage)
     Array.from({ length: numPages }).forEach((_, i) => {
         createPage({
