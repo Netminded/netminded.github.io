@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Link, graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import Layout from '../../components/layout'
+import Layout from '../components/layout'
 
 const BlogPage = ({data}) => {
     return (
@@ -33,23 +33,27 @@ const BlogPage = ({data}) => {
 }
 
 export const query = graphql`
-  query {
-    allMdx(sort: {fields: frontmatter___date, order: DESC}) {
-      nodes {
-        slug
-        frontmatter {
-          date(formatString: "MMMM D, YYYY")
-          title
-          hero_image_alt
-          hero_image {
-              childImageSharp {
-                  gatsbyImageData
-              }
-          }
+    query blogListQuery($skip: Int!, $limit: Int!) {
+        allMdx(
+        sort: { fields: [frontmatter___date], order: DESC }
+        limit: $limit
+        skip: $skip
+        ) {
+            nodes {
+                slug
+                frontmatter {
+                date(formatString: "MMMM D, YYYY")
+                title
+                hero_image_alt
+                hero_image {
+                    childImageSharp {
+                        gatsbyImageData
+                    }
+                }
+                }
+            id
+            excerpt
         }
-        id
-        excerpt
-      }
     }
   }
 `

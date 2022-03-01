@@ -15,7 +15,8 @@ exports.createPages = async ({
 
     // Define a template for blog post
     const blogPost = path.resolve(`./src/templates/blog-post.js`)
-    const tagTemplate = path.resolve("src/templates/tag.js")
+    const blogPostsList = path.resolve(`./src/templates/blog-posts-list.js`)
+    const tagTemplate = path.resolve(`src/templates/tag.js`)
 
     // Get all markdown blog posts sorted by date
     const result = await graphql(
@@ -68,7 +69,23 @@ exports.createPages = async ({
         })
     }
 
-// Extract tag data from query
+    // Create the blog posts list page with pagination
+    const postsPerPage = 5
+    const numPages = Math.ceil(posts.length / postsPerPage)
+    Array.from({ length: numPages }).forEach((_, i) => {
+        createPage({
+            path: i === 0 ? `/blog` : `/blog/${i + 1}`,
+            component: blogPostsList,
+            context: {
+                limit: postsPerPage,
+                skip: i * postsPerPage,
+                numPages,
+                currentPage: i + 1,
+            },
+        })
+    })
+
+    // Extract tag data from query
     const tags = result.data.tagsGroup.group
         // Make tag pages
         tags.forEach(tag => {
