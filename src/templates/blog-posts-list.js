@@ -2,7 +2,9 @@ import * as React from 'react'
 import { Link, graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Layout from '../components/layout'
-import Pagination from '../components/pagination'
+import Pagination from '../components/blog/pagination'
+import Tags from '../components/blog/tags'
+import AuthorSection from '../components/blog/author'
 
 const BlogPage = ({data, pageContext}) => {
     const {currentPage, numPages} = pageContext
@@ -21,7 +23,9 @@ const BlogPage = ({data, pageContext}) => {
                                 </Link>
                                 </h2>
                                 <GatsbyImage image={getImage(node.frontmatter.hero_image)} alt={node.frontmatter.hero_image_alt} />
-                                <p>Posted: {node.frontmatter.date}</p>
+                                <Tags tags={node.frontmatter.tags} />
+                                <AuthorSection author={node.frontmatter.author} 
+                                    posted={node.frontmatter.date} reading={node.fields.readingTime.text} />
                                 <p>{node.excerpt}</p>
                             </article>
                         ))
@@ -45,20 +49,27 @@ export const query = graphql`
             nodes {
                 slug
                 frontmatter {
-                date(formatString: "MMMM D, YYYY")
-                title
-                hero_image_alt
-                hero_image {
-                    childImageSharp {
-                        gatsbyImageData
+                    date(formatString: "MMMM D, YYYY")
+                    title
+                    author
+                    hero_image_alt
+                    hero_image {
+                        childImageSharp {
+                            gatsbyImageData
+                        }
+                    }
+                    tags
+                }
+                id
+                excerpt
+                fields {
+                    readingTime {
+                        text
                     }
                 }
-                }
-            id
-            excerpt
+            }
         }
     }
-  }
 `
 
 export default BlogPage

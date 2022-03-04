@@ -1,0 +1,133 @@
+/* Blog Style */
+
+.blog-post {
+    margin-top: 150px;
+    margin-bottom: 100px;
+}
+
+/* Tags Section */
+.blog-post-tags {
+    margin-top: 30px;
+    margin-bottom: 45px;
+}
+
+.blog-post-tag {
+    background: linear-gradient(111.61deg, #2897F3 7.92%, #826EF5 55.99%) no-repeat;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: #FFFFFF;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 15px 20px;
+    border-radius: 50px;
+    margin-right: 10px;
+    transition-timing-function: ease-in;
+    transition: 1s;
+}
+
+.blog-post-tag:hover {
+    color: rgba(255,255,255,.75); 
+}
+
+/* Header Section */
+.blog-post-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 44px;
+    color: #4C4D55;
+}
+
+.blog-post-hero {
+    border-radius: 25px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* Author Section */
+.post-author {
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.post-author-image {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 4px solid #826EF5;
+    margin-right: 15px;
+}
+
+.post-author-name {
+    font-family: 'Poppins', sans-serif;
+    color: #4C4D55;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 12px;
+    margin-bottom: 0;
+}
+
+.post-author-social {
+    color: #2897F3;
+    font-size: 20px;
+    margin-right: 3px;
+    margin-bottom: -1px;
+    transition-timing-function: ease-in;
+    transition: 1s;
+}
+
+.post-author-social:hover {
+    color: #4C4D55;
+}
+
+.post-author-info {
+    font-family: 'Karla', sans-serif;
+    color: #4C4D55;
+}
+
+/* Body Section */
+.blog-post-body {
+    margin-top: 30px;
+    margin-bottom: 150px;
+}
+
+.blog-post-body p, 
+.blog-post-body ul,
+.blog-post-body ol,
+.blog-post-body li {
+    font-family: 'Karla', sans-serif;
+    color: #4C4D55;
+    font-size: 18px;
+}
+
+.blog-post-body h1, 
+.blog-post-body h2, 
+.blog-post-body h3, 
+.blog-post-body h4, 
+.blog-post-body h5, 
+.blog-post-body h6 {
+    font-family: 'Poppins', sans-serif;
+    color: #4C4D55;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.blog-post img {
+    border-radius: 25px;
+}
+
+.blog-post pre {
+    background: #E9EFF4;
+    padding: 20px;
+    border-radius: 25px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.blog-post pre code {
+    color: #4C4D55;
+    font-size: 14px; 
+}

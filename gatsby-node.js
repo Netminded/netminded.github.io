@@ -13,12 +13,12 @@ exports.createPages = async ({
         createPage
     } = actions
 
-    // Define a template for blog post
+    // Define templates
     const blogPost = path.resolve(`./src/templates/blog-post.js`)
     const blogPostsList = path.resolve(`./src/templates/blog-posts-list.js`)
     const tagTemplate = path.resolve(`src/templates/tag.js`)
 
-    // Get all markdown blog posts sorted by date
+    // Get all markdown blog posts sorted by date and all tags
     const result = await graphql(
         `
         {
@@ -50,8 +50,9 @@ exports.createPages = async ({
         return
     }
 
+    // Extract blog post data from query
     const posts = result.data.allMdx.nodes
-
+    // Create blog post pages
     if (posts.length > 0) {
         posts.forEach((post, index) => {
             const previousPostId = index === 0 ? null : posts[index - 1].id
@@ -69,8 +70,8 @@ exports.createPages = async ({
         })
     }
 
-    // Create the blog posts list page with pagination
-    const postsPerPage = 1
+    // Create blog posts list page with pagination
+    const postsPerPage = 5
     const numPages = Math.ceil(posts.length / postsPerPage)
     Array.from({ length: numPages }).forEach((_, i) => {
         createPage({
@@ -87,7 +88,7 @@ exports.createPages = async ({
 
     // Extract tag data from query
     const tags = result.data.tagsGroup.group
-        // Make tag pages
+        // Create tag pages
         tags.forEach(tag => {
             createPage({
             path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
@@ -99,6 +100,7 @@ exports.createPages = async ({
     })
 }
 
+// Create nodes
 exports.onCreateNode = ({
     node,
     actions,

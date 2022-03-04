@@ -3,24 +3,31 @@ import { Link, graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Layout from '../components/layout'
+import AuthorSection from '../components/blog/author'
+import Tags from '../components/blog/tags'
 
 const BlogPost = ({data}) => {
-    const image = getImage(data.mdx.frontmatter.hero_image)
+    const heroImage = getImage(data.mdx.frontmatter.hero_image)
+    const tags = data.mdx.frontmatter.tags
     const { previous, next } = data
     return (
         <Layout pTitle={data.mdx.frontmatter.title} isArticle={true}>
             <div className="container">
                 <div className="row">
-                    <div className="col-12">
-                    <p>Posted: {data.mdx.frontmatter.date}</p>
-                        <GatsbyImage
-                        image={image}
-                        alt={data.mdx.frontmatter.hero_image_alt}
-                        />
-                        <MDXRenderer>
-                        {data.mdx.body}
-                        </MDXRenderer>
-                        <div>
+                    <article className="offset-2 col-8 blog-post" itemScope itemType="http://schema.org/Article">
+                        <header>
+                            <Tags tags={tags} />
+                            <h2 className="blog-post-title">{data.mdx.frontmatter.title}</h2>
+                            <AuthorSection author={data.mdx.frontmatter.author} 
+                                posted={data.mdx.frontmatter.date} reading={data.mdx.fields.readingTime.text} />
+                            <GatsbyImage className="blog-post-hero" image={heroImage} alt={data.mdx.frontmatter.hero_image_alt} />
+                        </header>
+                        <section className="blog-post-body">
+                            <MDXRenderer>
+                            {data.mdx.body}
+                            </MDXRenderer>
+                        </section>
+                        <footer>
                             <ul
                                 style={{
                                     display: `flex`,
@@ -45,8 +52,8 @@ const BlogPost = ({data}) => {
                                     )}
                                 </li>
                             </ul>
-                        </div>
-                    </div>
+                        </footer>
+                    </article>
                 </div>
             </div>
       </Layout>
@@ -63,11 +70,18 @@ export const query = graphql`
       frontmatter {
         title
         date(formatString: "MMMM D, YYYY")
+        author
         hero_image_alt
         hero_image {
             childImageSharp {
                 gatsbyImageData
             }
+        }
+        tags
+      }
+      fields {
+            readingTime {
+                text
         }
       }
       body
@@ -78,6 +92,11 @@ export const query = graphql`
         }
         frontmatter {
             title
+            hero_image {
+                childImageSharp {
+                    gatsbyImageData
+                }
+            }
         }
     }
     next: mdx(id: { eq: $nextPostId }) {
@@ -86,6 +105,11 @@ export const query = graphql`
         }
         frontmatter {
             title
+            hero_image {
+                childImageSharp {
+                    gatsbyImageData
+                }
+            }
         }
     }
   }
