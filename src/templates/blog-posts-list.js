@@ -8,32 +8,55 @@ import AuthorSection from '../components/blog/author'
 
 const BlogPage = ({data, pageContext}) => {
     const {currentPage, numPages} = pageContext
+    const firstPost = data.allMdx.nodes[0]
     return (
         <Layout pTitle="Blog" isArticle={false} simpleNav={true}>
             <div className="container">
-              <div className="row">
-                <div className="col-12">
-                  <ul>
-                    {
-                        data.allMdx.nodes.map(node => (
-                            <article key={node.id}>
-                                <h2>
-                                <Link to={`/blog/${node.slug}`}>
-                                    {node.frontmatter.title}
-                                </Link>
+              <div className="row blog-page">
+                  {currentPage === 1 ? <>
+                    <div className="col-lg-7">
+                        <article className="featured-post" key={firstPost.id} itemScope itemType="http://schema.org/Article">
+                            <Link to={`/blog/${firstPost.slug}`}>    
+                                <GatsbyImage className="featured-post-hero" image={getImage(firstPost.frontmatter.hero_image)} alt={firstPost.frontmatter.hero_image_alt} />
+                            </Link>
+                            <div className="featured-post-info">
+                                <h2 className="featured-post-title">
+                                    <Link className="featured-post-title--link" to={`/blog/${firstPost.slug}`}>
+                                        {firstPost.frontmatter.title}
+                                    </Link>
                                 </h2>
-                                <GatsbyImage image={getImage(node.frontmatter.hero_image)} alt={node.frontmatter.hero_image_alt} />
-                                <Tags tags={node.frontmatter.tags} />
-                                <AuthorSection author={node.frontmatter.author} 
-                                    posted={node.frontmatter.date} reading={node.fields.readingTime.text} />
-                                <p>{node.excerpt}</p>
-                            </article>
-                        ))
-                    }
-                  </ul>
-                  <Pagination currentPage={currentPage} numPages={numPages} />
-                </div>
+                                <Tags tags={firstPost.frontmatter.tags} />
+                                <AuthorSection author={firstPost.frontmatter.author} 
+                                    posted={firstPost.frontmatter.date} reading={firstPost.fields.readingTime.text} />
+                                <p className="featured-post-excerpt">{firstPost.excerpt}</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div className="col-lg-5">
+                        <ul className="featured-post-list">
+                            {
+                                data.allMdx.nodes.filter(node => node.id !== firstPost.id).map(node => (
+                                    <article className="featured-post-list-item" key={node.id} itemScope itemType="http://schema.org/Article">
+                                        <Link className="featured-post-list-hero--link" to={`/blog/${node.slug}`}>
+                                            <GatsbyImage className="featured-post-list-hero" image={getImage(node.frontmatter.hero_image)} alt={node.frontmatter.hero_image_alt} />
+                                        </Link>
+                                        <div className="featured-post-list-info">
+                                            <h3 className="featured-post-list-title">
+                                                <Link className="featured-post-list-title--link" to={`/blog/${node.slug}`}>
+                                                    {node.frontmatter.title}
+                                                </Link>
+                                            </h3>
+                                            <hr className="featured-post-list-divider" />
+                                            <p>{node.frontmatter.date} · {node.fields.readingTime.text}</p>
+                                        </div>
+                                    </article>
+                                ))
+                            }
+                        </ul>
+                    </div>
+                  </>: ""}
               </div>
+              <Pagination currentPage={currentPage} numPages={numPages} />
             </div>
         </Layout>
     )
