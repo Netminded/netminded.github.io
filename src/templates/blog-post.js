@@ -6,6 +6,7 @@ import Layout from '../components/layout'
 import AuthorSection from '../components/blog/author'
 import Tags from '../components/blog/tags'
 import PostPagination from '../components/blog/post-pagination'
+import AfterPostEntry from '../components/blog/post-after-entry'
 
 const BlogPost = ({data}) => {
     const fmatter = data.mdx.frontmatter
@@ -28,6 +29,7 @@ const BlogPost = ({data}) => {
                             <MDXRenderer>
                             {data.mdx.body}
                             </MDXRenderer>
+                            <AfterPostEntry />
                         </section>
                         <footer>
                             <PostPagination prev={previous} next={next} />
@@ -35,7 +37,7 @@ const BlogPost = ({data}) => {
                     </article>
                 </div>
             </div>
-      </Layout>
+        </Layout>
     )
 }
 
