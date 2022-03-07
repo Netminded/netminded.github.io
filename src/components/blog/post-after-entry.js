@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { Link } from 'gatsby'
 import NetMindedDashboardImg from '../../images/NetMinded_Dashboard.svg'
 import SocialShare from './social-share'
 
@@ -10,7 +11,8 @@ const AfterPostEntry = ({slug, title}) => {
                 <img src={NetMindedDashboardImg} alt="NetMinded Dashboard" />
                 <div className="blog-post-after-entry-info">
                     <h4>More about NetMinded</h4>
-                    <p>NetMinded is a low code/no-code platform helping innovative technology providers automate support to enhance their customers experience.</p>
+                    <p>NetMinded helps innovative technology providers automate support to enhance their customers experience.</p>
+                    <Link className="btn" to="/">Learn More</Link>
                 </div>
             </div>
         </>

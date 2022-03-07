@@ -11,54 +11,58 @@ const BlogPage = ({data, pageContext}) => {
     const firstPost = data.allMdx.nodes[0]
     return (
         <Layout pTitle="Blog" isArticle={false} simpleNav={true}>
-            <div className="container">
-              <div className="row blog-page">
-                  {currentPage === 1 ? <>
-                    <div className="col-lg-7">
-                        <article className="featured-post" key={firstPost.id} itemScope itemType="http://schema.org/Article">
-                            <Link to={`/blog/${firstPost.slug}`}>    
-                                <GatsbyImage className="featured-post-hero" image={getImage(firstPost.frontmatter.hero_image)} alt={firstPost.frontmatter.hero_image_alt} />
-                            </Link>
-                            <div className="featured-post-info">
-                                <h2 className="featured-post-title">
-                                    <Link className="featured-post-title--link" to={`/blog/${firstPost.slug}`}>
-                                        {firstPost.frontmatter.title}
-                                    </Link>
-                                </h2>
-                                <Tags tags={firstPost.frontmatter.tags} />
-                                <AuthorSection author={firstPost.frontmatter.author} 
-                                    posted={firstPost.frontmatter.date} reading={firstPost.fields.readingTime.text} />
-                                <p className="featured-post-excerpt">{firstPost.excerpt}</p>
-                            </div>
-                        </article>
-                    </div>
-                    <div className="col-lg-5">
-                        <ul className="featured-post-list">
-                            {
-                                data.allMdx.nodes.filter(node => node.id !== firstPost.id).map(node => (
-                                    <article className="featured-post-list-item" key={node.id} itemScope itemType="http://schema.org/Article">
-                                        <div className="featured-post-list-hero">
-                                            <Link className="featured-post-list-hero--link" to={`/blog/${node.slug}`}>
-                                                <GatsbyImage className="featured-post-list-image" image={getImage(node.frontmatter.hero_image)} alt={node.frontmatter.hero_image_alt} />
-                                            </Link>
-                                        </div>
-                                        <div className="featured-post-list-info">
-                                            <h3 className="featured-post-list-title">
-                                                <Link className="featured-post-list-title--link" to={`/blog/${node.slug}`}>
-                                                    {node.frontmatter.title}
+            <header className="blog-page-header">
+                <h1>NetMinded Blog</h1>
+                <h3>Articles, news, musings and more</h3>
+            </header> 
+            <div className="container"> 
+                <div className="row blog-page">
+                    {currentPage === 1 ? <>
+                        <div className="col-lg-7">
+                            <article className="featured-post" key={firstPost.id} itemScope itemType="http://schema.org/Article">
+                                <Link to={`/blog/${firstPost.slug}`}>    
+                                    <GatsbyImage className="featured-post-hero" image={getImage(firstPost.frontmatter.hero_image)} alt={firstPost.frontmatter.hero_image_alt} />
+                                </Link>
+                                <div className="featured-post-info">
+                                    <h2 className="featured-post-title">
+                                        <Link className="featured-post-title--link" to={`/blog/${firstPost.slug}`}>
+                                            {firstPost.frontmatter.title}
+                                        </Link>
+                                    </h2>
+                                    <Tags tags={firstPost.frontmatter.tags} />
+                                    <AuthorSection author={firstPost.frontmatter.author} 
+                                        posted={firstPost.frontmatter.date} reading={firstPost.fields.readingTime.text} />
+                                    <p className="featured-post-excerpt">{firstPost.excerpt}</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div className="col-lg-5">
+                            <ul className="featured-post-list">
+                                {
+                                    data.allMdx.nodes.filter(node => node.id !== firstPost.id).map(node => (
+                                        <article className="featured-post-list-item" key={node.id} itemScope itemType="http://schema.org/Article">
+                                            <div className="featured-post-list-hero">
+                                                <Link className="featured-post-list-hero--link" to={`/blog/${node.slug}`}>
+                                                    <GatsbyImage className="featured-post-list-image" image={getImage(node.frontmatter.hero_image)} alt={node.frontmatter.hero_image_alt} />
                                                 </Link>
-                                            </h3>
-                                            <hr className="featured-post-list-divider" />
-                                            <p>{node.frontmatter.date} · {node.fields.readingTime.text}</p>
-                                        </div>
-                                    </article>
-                                ))
-                            }
-                        </ul>
-                    </div>
-                  </>: ""}
-              </div>
-              <Pagination currentPage={currentPage} numPages={numPages} />
+                                            </div>
+                                            <div className="featured-post-list-info">
+                                                <h3 className="featured-post-list-title">
+                                                    <Link className="featured-post-list-title--link" to={`/blog/${node.slug}`}>
+                                                        {node.frontmatter.title}
+                                                    </Link>
+                                                </h3>
+                                                <hr className="featured-post-list-divider" />
+                                                <p>{node.frontmatter.date} · {node.fields.readingTime.text}</p>
+                                            </div>
+                                        </article>
+                                    ))
+                                }
+                            </ul>
+                        </div>
+                    </>: ""}
+                </div>
+                <Pagination currentPage={currentPage} numPages={numPages} />
             </div>
         </Layout>
     )

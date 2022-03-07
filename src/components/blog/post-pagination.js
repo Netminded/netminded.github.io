@@ -15,7 +15,7 @@ const PostPagination = ({prev, next}) => {
                     <div className="blog-post-pagination-info">
                         <p>← Previous Article</p>
                         <Link className="blog-post-pagination-info--title" to={`/blog${prev.fields.slug}`} rel="prev">
-                            {prev.frontmatter.title}
+                            {prev.frontmatter.title.slice(0, 40)}...
                         </Link>
                     </div>
                 </>
@@ -26,7 +26,7 @@ const PostPagination = ({prev, next}) => {
                     <div className="blog-post-pagination-info">
                         <p>Next Article →</p>
                         <Link className="blog-post-pagination-info--title" to={`/blog${next.fields.slug}`} rel="next">
-                            {next.frontmatter.title}
+                            {next.frontmatter.title.slice(0, 40)}...
                         </Link>
                     </div>
                     <div className="blog-post-pagination-hero">
