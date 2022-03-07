@@ -7,9 +7,11 @@ const PostPagination = ({prev, next}) => {
         <div className="blog-post-pagination">
             <div className={`blog-post-pagination-item ${prev ? "blog-post-pagination-item--prev" : ""}`}>
                 {prev && (<>
-                    <Link className="blog-post-pagination-info--title" to={`/blog${prev.fields.slug}`} rel="prev">
-                        <GatsbyImage className="blog-post-pagination-image" image={getImage(prev.frontmatter.hero_image)} alt={prev.frontmatter.hero_image_alt} />
-                    </Link>
+                    <div className="blog-post-pagination-hero">
+                        <Link to={`/blog${prev.fields.slug}`} rel="prev">
+                            <GatsbyImage className="blog-post-pagination-image" image={getImage(prev.frontmatter.hero_image)} alt={prev.frontmatter.hero_image_alt} />
+                        </Link>
+                    </div>
                     <div className="blog-post-pagination-info">
                         <p>← Previous Article</p>
                         <Link className="blog-post-pagination-info--title" to={`/blog${prev.fields.slug}`} rel="prev">
@@ -27,9 +29,11 @@ const PostPagination = ({prev, next}) => {
                             {next.frontmatter.title}
                         </Link>
                     </div>
-                    <Link className="blog-post-pagination-info--title" to={`/blog${next.fields.slug}`} rel="next">
-                        <GatsbyImage className="blog-post-pagination-image" image={getImage(next.frontmatter.hero_image)} alt={next.frontmatter.hero_image_alt} />
-                    </Link>
+                    <div className="blog-post-pagination-hero">
+                        <Link to={`/blog${next.fields.slug}`} rel="next">
+                            <GatsbyImage className="blog-post-pagination-image" image={getImage(next.frontmatter.hero_image)} alt={next.frontmatter.hero_image_alt} />
+                        </Link>
+                    </div>
                 </>
                 )}
             </div>

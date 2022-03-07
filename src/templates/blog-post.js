@@ -29,7 +29,7 @@ const BlogPost = ({data}) => {
                             <MDXRenderer>
                             {data.mdx.body}
                             </MDXRenderer>
-                            <AfterPostEntry />
+                            <AfterPostEntry slug={data.mdx.fields.slug} title={fmatter.title} />
                         </section>
                         <footer>
                             <PostPagination prev={previous} next={next} />
@@ -63,7 +63,8 @@ export const query = graphql`
       fields {
             readingTime {
                 text
-        }
+            }
+            slug
       }
       body
     }

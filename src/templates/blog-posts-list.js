@@ -37,9 +37,11 @@ const BlogPage = ({data, pageContext}) => {
                             {
                                 data.allMdx.nodes.filter(node => node.id !== firstPost.id).map(node => (
                                     <article className="featured-post-list-item" key={node.id} itemScope itemType="http://schema.org/Article">
-                                        <Link className="featured-post-list-hero--link" to={`/blog/${node.slug}`}>
-                                            <GatsbyImage className="featured-post-list-hero" image={getImage(node.frontmatter.hero_image)} alt={node.frontmatter.hero_image_alt} />
-                                        </Link>
+                                        <div className="featured-post-list-hero">
+                                            <Link className="featured-post-list-hero--link" to={`/blog/${node.slug}`}>
+                                                <GatsbyImage className="featured-post-list-image" image={getImage(node.frontmatter.hero_image)} alt={node.frontmatter.hero_image_alt} />
+                                            </Link>
+                                        </div>
                                         <div className="featured-post-list-info">
                                             <h3 className="featured-post-list-title">
                                                 <Link className="featured-post-list-title--link" to={`/blog/${node.slug}`}>
