@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { GatsbyImage, getImage, getSrc } from 'gatsby-plugin-image'
 import Layout from '../components/layout'
 import AuthorSection from '../components/blog/author'
 import Tags from '../components/blog/tags'
@@ -12,12 +12,13 @@ const BlogPost = ({data}) => {
     const fmatter = data.mdx.frontmatter
     const heroImage = getImage(fmatter.hero_image)
     const tags = fmatter.tags
+    const tagsList = `${tags}`
     const { previous, next } = data
     return (
-        <Layout pTitle={fmatter.title} isArticle={true}>
+        <Layout pTitle={fmatter.title} pDescription={data.mdx.excerpt} pImage={getSrc(fmatter.hero_image)} pKeywords={tagsList} isArticle={true} simpleNav={true} >
             <div className="container">
                 <div className="row">
-                    <article className="offset-2 col-8 blog-post" itemScope itemType="http://schema.org/Article">
+                    <article className="offset-lg-2 col-lg-8 col-sm-12 blog-post" itemScope itemType="http://schema.org/Article">
                         <header>
                             <Tags tags={tags} />
                             <h2 className="blog-post-title">{fmatter.title}</h2>
@@ -67,6 +68,7 @@ export const query = graphql`
             slug
       }
       body
+      excerpt
     }
     previous: mdx(id: { eq: $previousPostId }) {
         fields {

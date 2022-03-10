@@ -9,8 +9,9 @@ import AuthorSection from '../components/blog/author'
 const BlogPage = ({data, pageContext}) => {
     const {currentPage, numPages} = pageContext
     const firstPost = data.allMdx.nodes[0]
+    const blogKeywords = "NetMinded, Blog, News, Articles, Internet, Networking, Status, Communication"
     return (
-        <Layout pTitle="Blog" isArticle={false} simpleNav={true}>
+        <Layout pTitle="Blog" pDescription="Articles, news, musings and more" pKeywords={blogKeywords} isArticle={false} simpleNav={true}>
             <header className="blog-page-header">
                 <h1>NetMinded Blog</h1>
                 <h3>Articles, news, musings and more</h3>
@@ -49,7 +50,7 @@ const BlogPage = ({data, pageContext}) => {
                                             <div className="featured-post-list-info">
                                                 <h3 className="featured-post-list-title">
                                                     <Link className="featured-post-list-title--link" to={`/blog/${node.slug}`}>
-                                                        {node.frontmatter.title}
+                                                        {node.frontmatter.title.length > 35 ? `${node.frontmatter.title.slice(0, 35)}...` : node.frontmatter.title}
                                                     </Link>
                                                 </h3>
                                                 <hr className="featured-post-list-divider" />
@@ -60,7 +61,31 @@ const BlogPage = ({data, pageContext}) => {
                                 }
                             </ul>
                         </div>
-                    </>: ""}
+                    </> :  
+                        <div className="col-12">
+                            <ul className="standard-post-list">
+                                {
+                                    data.allMdx.nodes.map(node => (
+                                        <article className="standard-post-list-item" key={node.id} itemScope itemType="http://schema.org/Article">
+                                            <div className="standard-post-list-hero">
+                                                <Link className="standard-post-list-hero--link" to={`/blog/${node.slug}`}>
+                                                    <GatsbyImage className="standard-post-list-image" image={getImage(node.frontmatter.hero_image)} alt={node.frontmatter.hero_image_alt} />
+                                                </Link>
+                                            </div>
+                                            <div className="standard-post-list-info">
+                                                <h3 className="standard-post-list-title">
+                                                    <Link className="standard-post-list-title--link" to={`/blog/${node.slug}`}>
+                                                        {node.frontmatter.title}
+                                                    </Link>
+                                                </h3>
+                                                <hr className="standard-post-list-divider" />
+                                                <p>{node.frontmatter.date} · {node.fields.readingTime.text}</p>
+                                            </div>
+                                        </article>
+                                    ))
+                                }
+                            </ul>
+                        </div>}
                 </div>
                 <Pagination currentPage={currentPage} numPages={numPages} />
             </div>
