@@ -16,7 +16,8 @@ exports.createPages = async ({
     // Define templates
     const blogPost = path.resolve(`./src/templates/blog-post.js`)
     const blogPostsList = path.resolve(`./src/templates/blog-posts-list.js`)
-    const tagTemplate = path.resolve(`src/templates/tag.js`)
+    const tagsList = path.resolve(`./src/templates/tags-list.js`)
+    const tagTemplate = path.resolve(`./src/templates/tag.js`)
 
     // Get all markdown blog posts sorted by date and all tags
     const result = await graphql(
@@ -36,6 +37,7 @@ exports.createPages = async ({
           tagsGroup: allMdx(limit: 2000) {
             group(field: frontmatter___tags) {
               fieldValue
+              totalCount
             }
           }
         }
@@ -88,14 +90,40 @@ exports.createPages = async ({
 
     // Extract tag data from query
     const tags = result.data.tagsGroup.group
-        // Create tag pages
-        tags.forEach(tag => {
-            createPage({
-            path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
-            component: tagTemplate,
+
+    // Create tags list page with pagination
+    const tagsPerPage = 10
+    const numTagPages = Math.ceil(tags.length / tagsPerPage)
+    Array.from({ length: numTagPages }).forEach((tag, i) => {
+        createPage({
+            path: i === 0 ? `/tags` : `/tags/${i + 1}`,
+            component: tagsList,
             context: {
-                tag: tag.fieldValue,
+                limit: tagsPerPage,
+                skip: i * tagsPerPage,
+                numPages: numTagPages,
+                currentPage: i + 1,
             },
+        })
+    })
+
+    // Create tags detail page with pagination
+    const tagsPerDetailPage = 4
+    tags.forEach((tag) => {
+        const numTagDetailPages = Math.ceil(tag.totalCount / tagsPerDetailPage)
+
+        Array.from({ length: numTagDetailPages}).forEach((tagInner, i) => {
+            createPage({
+                path: i === 0 ? `/tags/${_.kebabCase(tag.fieldValue)}/` : `/tags/${_.kebabCase(tag.fieldValue)}/${i + 1}`,
+                component: tagTemplate,
+                context: {
+                    tag: tag.fieldValue,
+                    limit: tagsPerDetailPage,
+                    skip: i * tagsPerDetailPage,
+                    numPages: numTagDetailPages,
+                    currentPage: i + 1,
+                },
+            })
         })
     })
 }

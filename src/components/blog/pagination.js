@@ -8,7 +8,7 @@ const Pagination = ({currentPage, numPages}) => {
         <div className="blog-page-pagination">
             <div className="blog-page-pagination-prev">
                 {numPages > 1 && currentPage !== 1 && 
-                    <Link className="btn" to={`${currentPage === 2 ? `/blog` : `/blog/${currentPage - 1}`}`}><FontAwesomeIcon icon={faChevronLeft} /> Prev</Link>
+                    <Link className="btn" to={`${currentPage === 2 ? `/blog` : `/blog/${currentPage - 1}`}`}><FontAwesomeIcon icon={faChevronLeft} /> <span>Prev</span></Link>
                 } 
             </div>
             <div>
@@ -18,7 +18,7 @@ const Pagination = ({currentPage, numPages}) => {
             </div>
             <div className="blog-page-pagination-next">
                 {currentPage !== numPages &&
-                    <Link className="btn" to={`/blog/${currentPage + 1}`}>Next <FontAwesomeIcon icon={faChevronRight} /></Link>
+                    <Link className="btn" to={`/blog/${currentPage + 1}`}><span>Next</span> <FontAwesomeIcon icon={faChevronRight} /></Link>
                 }                   
             </div>
         </div>

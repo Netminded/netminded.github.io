@@ -49,9 +49,10 @@ Tags.propTypes = {
 }
 export default Tags
 export const pageQuery = graphql`
-  query($tag: String) {
+  query($tag: String, $skip: Int!, $limit: Int!) {
     allMdx(
-      limit: 2000
+      limit: $limit
+      skip: $skip
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { tags: { in: [$tag] } } }
     ) {
