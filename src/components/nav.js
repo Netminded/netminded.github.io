@@ -11,7 +11,7 @@ const toggleNav = (e, setShowCollapsedNav, showCollapsedNav) => {
 const Nav = ({simpleNav, isHero, scrollToProducts }) => {
     const [showCollapsedNav, setShowCollapsedNav] = useState(false)
     return (
-        <nav className={`navbar fixed-top navbar-expand-xl navbar-dark ${simpleNav ? "menu-scrolling-hero" : isHero ? "menu-scrolling-hero" : "menu-scrolling-content"}`}>
+        <nav className={`navbar fixed-top navbar-expand-xl navbar-dark ${isHero ? "menu-scrolling-hero" : "menu-scrolling-content"}`}>
             <div className="me-auto tog-container">
                 <Link className="navbar-brand" to="/">
                     <img src={NetMindedLogo} alt="NetMinded Logo"/>
@@ -26,7 +26,7 @@ const Nav = ({simpleNav, isHero, scrollToProducts }) => {
                         <a className="nav-link text-accent" href="#" onClick={(e) => scrollToProducts(e)}>Solutions</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link text-accent" href="https://medium.com/netminded" target="_blank" rel="noreferrer">Blog</a>
+                        <Link className="nav-link text-accent" to="/blog">Blog</Link>
                     </li>
                     <li className="nav-item">
                         <a className="nav-link text-accent" href="#">Contact</a>

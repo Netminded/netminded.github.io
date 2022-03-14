@@ -8,7 +8,25 @@ module.exports = {
       `NetMinded automates your customer support and reduces the cost of scaling your business.`,
     image: `/netminded-og-image.jpg`,
     keywords: `Status,Services,Monitors,Internet,WiFi,Network,IT,Branded,Support,Productivity,NetMinder,NetMinded`,
-    maskedIcon: `/safari-pinned-tab.svg`
+    maskedIcon: `/safari-pinned-tab.svg`,
+    authors: [
+      {
+        name: `Nick Randall`,
+        social: `https://www.linkedin.com/in/nrandall`,
+      },
+      {
+        name: `Tam Love`,
+        social: `https://www.linkedin.com/in/tamlove`,
+      },
+      {
+        name: `Ross Loveridge`,
+        social: `https://www.linkedin.com/in/ross-loveridge-65159619b`,
+      },
+      {
+        name: `NetMinded`,
+        social: `https://www.linkedin.com/company/40932026`,
+      },
+    ]
   },
   plugins: [ 
     "gatsby-plugin-react-helmet", 
@@ -50,5 +68,37 @@ module.exports = {
         environments: ['production']
       },
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `blog`,
+        path: `${__dirname}/src/articles`,
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
+    `gatsby-remark-images`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+            },
+          },
+        ],
+      },
+    },
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-remark-reading-time`,
   ]
 };

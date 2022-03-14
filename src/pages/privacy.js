@@ -3,7 +3,7 @@ import Layout from '../components/layout'
 
 const PrivacyPage = () => {
     return (
-        <Layout pTitle="Privacy Policy" isArticle={false} simpleNav={true}>
+        <Layout pTitle="Privacy Policy" isArticle={false} isHero={true} simpleNav={true}>
             <div className='policy'>
                         <div className="container">
                             <div className="policies-container">

@@ -3,7 +3,7 @@ import Layout from '../components/layout'
 
 const LicencesPage = () => {
     return (
-        <Layout pTitle="Web Licences" isArticle={false} simpleNav={true}>
+        <Layout pTitle="Web Licences" isArticle={false} isHero={true} simpleNav={true}>
             <div className="policy">
                 <div className="container">
                     <div className="policies-container">
