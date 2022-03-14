@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { GatsbyImage, getImage, getSrc } from 'gatsby-plugin-image'
 import Layout from '../components/layout'
@@ -7,6 +7,10 @@ import AuthorSection from '../components/blog/author'
 import Tags from '../components/blog/tags'
 import PostPagination from '../components/blog/post-pagination'
 import AfterPostEntry from '../components/blog/post-after-entry'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+    faChevronRight
+} from '@fortawesome/free-solid-svg-icons'
 
 const BlogPost = ({data}) => {
     const fmatter = data.mdx.frontmatter
@@ -19,6 +23,7 @@ const BlogPost = ({data}) => {
             <div className="container">
                 <div className="row">
                     <article className="offset-lg-2 col-lg-8 col-sm-12 blog-post" itemScope itemType="http://schema.org/Article">
+                        <p className="blog-breadcrumbs"><Link to="/blog">Blog</Link> <FontAwesomeIcon icon={faChevronRight}/> <Link to={`/blog${data.mdx.fields.slug}`}>{fmatter.title}</Link></p>
                         <header>
                             <Tags tags={tags} />
                             <h2 className="blog-post-title">{fmatter.title}</h2>

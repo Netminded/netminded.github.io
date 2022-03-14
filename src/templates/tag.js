@@ -3,9 +3,14 @@ import PropTypes from "prop-types"
 import { Link, graphql } from "gatsby"
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { useState } from 'react'
+import kebabCase from "lodash/kebabCase"
 import Layout from "../components/layout"
 import { Waypoint } from 'react-waypoint'
 import Pagination from "../components/blog/pagination"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faChevronRight
+} from '@fortawesome/free-solid-svg-icons'
 
 const Tags = ({ pageContext, data }) => {
   const [isHero, setIsHero] = useState(true)
@@ -21,18 +26,19 @@ const Tags = ({ pageContext, data }) => {
       <div className="container">
         <div className="row tag-page">
           <div className="col-12">
+          <p className="blog-breadcrumbs"><Link to="/blog">Blog</Link> <FontAwesomeIcon icon={faChevronRight}/> <Link to="/tags">Tags</Link> <FontAwesomeIcon icon={faChevronRight}/> <Link to={`/tags/${kebabCase(tag)}`}>{tag}</Link></p>
             <ul className="standard-post-list">
               {
                 edges.map(n => (
                   <article className="standard-post-list-item" key={n.node.id} itemScope itemType="http://schema.org/Article">
                     <div className="standard-post-list-hero">
-                      <Link className="standard-post-list-hero--link" to={`/blog/${n.node.fields.slug}`}>
+                      <Link className="standard-post-list-hero--link" to={`/blog${n.node.fields.slug}`}>
                         <GatsbyImage className="standard-post-list-image" image={getImage(n.node.frontmatter.hero_image)} alt={n.node.frontmatter.hero_image_alt} />
                       </Link>
                     </div>
                     <div className="standard-post-list-info">
                       <h3 className="standard-post-list-title">
-                        <Link className="standard-post-list-title--link" to={`/blog/${n.node.fields.slug}`}>
+                        <Link className="standard-post-list-title--link" to={`/blog${n.node.fields.slug}`}>
                           {n.node.frontmatter.title.length > 35 ? `${n.node.frontmatter.title.slice(0, 35)}...` : n.node.frontmatter.title}
                         </Link>
                       </h3>

@@ -6,6 +6,10 @@ import { useState } from 'react'
 import Layout from "../components/layout"
 import Pagination from "../components/blog/pagination"
 import { Waypoint } from 'react-waypoint'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faChevronRight
+} from '@fortawesome/free-solid-svg-icons'
 
 const TagsPage = ({data, pageContext}) => {
   const [isHero, setIsHero] = useState(true)
@@ -24,6 +28,7 @@ const TagsPage = ({data, pageContext}) => {
       <div className="container">
         <div className="row tags-page">
           <div className="col-12">
+            <p className="blog-breadcrumbs"><Link to="/blog">Blog</Link> <FontAwesomeIcon icon={faChevronRight}/> <Link to="/tags">Tags</Link></p>
             <ul className="tags-page-list">
               {tags.map(tag => (
                 <li key={tag.fieldValue}>
