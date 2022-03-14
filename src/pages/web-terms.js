@@ -3,7 +3,7 @@ import Layout from '../components/layout'
 
 const WebTermsPage = () => {
     return (
-        <Layout pTitle="Website Terms of Use" isArticle={false} simpleNav={true}>
+        <Layout pTitle="Website Terms of Use" isArticle={false} isHero={true} simpleNav={true}>
             <div className="policy">
                 <div className="container">
                     <div className="policies-container">

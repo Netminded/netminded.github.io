@@ -1,21 +1,25 @@
 import * as React from 'react'
 import { Link, graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { useState } from 'react'
 import Layout from '../components/layout'
 import Pagination from '../components/blog/pagination'
 import Tags from '../components/blog/tags'
 import AuthorSection from '../components/blog/author'
+import { Waypoint } from 'react-waypoint'
 
 const BlogPage = ({data, pageContext}) => {
+    const [isHero, setIsHero] = useState(true)
     const {currentPage, numPages} = pageContext
     const firstPost = data.allMdx.nodes[0]
     const blogKeywords = "NetMinded, Blog, News, Articles, Internet, Networking, Status, Communication"
     return (
-        <Layout pTitle="Blog" pDescription="Articles, news, musings and more" pKeywords={blogKeywords} isArticle={false} simpleNav={true}>
+        <Layout pTitle="Blog" pDescription="Articles, news, musings and more" pKeywords={blogKeywords} isArticle={false} isHero={isHero} simpleNav={true}>
             <header className="blog-page-header">
                 <h1>NetMinded Blog</h1>
                 <h3>Articles, news, musings and more</h3>
             </header> 
+            <Waypoint onEnter={() => setIsHero(true)} onLeave={() => setIsHero(false)} topOffset={100} />
             <div className="container"> 
                 <div className="row blog-page">
                     {currentPage === 1 ? <>
@@ -87,7 +91,7 @@ const BlogPage = ({data, pageContext}) => {
                             </ul>
                         </div>}
                 </div>
-                <Pagination currentPage={currentPage} numPages={numPages} />
+                <Pagination currentPage={currentPage} numPages={numPages} isBlogPage={true} />
             </div>
         </Layout>
     )

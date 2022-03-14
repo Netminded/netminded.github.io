@@ -11,7 +11,7 @@ const toggleNav = (e, setShowCollapsedNav, showCollapsedNav) => {
 const Nav = ({simpleNav, isHero, scrollToProducts }) => {
     const [showCollapsedNav, setShowCollapsedNav] = useState(false)
     return (
-        <nav className={`navbar fixed-top navbar-expand-xl navbar-dark ${simpleNav ? "menu-scrolling-hero" : isHero ? "menu-scrolling-hero" : "menu-scrolling-content"}`}>
+        <nav className={`navbar fixed-top navbar-expand-xl navbar-dark ${isHero ? "menu-scrolling-hero" : "menu-scrolling-content"}`}>
             <div className="me-auto tog-container">
                 <Link className="navbar-brand" to="/">
                     <img src={NetMindedLogo} alt="NetMinded Logo"/>
