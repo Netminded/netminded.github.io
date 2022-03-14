@@ -79,7 +79,7 @@ const BlogPage = ({data, pageContext}) => {
                                             <div className="standard-post-list-info">
                                                 <h3 className="standard-post-list-title">
                                                     <Link className="standard-post-list-title--link" to={`/blog/${node.slug}`}>
-                                                        {node.frontmatter.title}
+                                                        {node.frontmatter.title.length > 35 ? `${node.frontmatter.title.slice(0, 35)}...` : node.frontmatter.title}
                                                     </Link>
                                                 </h3>
                                                 <hr className="standard-post-list-divider" />

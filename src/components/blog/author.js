@@ -21,7 +21,7 @@ const AuthorSection = ({author, posted, reading}) => {
             : author === authorBio[2].name ? 
             <StaticImage className="post-author-image" src="../../images/blog/NetMinded_Ross_Loveridge.png" alt={`Author ${name}`} /> 
             : <StaticImage className="post-author-image" src="../../images/icon.png" alt={`Author ${name}`} />}
-            <div>
+            <div className="post-author-content">
               <p className="post-author-name"><a href={social}><FontAwesomeIcon className="post-author-social" icon={faLinkedin} /></a> {name}</p>
               <p className="post-author-info">{posted} · {reading}</p>
             </div>

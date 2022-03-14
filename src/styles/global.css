@@ -122,11 +122,17 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
     position: relative;
     bottom: 2px;
   }
+
+  @media screen and (max-width: 1199px) {
+    .navbar-brand img {
+      bottom: -1px;
+    }
+  }
   
   .navbar-dark .navbar-toggler {
     border: 0;
     position: relative;
-    top: 3px;
+    top: 0;
     color: #FFFFFF;
     padding-right: 5px;
   }
@@ -155,12 +161,6 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
   
   .navbar-collapse {
     text-align: center;
-  }
-  
-  @media only screen and (max-width: 1199px) {
-    .navbar-collapse {
-        background: linear-gradient(111.61deg, #2897F3 7.92%, #826EF5 55.99%) no-repeat;
-    }
   }
   
   .navbar-dark .navbar-nav .nav-link {
