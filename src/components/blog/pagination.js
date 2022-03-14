@@ -1,10 +1,12 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
+import kebabCase from "lodash/kebabCase"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
-const Pagination = ({currentPage, numPages, isBlogPage}) => {
-    const pagPath = isBlogPage ? `/blog/` : `/tags/`
+const Pagination = ({currentPage, numPages, isBlogPage, tagName}) => {
+    const tagPath = tagName ? `${kebabCase(tagName)}/` : ``
+    const pagPath = isBlogPage ? `/blog/` : `/tags/${tagPath}`
     return (
         <div className="blog-page-pagination">
             <div className="blog-page-pagination-prev">

@@ -108,7 +108,7 @@ exports.createPages = async ({
     })
 
     // Create tags detail page with pagination
-    const tagsPerDetailPage = 4
+    const tagsPerDetailPage = 2
     tags.forEach((tag) => {
         const numTagDetailPages = Math.ceil(tag.totalCount / tagsPerDetailPage)
 

@@ -11,8 +11,9 @@ const TagsPage = ({data, pageContext}) => {
   const [isHero, setIsHero] = useState(true)
   const group = data.allMdx.group
   const {limit, skip, currentPage, numPages} = pageContext
-  const tagsNum = group.slice(skip).length  
-  const tags = tagsNum < limit ? group.slice(skip, tagsNum + skip) : group.slice(skip, limit)
+  const tagsNum = group.slice(skip).length
+  const tags = tagsNum < limit ? group.slice(skip, tagsNum + skip) : group.slice(skip, limit + skip)
+
   return (
     <Layout pTitle="Tags" pDescription="Discover more articles and content from NetMinded" isHero={isHero} isArticle={false} simpleNav={true}>
       <header className="blog-page-header">

@@ -12,6 +12,7 @@
     font-weight: 800;
     font-size: 44px;
     margin-bottom: 20px;
+    text-transform: capitalize;
 }
 
 @media screen and (max-width: 1199px) {
@@ -40,6 +41,7 @@
     font-weight: 300;
     line-height: 1.5;
     font-family: "Karla", sans-serif;
+    text-transform: capitalize;
 }
 
 @media screen and (max-width: 600px) {
@@ -51,6 +53,7 @@
 .blog-page {
     margin-top: 120px;
     margin-bottom: 100px;
+    min-height: calc(100% - 600px);
 }
 
 @media screen and (max-width: 450px) {
@@ -855,4 +858,19 @@
     list-style-type: none;
     padding: 0;
     margin-bottom: 60px;
+}
+
+/* Tag Page */
+
+.tag-page {
+    margin-top: 120px;
+    margin-bottom: 100px; 
+    min-height: calc(100% - 600px);
+}
+
+@media screen and (max-width: 450px) {
+    .tag-page {
+        margin-top: 60px;
+        margin-bottom: 50px;
+    }
 }

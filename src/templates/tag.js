@@ -1,28 +1,53 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Link, graphql } from "gatsby"
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { useState } from 'react'
+import Layout from "../components/layout"
+import { Waypoint } from 'react-waypoint'
+import Pagination from "../components/blog/pagination"
+
 const Tags = ({ pageContext, data }) => {
-  const { tag } = pageContext
+  const [isHero, setIsHero] = useState(true)
+  const { tag, currentPage, numPages } = pageContext
   const { edges, totalCount } = data.allMdx
-  const tagHeader = `${totalCount} post${
-    totalCount === 1 ? "" : "s"
-  } tagged with "${tag}"`
   return (
-    <div>
-      <h1>{tagHeader}</h1>
-      <ul>
-        {edges.map(({ node }) => {
-          const { slug } = node.fields
-          const { title } = node.frontmatter
-          return (
-            <li key={slug}>
-              <Link to={slug}>{title}</Link>
-            </li>
-          )
-        })}
-      </ul>
-      <Link to="/tags">All tags</Link>
-    </div>
+    <Layout pTitle={`Tag: ${tag}`} isArticle={false} isHero={isHero} simpleNav={true}>
+      <header className="blog-page-header">
+        <h1>{tag}</h1>
+        <h3>{`${totalCount} article${totalCount === 1 ? "" : "'s"} tagged with "${tag}"`}</h3>
+      </header> 
+      <Waypoint onEnter={() => setIsHero(true)} onLeave={() => setIsHero(false)} topOffset={100} />
+      <div className="container">
+        <div className="row tag-page">
+          <div className="col-12">
+            <ul className="standard-post-list">
+              {
+                edges.map(n => (
+                  <article className="standard-post-list-item" key={n.node.id} itemScope itemType="http://schema.org/Article">
+                    <div className="standard-post-list-hero">
+                      <Link className="standard-post-list-hero--link" to={`/blog/${n.node.fields.slug}`}>
+                        <GatsbyImage className="standard-post-list-image" image={getImage(n.node.frontmatter.hero_image)} alt={n.node.frontmatter.hero_image_alt} />
+                      </Link>
+                    </div>
+                    <div className="standard-post-list-info">
+                      <h3 className="standard-post-list-title">
+                        <Link className="standard-post-list-title--link" to={`/blog/${n.node.fields.slug}`}>
+                          {n.node.frontmatter.title.length > 35 ? `${n.node.frontmatter.title.slice(0, 35)}...` : n.node.frontmatter.title}
+                        </Link>
+                      </h3>
+                      <hr className="standard-post-list-divider" />
+                      <p>{n.node.frontmatter.date} · {n.node.fields.readingTime.text}</p>
+                    </div>
+                  </article>
+                ))
+              }
+            </ul>
+          </div>
+        </div>
+        <Pagination currentPage={currentPage} numPages={numPages} tagName={tag} />
+      </div>
+    </Layout>
   )
 }
 Tags.propTypes = {
@@ -47,7 +72,9 @@ Tags.propTypes = {
     }),
   }),
 }
+
 export default Tags
+
 export const pageQuery = graphql`
   query($tag: String, $skip: Int!, $limit: Int!) {
     allMdx(
@@ -61,10 +88,22 @@ export const pageQuery = graphql`
         node {
           fields {
             slug
+            readingTime {
+              text
+            }
           }
           frontmatter {
+            date(formatString: "MMMM D, YYYY")
             title
+            hero_image_alt
+            hero_image {
+              childImageSharp {
+                gatsbyImageData
+              }
+            }
           }
+          id
+          excerpt
         }
       }
     }
