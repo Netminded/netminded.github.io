@@ -608,6 +608,10 @@
     font-size: 14px; 
 }
 
+.comments-divider {
+    margin-top: 60px;
+}
+
 /* Social Share */
 .social-sharing {
     margin-top: 45px;
