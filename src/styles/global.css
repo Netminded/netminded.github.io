@@ -918,4 +918,29 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
     margin-right: 100px;
   }
 
+
+  /* 404 Page */
+
+  .page-not-found-div{
+    width: 100%;
+    min-height: 95%;
+    background: linear-gradient(111.61deg, #2897F3 7.92%, #826EF5 55.99%) no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 68px;
+  }
+
+  @media screen and (max-width: 1199px) {
+    .page-not-found-div{
+      min-height: 88.6%;
+    }
+  }
+
+  .page-not-found-text{
+    color: #FFFFFF;
+    text-align: center;
+    padding: 15px;
+  }
   
