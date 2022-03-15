@@ -156,7 +156,7 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
   }
   
   .navbar-dark .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=utf8;%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255;255;255; 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
   }
   
   .navbar-collapse {
@@ -790,7 +790,7 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
   
   .policies-content ul li {
     color: #FFFFFF;
-    font-family: "Poppins", sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji" !important;
+    font-family: "Poppins", sans-serif !important;
   }
   
   /* Footer */
@@ -894,40 +894,28 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
   }
   
   /* Cookies */
-  
-  .cc-window.cc-banner {
-    box-shadow: 0 4px 14px #C9DBE9;
-  }
-  
-  .cc-banner .cc-message {
+
+  .cookie-banner{
+    background: #4C4D55;
     font-family: "Karla", sans-serif;
-    font-weight: 400;
-    font-size: 0.8rem;
   }
   
-  .cc-floating .cc-message {
-    text-align: center;
+  .cookie-button{
+    background: #2897F3; 
+    color: #FFFFFF; 
+    text-transform: uppercase; 
+    font-family: "Poppins", sans-serif; 
+    font-weight: 700; 
+    letter-spacing: 2; 
+    font-size: 13px; 
+    border-radius: 50px; 
+    padding: 10px 20px; 
+    border: 0;
+    margin-left: 15px;
   }
-  
-  .cc-link {
-    transition-timing-function: ease-in;
-    transition: 1s;
+
+  .cookie-button-right{
+    margin-right: 100px;
   }
-  
-  .cc-theme-classic .cc-btn:last-child {
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    font-size: 12px;
-    min-width: 100px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    border-radius: 50px;
-    padding: 8px 15px;
-    transition-timing-function: ease-in;
-    transition: 0.5s;
-  }
-  
-  .cc-theme-classic .cc-btn:last-child:hover {
-    text-decoration: none;
-  }
+
   
