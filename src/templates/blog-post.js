@@ -8,9 +8,8 @@ import Tags from '../components/blog/tags'
 import PostPagination from '../components/blog/post-pagination'
 import AfterPostEntry from '../components/blog/post-after-entry'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-    faChevronRight
-} from '@fortawesome/free-solid-svg-icons'
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import { Disqus } from 'gatsby-plugin-disqus'
 
 const BlogPost = ({data}) => {
     const fmatter = data.mdx.frontmatter
@@ -18,6 +17,12 @@ const BlogPost = ({data}) => {
     const tags = fmatter.tags
     const tagsList = `${tags}`
     const { previous, next } = data
+    let disqusConfig = {
+        url: `${data.site.siteMetadata.siteUrl}${data.mdx.fields.slug}`,
+        identifier: data.mdx.id,
+        title: fmatter.title,
+    }
+    console.log(data.mdx.fields.slug)
     return (
         <Layout pTitle={fmatter.title} pDescription={data.mdx.excerpt} pImage={getSrc(fmatter.hero_image)} pKeywords={tagsList} isArticle={true} simpleNav={true} >
             <div className="container">
@@ -35,6 +40,8 @@ const BlogPost = ({data}) => {
                             <MDXRenderer>
                             {data.mdx.body}
                             </MDXRenderer>
+                            <div className="comments-divider"></div>
+                            <Disqus config={disqusConfig} />
                             <AfterPostEntry slug={data.mdx.fields.slug} title={fmatter.title} />
                         </section>
                         <footer>
@@ -53,6 +60,11 @@ export const query = graphql`
       $previousPostId: String
       $nextPostId: String
   ) {
+    site {
+        siteMetadata {
+          siteUrl
+        }
+    }  
     mdx(id: {eq: $id}) {
       frontmatter {
         title
@@ -74,6 +86,7 @@ export const query = graphql`
       }
       body
       excerpt
+      id
     }
     previous: mdx(id: { eq: $previousPostId }) {
         fields {
