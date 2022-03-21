@@ -1120,18 +1120,17 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
         max-width: 100%;
     }
   }
-  
-  .footer-container .footer-text {
+
+  .footer-container h5 {
+    margin-left: 15px;
     color: #FFFFFF;
-    margin-top: 2px;
-    margin-left: 10px;
-    margin-bottom: 5px;
+    font-weight: 700;
   }
-  
-  @media screen and (max-width: 1199px) {
-    .footer-container .footer-text {
-        text-align: center;
-        margin: 5px 0;
+
+  @media screen and (max-width: 768px) {
+    .footer-container h5{
+      text-align: center;
+      margin-left: 0px;
     }
   }
   
@@ -1150,56 +1149,91 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
     color: #FFFFFF;
     text-decoration: none;
   }
-  
+
   .footer-container a:hover {
-    color: #FFFFFF;
-    text-decoration: underline;
+    color: #A194EE;
+    text-decoration: none;
   }
-  
+
+  .footer-container img{
+    height: 50px;
+    position: relative;
+    right: 18px;
+    margin-right: 50px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .footer-container img{
+      position: relative;
+      left: 10px;
+    }
+  }
+
+  .google-play-button{
+    margin-left: 0px;
+  }
+  @media screen and (max-width: 1441px) {
+    .google-play-button{
+      margin-top: 10px;
+    }
+  }
+
   .footer-container ul {
-    list-style-type: none;
-    text-align: right;
+    color: #FFFFFF;
+  }
+
+  @media screen and (max-width: 768px) {
+    .footer-container ul{
+      text-align: center;
+      list-style: none;
+    }
   }
   
   .footer-container ul li {
-    display: inline-block;
-    margin-left: 10px;
-    margin-right: 10px;
+    color: #FFFFFF;
   }
-  
-  @media screen and (max-width: 1199px) {
-    .footer-container ul {
-        text-align: center;
-        padding-left: 0;
-        padding-bottom: 5px;
+
+  @media screen and (max-width: 768px) {
+    .footer-container ul li{
+      position: relative;
+      right: 14px;
     }
   }
+
   
-  .footer-container .footer-social a {
-    font-size: 24px;
-    margin-left: 7px;
-    margin-right: 7px;
-  }
-  
-  @media screen and (max-width: 1199px) {
-    .footer-container .footer-social {
-        margin-top: 10px;
-    }
-  }
-  
-  .footer-container .fa-facebook-square {
+  .footer-container .fa-facebook {
+    /* color: #4267B2; */
     position: relative;
     bottom: 5px;
+    right: 15px;
+    font-size: 28px;
+    margin-right: 15px;
   }
   
-  .footer-container .fa-twitter-square {
+  .footer-container .fa-twitter {
+    /* color: #1DA1F2; */
     position: relative;
     bottom: 5px;
+    right: 15px;
+    font-size: 28px;
+    margin-right: 15px;
   }
   
   .footer-container .fa-linkedin {
+    /* color: #0072b1; */
     position: relative;
     bottom: 5px;
+    right: 15px;
+    font-size: 28px;
+    margin-right: 15px;
+  }
+
+  .footer-container .fa-youtube {
+    /* color: #FF0000; */
+    position: relative;
+    bottom: 5px;
+    right: 15px;
+    font-size: 28px;
   }
   
   /* Cookies */
