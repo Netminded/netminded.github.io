@@ -254,10 +254,22 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
   .hero-image {
     width: 100%;
   }
+
+  @media screen and (max-width: 1399px) {
+    .hero-image {
+      margin-top: 50px;
+    }
+  }
   
   @media screen and (min-width: 992px) and (max-width: 1199px) {
     .hero-image {
-        margin-top: 80px;
+        margin-top: 70px;
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    .hero-image {
+      margin-top: 0;
     }
   }
   
@@ -276,7 +288,7 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
   
   @media screen and (min-width: 992px) {
     .hero-image-container {
-        width: 80%;
+        width: 70%;
         height: 0;
         padding-top: 59%;
         margin-top: -50px;
@@ -445,10 +457,113 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
   .gps-icon {
       fill: #40A0F0;
   }
+
+  /* Communication Section */
+  .communication-container {
+    padding-top: 120px;
+    padding-bottom: 100px;
+  }
+
+  .communication-header {
+    margin-bottom: 60px;
+  }
+  
+  .communication-container .text-accent {
+    text-align: center;
+    font-size: 38px;
+    font-weight: 800;
+    color: #4C4D55;
+    margin-bottom: 30px;
+  }
+  
+  @media screen and (min-width: 601px) and (max-width: 1199px) {
+    .communication-container .text-accent {
+        font-size: 34px;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .communication-container .text-accent {
+        font-size: 30px;
+    } 
+  }
+  
+  @media screen and (max-width: 350px) {
+    .communication-container .text-accent {
+        font-size: 24px;
+    } 
+  }
+  
+  .communication-container hr {
+    width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 50px;
+  }
+
+  .communication-container p {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    color: #4C4D55;
+  }
+  
+  .communication-container p span {
+    font-weight: 600;
+  }
+
+  .communication-container .col-lg-4 {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 45px;
+  }
+
+  .communication-icon {
+    width: 80px;
+    height: 80px;
+    display: block;
+    background-color: #E9EFF4;
+    border-radius: 50px;
+    text-align: center;
+    color: #2897F3;
+    margin: 0 auto 30px auto;
+  }
+
+  .communication-icon--middle {
+    background: #EEECFB;
+    color: #826EF5;
+  }
+
+  .communication-icon .fa-phone-slash {
+    font-size: 32px;
+    margin-top: 22px;
+  }
+
+  .communication-icon .fa-user-check {
+    font-size: 32px;
+    margin-top: 22px;
+    margin-left: 5px;
+  }
+
+  .communication-icon .fa-paper-plane {
+    font-size: 32px;
+    margin-top: 22px;
+    margin-right: 5px;
+  }
+
+  .communication-container h6 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 800;
+    color: #4C4D55;
+    margin-bottom: 15px;
+  }
+  
   
   /* App */
   .app-container {
-    padding-top: 120px;
+    padding-top: 0;
     padding-bottom: 100px;
   }
   
@@ -647,22 +762,136 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
   /* Testimonial */
   .testimonial-container {
     width: 100%;
-    padding-top: 120px;
+    padding-top: 180px;
     padding-bottom: 120px;
   }
-  
-  .testimonial-container .testimonial-image img {
+
+  .testimonial-panel-container {
+    background: url('../images/NetMinded_Circle_Bk.svg') right no-repeat;
+    height: 100%;
     width: 100%;
   }
+
+  @media screen and (max-width: 991px) {
+    .testimonial-panel-container {
+      padding-top: 10px;
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    .testimonial-panel-container {
+      padding-top: 24px;
+    }
+  }
+
+  @media screen and (max-width: 482px) {
+    .testimonial-panel-container {
+      padding-top: 32px;
+    }
+  }
+
+  .testimonial-panel {
+    background: linear-gradient(144.75deg, #2897F3 3.59%, #826EF5 73.58%);
+    padding: 30px;
+    border-radius: 15px;  
+    height: 92%;
+    width: 80%;
+    position: relative;
+    left: 4%;
+    bottom: 9.8%;
+  }
+
+  @media screen and (max-width: 1199px) {
+    .testimonial-panel {
+      bottom: 7%;
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    .testimonial-panel {
+      padding-bottom: 80px;
+      bottom: 14%;
+    }
+  }
+
+  .testimonial-panel .text-accent {
+    font-size: 38px;
+    font-weight: 800;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+  }
   
-  @media screen and (max-width: 767px) {
-    .testimonial-container .testimonial-image img {
-        width: 50%;
+  @media screen and (min-width: 601px) and (max-width: 1199px) {
+    .testimonial-panel .text-accent {
+        font-size: 34px;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .testimonial-panel .text-accent {
+        font-size: 30px;
     } 
   }
   
+  @media screen and (max-width: 350px) {
+    .testimonial-panel .text-accent {
+        font-size: 24px;
+    } 
+  }
+
+  .testimonial-selector {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .testimonial-selector span {
+    width: 40px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.5);
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .testimonial-selector--active {
+    background: #FFFFFF !important;
+  }
+  
+  .testimonial-container .testimonial-image img {
+    width: 18%;
+    margin-bottom: 15px;
+  }
+
+  @media screen and (max-width: 991px) {
+    .testimonial-container .testimonial-image img {
+      width: 30%;
+    }
+  }
+
+  .testimonial-container h3 {
+    font-family: 'Karla', sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    color: #FFFFFF;
+  }
+
+  @media screen and (max-width: 1199px) {
+    .testimonial-container h3 {
+      font-size: 20px;
+    }
+  }
+  
   .testimonial-text {
-    margin-top: 10px;
+    margin-top: -15px;
+    padding-left: 30px;
+  }
+
+  @media screen and (max-width: 991px) {
+    .testimonial-text {
+      margin-top: 50px;
+      padding-right: 30px;
+    }
   }
   
   .testimonial-container p {
@@ -673,14 +902,94 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
   
   .testimonial-container hr {
     width: 280px;
-    margin-top: 40px;
+    margin-top: 25px;
     margin-left: 0;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
+  }
+
+  @media screen and (max-width: 450px) {
+    .testimonial-container hr {
+      width: 75%;
+    }
   }
   
   .testimonial-container .text-large-accent {
-    font-size: 22px;
+    font-weight: 600;
     margin-top: 30px;
+  }
+
+  .testimonial-logos {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+
+  @media screen and (max-width: 380px) {
+    .testimonial-logos {
+      flex-direction: column;
+    }
+  }
+
+  .testimonial-logos li img {
+    width: 60%;
+  }
+
+  @media screen and (max-width: 650px) {
+    .testimonial-logos li img {
+      width: 75%;
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    .testimonial-logos li img {
+      width: 88%;
+    }
+  }
+
+  @media screen and (max-width: 380px) {
+    .testimonial-logos li img {
+      width: 60%;
+    }
+  }
+
+  @media screen and (max-width: 380px) {
+    .testimonial-logos li:first-child img {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .testimonial-logos li:nth-child(2) {
+    margin-left: 20px;
+  }
+
+  @media screen and (max-width: 650px) {
+    .testimonial-logos li:nth-child(2) {
+      margin-left: 10px;
+    }
+  }
+
+  @media screen and (max-width: 380px) {
+    .testimonial-logos li:nth-child(2) {
+      margin: 15px 0;
+    }
+  }
+
+  .testimonial-logos li:nth-child(2) img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .testimonial-logos li:last-child img {
+    margin-left: auto;
+  }
+
+  @media screen and (max-width: 380px) {
+    .testimonial-logos li:last-child img {
+      margin-right: auto;
+    }
   }
   
   /* CTA */
@@ -965,10 +1274,6 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
   @media screen and (max-width: 600px) {
     .page-not-found-heading {
         font-size: 34px;
-    }
-  
-    .hero-container h3 {
-        font-size: 22px;
     }
   }
   

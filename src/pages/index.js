@@ -1,14 +1,20 @@
 import * as React from 'react'
 import Layout from '../components/layout'
+import { StaticImage } from 'gatsby-plugin-image'
 import NetMindedAppImg from '../images/NetMinded_App.svg'
 import NetMindedDashboardImg from '../images/NetMinded_Dashboard.svg'
+import NetMindedPTIImg from '../images/NetMinded_Mike_Bohndiek.svg'
+import NetMindedTriangleImg from '../images/NetMinded_Paul_Anslow.svg'
 import NetMindedGrowImg from '../images/NetMinded_Llew_Nicholls.svg'
 import { useState } from 'react'
 import { openPopupWidget } from 'react-calendly'
 import { Waypoint } from 'react-waypoint'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
-  faCheck
+  faCheck,
+  faPhoneSlash,
+  faUserCheck,
+  faPaperPlane,
 } from '@fortawesome/free-solid-svg-icons'
 import Cta from '../components/cta'
 
@@ -27,6 +33,9 @@ const scrollToProducts = (e) => {
 
 const IndexPage = () => {
   const [isHero, setIsHero] = useState(true)
+  const [testiMonialPTI, setTestiMonialPTI] = useState(true)
+  const [testiMonialGrow, setTestiMonialGrow] = useState(false)
+  const [testiMonialTriangle, setTestiMonialTriangle] = useState(false)
   return (
     <Layout isArticle={false} isHero={isHero} scrollToProducts={scrollToProducts}>
       <div className="hero-container">
@@ -35,8 +44,8 @@ const IndexPage = () => {
                         <div className="row">
                             <div className="col-lg-6">
                                 <div className="hero-content">
-                                    <h1>Create Innovative Customer Support Applications</h1>
-                                    <h3 className="dark-text">The NetMinded app <span>automates your customer support</span> and <span>reduces the cost</span> of scaling your business.</h3>
+                                    <h1>Develop a Resilient Support Process With NetMinded</h1>
+                                    <h3 className="dark-text"><span>Protect your reputation</span> and <span>reduce operational costs</span> by <span>sharing status information</span> with the right stakeholders at the right time.</h3>
                                     <div className="hero-cta">
                                         <a className="btn" href="#" onClick={(e) => scrollToProducts(e)}>Learn More</a>
                                         <a className="btn hero-btn-last" href="" onClick={(e) => launchCalendar(e)}>Request Demo</a>
@@ -289,6 +298,34 @@ const IndexPage = () => {
                 </div>
             </div>
             <Waypoint onEnter={() => setIsHero(true)} onLeave={() => setIsHero(false)} topOffset={100} />
+            <div id="communicationSection" className="communication-container">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12 communication-header">
+                            <h5 className="text-accent">Communication Made Easy</h5>
+                            <p><span>No matter what the situation, stay in control. Share status information and updates when you want and with whoever you want — your customers, teams, suppliers, investors, partners and more.</span></p>
+                            <hr />
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-lg-4">
+                            <span className="communication-icon"><FontAwesomeIcon icon={faPhoneSlash}/></span>
+                            <h6>Reduce Support Calls</h6>
+                            <p>With 24/7 status information and timely notifications your stakeholders have less reasons to call you.</p>
+                        </div>
+                        <div className="col-lg-4">
+                            <span className="communication-icon communication-icon--middle"><FontAwesomeIcon icon={faUserCheck}/></span>
+                            <h6>Escalate to the Right Person</h6>
+                            <p>With a full picture of your status information and a dependency view it’s simple to determine where issues originate. </p>
+                        </div>
+                        <div className="col-lg-4">
+                            <span className="communication-icon"><FontAwesomeIcon icon={faPaperPlane}/></span>
+                            <h6>Automate Communication</h6>
+                            <p>With automatic status message delivery and custom first-line prompts your support team save valuable time. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div id="productSection" className="app-container">
                 <div className="container">
                     <div className="row">
@@ -356,13 +393,49 @@ const IndexPage = () => {
             <div className="testimonial-container">
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-3 testimonial-image">
-                            <img src={NetMindedGrowImg} alt="Llew Nicholls - Grow Marketing / Grow Coffee House" />
+                        <div className="col-lg-4">
+                            <div className="testimonial-panel-container">
+                                <div className="testimonial-panel">
+                                    <h1 className="text-accent">What Our Customers Think</h1>
+                                    <h3>Our customers are implementing improved support strategies with NetMinded.</h3>
+                                    <div className="testimonial-selector">
+                                        <a href="#" onClick={(e) => {e.preventDefault(); setTestiMonialPTI(true); setTestiMonialGrow(false); setTestiMonialTriangle(false)}}><span className={`${testiMonialPTI ? `testimonial-selector--active` : ``}`}></span></a>
+                                        <a href="#" onClick={(e) => {e.preventDefault(); setTestiMonialPTI(false); setTestiMonialGrow(true); setTestiMonialTriangle(false)}}><span className={`${testiMonialGrow ? `testimonial-selector--active` : ``}`}></span></a>
+                                        <a href="#" onClick={(e) => {e.preventDefault(); setTestiMonialPTI(false); setTestiMonialGrow(false); setTestiMonialTriangle(true)}}><span className={`${testiMonialTriangle ? `testimonial-selector--active` : ``}`}></span></a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div className="col-md-9 testimonial-text">
-                            <p>As with most businesses, we rely on robust internet connectivity and with 3 businesses on one site that adds to the intricacy. With SeeThru Networks we resolved a complex service issue affecting our network. Having a view of the service status across many providers was key in the speedy resolution of this issue.</p>
-                            <hr />
-                            <h3 className="text-large-accent">Llew Nicholls, Grow Marketing / Grow Coffee House</h3>
+                        <div className="col-lg-8 testimonial-text">
+                            {testiMonialPTI && <div>
+                                <div className="testimonial-image">
+                                    <img src={NetMindedPTIImg} alt="Mike Bohndiek - PTI Digital" />
+                                </div>
+                                <p>Leveraging the NetMinded platforms, PTI are able to deliver impactful, relevant and clear communication. NetMinded really enables complex IT messages to be translated into understandable – and usable – communications. This enables a focus on the most important tasks and keenly reduces speed of resolution in business-critical moments.</p>
+                                <hr />
+                                <p className="text-large-accent">Mike Bohndiek, PTI Digital</p>
+                            </div>}
+                            {testiMonialGrow && <div>
+                                <div className="testimonial-image">
+                                    <img src={NetMindedGrowImg} alt="Llew Nicholls - Grow Marketing / Grow Coffee House" />
+                                </div>
+                                <p>As with most businesses, we rely on robust internet connectivity and with 3 businesses on one site that adds to the intricacy. With NetMinded we resolved a complex service issue affecting our network. Having a view of the service status across many providers was key in the speedy resolution of this issue.</p>
+                                <hr />
+                                <p className="text-large-accent">Llew Nicholls, Grow Marketing / Grow Coffee House</p>
+                            </div>}
+                            {testiMonialTriangle && <div>
+                                <div className="testimonial-image">
+                                    <img src={NetMindedTriangleImg} alt="Paul Anslow - Triangle Networks" />
+                                </div>
+                                <p>We’re offering this platform to our customers to help them provide the very best service to their end-users, giving end users control of their services for the first time ever. The NetMinded app allows users to know exactly which service is causing an issue through a simple notification, allowing the problem to be resolved in a fraction of the time.</p>
+                                <hr />
+                                <p className="text-large-accent">Paul Anslow, Triangle Networks</p>
+                            </div>}
+                            <ul className="testimonial-logos">
+                                <li><a href="#" onClick={(e) => {e.preventDefault(); setTestiMonialPTI(true); setTestiMonialGrow(false); setTestiMonialTriangle(false)}}><StaticImage src='../images/PTI_NetMinded.png' /></a></li>
+                                <li><a href="#" onClick={(e) => {e.preventDefault(); setTestiMonialPTI(false); setTestiMonialGrow(true); setTestiMonialTriangle(false)}}><StaticImage src='../images/Grow_Marketing_NetMinded.png' /></a></li>
+                                <li><a href="#" onClick={(e) => {e.preventDefault(); setTestiMonialPTI(false); setTestiMonialGrow(false); setTestiMonialTriangle(true)}}><StaticImage src='../images/Triangle_Networks_NetMinded.png' /></a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
