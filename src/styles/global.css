@@ -524,7 +524,7 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
   
   /* App */
   .app-container {
-    padding-top: 0;
+    padding-top: 120px;
     padding-bottom: 100px;
   }
   

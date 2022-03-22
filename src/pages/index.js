@@ -125,7 +125,7 @@ const IndexPage = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-12">
-                            <h5 className="text-accent">Reduce Customer Calls and Shorten Resolution Times</h5>
+                            <h5 className="text-accent">How Do We Do All of This?</h5>
                             <hr />
                         </div>
                     </div>
@@ -139,21 +139,14 @@ const IndexPage = () => {
                                 </div>
                             </div>
                             <div className="col-lg-7 app-text">
-                                <p><FontAwesomeIcon icon={faCheck}/>Give your customers a full view of their connection and service state.</p>
+                            <p><span>We do this with our simple to use web Dashboard and mobile App (available on both iOS and Android).</span></p>
                                 <br />
-                                <p><FontAwesomeIcon icon={faCheck}/>Automate message delivery for common problems.</p>
+                                <p>We’ve built a customer support platform to help you better assist your stakeholders, and to save you time and money.
+                                   Our App and web Dashboard gives a full view of customer connection and service state. Use it to automate message delivery for common problems and send group targeted messaging (Is it just me?). </p>
                                 <br />
-                                <p><FontAwesomeIcon icon={faCheck}/>Utilise group targeted messaging (Is it just me?).</p>
+                                <p>Information is communicated through a jargon free interface using tiles along with red, amber and green colours to indicate service status. </p>
                                 <br />
-                                <p><FontAwesomeIcon icon={faCheck}/>Communicate en-masse to your customers. Let them know when you’re working on issues.</p>
-                                <br />
-                                <p><FontAwesomeIcon icon={faCheck}/>Improve support outcomes for speedtest issues with our comprehensive router/device test framework (TR143, iPerf etc).</p>
-                                <br />
-                                <p><FontAwesomeIcon icon={faCheck}/>Encourage your customers to self-support with an intuitive jargon-free interface.</p>
-                                <br />
-                                <br />                                
-                                <p><span>The NetMinded app is available for same day setup at a low monthly cost which scales with customer acquisition. 
-                                The app can carry your branding, and additional services can be readily developed and integrated to meet your specific needs.</span></p>
+                                <p>NetMinded is available for same day setup at a low monthly cost which scales according to customer acquisition. The App and Dashboard can carry your branding, and additional services can be readily developed and integrated to meet your specific needs.</p>                              
                             </div>
                         </div>
                     </div>
