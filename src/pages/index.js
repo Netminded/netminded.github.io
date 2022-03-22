@@ -15,6 +15,9 @@ import {
   faPhoneSlash,
   faUserCheck,
   faPaperPlane,
+  faHandHoldingDollar,
+  faArrowTrendDown,
+  faUserPlus
 } from '@fortawesome/free-solid-svg-icons'
 import Cta from '../components/cta'
 
@@ -42,7 +45,7 @@ const IndexPage = () => {
                 <div className="hero-container-sub">
                     <div className="container">
                         <div className="row">
-                            <div className="col-lg-6">
+                            <div className="col-lg-5">
                                 <div className="hero-content">
                                     <h1>Develop a Resilient Support Process With NetMinded</h1>
                                     <h3 className="dark-text"><span>Protect your reputation</span> and <span>reduce operational costs</span> by <span>sharing status information</span> with the right stakeholders at the right time.</h3>
@@ -52,9 +55,126 @@ const IndexPage = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-lg-6">
+                            <div className="col-lg-7">
                                 <div className="hero-image">
                                     <div className="hero-image-container">
+                                        <img src={NetMindedDashboardImg} alt="NetMinded Dashboard"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <Waypoint onEnter={() => setIsHero(true)} onLeave={() => setIsHero(false)} topOffset={100} />
+            <div id="communicationSection" className="communication-container">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12 communication-header">
+                            <h5 className="text-accent">Communication Made Easy</h5>
+                            <p><span>No matter what the situation, stay in control. Share status information and updates when you want and with whoever you want — your customers, teams, suppliers, investors, partners and more.</span></p>
+                            <hr />
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-lg-4">
+                            <span className="communication-icon"><FontAwesomeIcon icon={faPhoneSlash}/></span>
+                            <h6>Reduce Support Calls</h6>
+                            <p>With 24/7 status information and timely notifications your stakeholders have less reasons to call you.</p>
+                        </div>
+                        <div className="col-lg-4">
+                            <span className="communication-icon communication-icon--middle"><FontAwesomeIcon icon={faUserCheck}/></span>
+                            <h6>Escalate to the Right Person</h6>
+                            <p>With a full picture of your status information and a dependency view it’s simple to determine where issues originate. </p>
+                        </div>
+                        <div className="col-lg-4">
+                            <span className="communication-icon"><FontAwesomeIcon icon={faPaperPlane}/></span>
+                            <h6>Automate Communication</h6>
+                            <p>With automatic status message delivery and custom first-line prompts your support team save valuable time. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="dashboard-container">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12">
+                            <h5 className="text-accent">Stream All of Your Operational Data From One Place</h5>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-lg-6">
+                            <p><span>Use NetMinded to build your automated customer support solution. Drive the real-time customer support conversation with your existing network management systems. 
+                                Add information from Cloud controller APIs, AAA systems, TR069 ACS platforms, Ethernet Connectivity, Fault Management and more.</span></p>
+                            <p>Automate the relationship between information from multiple platforms. Share and combine information from multiple organisations.</p>
+                            <p>Build solutions for easier 1st line diagnostics/customer self-serve. Make technical issues easy to understand for your customers and support staff.</p>
+                            <p>Reduce mean-time-to-innocence using a dependency view per customer to help your support staff quickly identify service issues.</p>
+                            <a className="btn" href="" onClick={(e) => launchCalendar(e)}>Request Demo</a>
+                        </div>
+                        <div className="col-lg-6">
+                            <div className="dashboard-image">
+                                <div className="dashboard-image-container">
+                                    <img src={NetMindedDashboardImg} alt="NetMinded Dashboard"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="productSection" className="app-container">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12">
+                            <h5 className="text-accent">Reduce Customer Calls and Shorten Resolution Times</h5>
+                            <hr />
+                        </div>
+                    </div>
+                </div>
+                <div className="app-container-sub">
+                    <div className="container">
+                        <div className='row'>
+                            <div className="col-lg-5">
+                                <div className="app-image">
+                                    <img src={NetMindedAppImg} alt="NetMinded App" />
+                                </div>
+                            </div>
+                            <div className="col-lg-7 app-text">
+                                <p><FontAwesomeIcon icon={faCheck}/>Give your customers a full view of their connection and service state.</p>
+                                <br />
+                                <p><FontAwesomeIcon icon={faCheck}/>Automate message delivery for common problems.</p>
+                                <br />
+                                <p><FontAwesomeIcon icon={faCheck}/>Utilise group targeted messaging (Is it just me?).</p>
+                                <br />
+                                <p><FontAwesomeIcon icon={faCheck}/>Communicate en-masse to your customers. Let them know when you’re working on issues.</p>
+                                <br />
+                                <p><FontAwesomeIcon icon={faCheck}/>Improve support outcomes for speedtest issues with our comprehensive router/device test framework (TR143, iPerf etc).</p>
+                                <br />
+                                <p><FontAwesomeIcon icon={faCheck}/>Encourage your customers to self-support with an intuitive jargon-free interface.</p>
+                                <br />
+                                <br />                                
+                                <p><span>The NetMinded app is available for same day setup at a low monthly cost which scales with customer acquisition. 
+                                The app can carry your branding, and additional services can be readily developed and integrated to meet your specific needs.</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="trust-container">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-6">
+                            <h5 className="text-accent">Give Your Customers a Reason to Trust You</h5>
+                            <p><span>The NetMinded platform provides clarity. Your customers are more empowered which promotes a healthy relationship between you and them.</span></p>
+                            <div className="trust-items">
+                                <h6><span className="trust-icon"><FontAwesomeIcon icon={faHandHoldingDollar}/></span><span className="trust-item-text">Prove your reliability and show constant value for service</span></h6>
+                                <h6><span className="trust-icon trust-icon--middle"><FontAwesomeIcon icon={faArrowTrendDown}/></span><span className="trust-item-text">Reduce customer churn</span></h6>
+                                <h6><span className="trust-icon"><FontAwesomeIcon icon={faUserPlus}/></span><span className="trust-item-text">Focus on acquisition rather than retainment</span></h6>
+                            </div>
+                            <a className="btn" href="" onClick={(e) => launchCalendar(e)}>Request Demo</a>
+                        </div>
+                        <div className="col-lg-6">
+                                <div className="trust-image">
+                                    <div className="trust-image-container">
                                         <svg viewBox="0 0 477 617" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g id="Group 173">
                                         <g id="Group 163">
@@ -293,100 +413,6 @@ const IndexPage = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <Waypoint onEnter={() => setIsHero(true)} onLeave={() => setIsHero(false)} topOffset={100} />
-            <div id="communicationSection" className="communication-container">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-12 communication-header">
-                            <h5 className="text-accent">Communication Made Easy</h5>
-                            <p><span>No matter what the situation, stay in control. Share status information and updates when you want and with whoever you want — your customers, teams, suppliers, investors, partners and more.</span></p>
-                            <hr />
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col-lg-4">
-                            <span className="communication-icon"><FontAwesomeIcon icon={faPhoneSlash}/></span>
-                            <h6>Reduce Support Calls</h6>
-                            <p>With 24/7 status information and timely notifications your stakeholders have less reasons to call you.</p>
-                        </div>
-                        <div className="col-lg-4">
-                            <span className="communication-icon communication-icon--middle"><FontAwesomeIcon icon={faUserCheck}/></span>
-                            <h6>Escalate to the Right Person</h6>
-                            <p>With a full picture of your status information and a dependency view it’s simple to determine where issues originate. </p>
-                        </div>
-                        <div className="col-lg-4">
-                            <span className="communication-icon"><FontAwesomeIcon icon={faPaperPlane}/></span>
-                            <h6>Automate Communication</h6>
-                            <p>With automatic status message delivery and custom first-line prompts your support team save valuable time. </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="productSection" className="app-container">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-12">
-                            <h5 className="text-accent">Reduce Customer Calls and Shorten Resolution Times</h5>
-                            <hr />
-                        </div>
-                    </div>
-                </div>
-                <div className="app-container-sub">
-                    <div className="container">
-                        <div className='row'>
-                            <div className="col-lg-5">
-                                <div className="app-image">
-                                    <img src={NetMindedAppImg} alt="NetMinded App" />
-                                </div>
-                            </div>
-                            <div className="col-lg-7 app-text">
-                                <p><FontAwesomeIcon icon={faCheck}/>Give your customers a full view of their connection and service state.</p>
-                                <br />
-                                <p><FontAwesomeIcon icon={faCheck}/>Automate message delivery for common problems.</p>
-                                <br />
-                                <p><FontAwesomeIcon icon={faCheck}/>Utilise group targeted messaging (Is it just me?).</p>
-                                <br />
-                                <p><FontAwesomeIcon icon={faCheck}/>Communicate en-masse to your customers. Let them know when you’re working on issues.</p>
-                                <br />
-                                <p><FontAwesomeIcon icon={faCheck}/>Improve support outcomes for speedtest issues with our comprehensive router/device test framework (TR143, iPerf etc).</p>
-                                <br />
-                                <p><FontAwesomeIcon icon={faCheck}/>Encourage your customers to self-support with an intuitive jargon-free interface.</p>
-                                <br />
-                                <br />                                
-                                <p><span>The NetMinded app is available for same day setup at a low monthly cost which scales with customer acquisition. 
-                                The app can carry your branding, and additional services can be readily developed and integrated to meet your specific needs.</span></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="dashboard-container">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-12">
-                            <h5 className="text-accent">Stream All of Your Operational Data From One Place</h5>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col-lg-6">
-                            <p><span>Use NetMinded to build your automated customer support solution. Drive the real-time customer support conversation with your existing network management systems. 
-                                Add information from Cloud controller APIs, AAA systems, TR069 ACS platforms, Ethernet Connectivity, Fault Management and more.</span></p>
-                            <p>Automate the relationship between information from multiple platforms. Share and combine information from multiple organisations.</p>
-                            <p>Build solutions for easier 1st line diagnostics/customer self-serve. Make technical issues easy to understand for your customers and support staff.</p>
-                            <p>Reduce mean-time-to-innocence using a dependency view per customer to help your support staff quickly identify service issues.</p>
-                            <a className="btn" href="" onClick={(e) => launchCalendar(e)}>Request Demo</a>
-                        </div>
-                        <div className="col-lg-6">
-                            <div className="dashboard-image">
-                                <div className="dashboard-image-container">
-                                    <img src={NetMindedDashboardImg} alt="NetMinded Dashboard"/>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
