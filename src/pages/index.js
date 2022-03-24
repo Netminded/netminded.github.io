@@ -1,7 +1,7 @@
 import * as React from 'react'
+import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import { StaticImage } from 'gatsby-plugin-image'
-import NetMindedAppImg from '../images/NetMinded_App.svg'
 import NetMindedDashboardImg from '../images/NetMinded_Dashboard.svg'
 import NetMindedPTIImg from '../images/NetMinded_Mike_Bohndiek.svg'
 import NetMindedTriangleImg from '../images/NetMinded_Paul_Anslow.svg'
@@ -100,17 +100,16 @@ const IndexPage = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-12">
-                            <h5 className="text-accent">Stream All of Your Operational Data From One Place</h5>
+                            <h5 className="text-accent">Reduce Strain on Your Support Team</h5>
+                            <p><span>Use NetMinded to build your automated customer support solution. Drive the real-time customer support conversation with your existing network management systems. Add information from Cloud controller APIs, PRTG, HP Aruba, Nagios, UniFi, AAA systems, Ethernet Connectivity, Fault Management and more.</span></p>
+                            <Link className="btn" to="/integrations">Integrations</Link>
                         </div>
                     </div>
                     <div className="row">
                         <div className="col-lg-6">
-                            <p><span>Use NetMinded to build your automated customer support solution. Drive the real-time customer support conversation with your existing network management systems. 
-                                Add information from Cloud controller APIs, AAA systems, TR069 ACS platforms, Ethernet Connectivity, Fault Management and more.</span></p>
                             <p>Automate the relationship between information from multiple platforms. Share and combine information from multiple organisations.</p>
                             <p>Build solutions for easier 1st line diagnostics/customer self-serve. Make technical issues easy to understand for your customers and support staff.</p>
                             <p>Reduce mean-time-to-innocence using a dependency view per customer to help your support staff quickly identify service issues.</p>
-                            <a className="btn" href="" onClick={(e) => launchCalendar(e)}>Request Demo</a>
                         </div>
                         <div className="col-lg-6">
                             <div className="dashboard-image">

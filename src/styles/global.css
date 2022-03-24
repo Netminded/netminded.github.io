@@ -1330,9 +1330,9 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
   .footer-container {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
-    font-size: 12px;
-    padding-top: 20px;
-    padding-bottom: 4px;
+    font-size: 14px;
+    padding-top: 50px;
+    padding-bottom: 30px;
     width: 100%;
     background: #4C4D55;
   }
@@ -1345,7 +1345,6 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
   }
 
   .footer-container h5 {
-    margin-left: 15px;
     color: #FFFFFF;
     font-weight: 700;
   }
@@ -1359,15 +1358,7 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
   
   .footer-container a {
     font-family: "Poppins", sans-serif;
-    -webkit-transition-timing-function: ease-in;
-    -moz-transition-timing-function: ease-in;
-    -ms-transition-timing-function: ease-in;
-    -o-transition-timing-function: ease-in;
     transition-timing-function: ease-in;
-    -webkit-transition: 1s;
-    -moz-transition: 1s;
-    -ms-transition: 1s;
-    -o-transition: 1s;
     transition: 1s;
     color: #FFFFFF;
     text-decoration: none;
@@ -1378,85 +1369,97 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
     text-decoration: none;
   }
 
-  .footer-container img{
+  .footer-container .app-badges {
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+
+  .footer-container img {
     height: 50px;
-    position: relative;
-    right: 18px;
     margin-right: 50px;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     .footer-container img{
-      position: relative;
-      left: 10px;
+      margin-left: 25px;
+      margin-right: 25px;
     }
   }
 
-  .google-play-button{
+  .google-play-button {
     margin-left: 0px;
   }
-  @media screen and (max-width: 1441px) {
-    .google-play-button{
+
+  @media screen and (max-width: 1344px) {
+    .google-play-button {
+      margin-top: 10px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .google-play-button {
+      margin-top: 0;
+    }
+  }
+
+  @media screen and (max-width: 456px) {
+    .google-play-button {
       margin-top: 10px;
     }
   }
 
   .footer-container ul {
     color: #FFFFFF;
+    list-style-type: none;
+    padding: 0;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     .footer-container ul{
       text-align: center;
-      list-style: none;
     }
   }
   
   .footer-container ul li {
     color: #FFFFFF;
+    font-size: 16px;
   }
 
-  @media screen and (max-width: 768px) {
-    .footer-container ul li{
-      position: relative;
-      right: 14px;
+  .footer-last-list {
+    margin-top: 34px;
+  }
+
+  @media screen and (max-width: 767px) {
+    .footer-last-list {
+      margin-top: -20px;
     }
   }
 
   
   .footer-container .fa-facebook {
-    /* color: #4267B2; */
-    position: relative;
-    bottom: 5px;
-    right: 15px;
     font-size: 28px;
-    margin-right: 15px;
+    margin-right: 25px;
   }
   
   .footer-container .fa-twitter {
-    /* color: #1DA1F2; */
-    position: relative;
-    bottom: 5px;
-    right: 15px;
     font-size: 28px;
-    margin-right: 15px;
+    margin-right: 28px;
   }
   
   .footer-container .fa-linkedin {
-    /* color: #0072b1; */
-    position: relative;
-    bottom: 5px;
-    right: 15px;
     font-size: 28px;
-    margin-right: 15px;
+    margin-right: 30px;
   }
 
   .footer-container .fa-youtube {
-    /* color: #FF0000; */
-    position: relative;
-    bottom: 5px;
-    right: 15px;
     font-size: 28px;
+  }
+
+  @media screen and (max-width: 767px) {
+    .footer-container .footer-credit {
+      text-align: center;
+      margin-top: 30px;
+    }
   }
   
   /* Cookies */
