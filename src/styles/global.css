@@ -425,6 +425,13 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
     padding-bottom: 100px;
   }
 
+  @media screen and (max-width: 991px) {
+    .communication-container {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
   .communication-header {
     margin-bottom: 60px;
   }
@@ -522,13 +529,20 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
   }
   
   
-  /* App */
-  .app-container {
+  /* Product Srction */
+  .product-container {
     padding-top: 120px;
     padding-bottom: 100px;
   }
+
+  @media screen and (max-width: 991px) {
+    .product-container {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
   
-  .app-container .text-accent {
+  .product-container .text-accent {
     font-size: 38px;
     font-weight: 800;
     color: #4C4D55;
@@ -536,90 +550,135 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
   }
   
   @media screen and (min-width: 601px) and (max-width: 1199px) {
-    .app-container .text-accent {
+    .product-container .text-accent {
         font-size: 34px;
     }
   }
   
   @media screen and (max-width: 600px) {
-    .app-container .text-accent {
+    .product-container .text-accent {
         font-size: 30px;
     } 
   }
   
   @media screen and (max-width: 350px) {
-    .app-container .text-accent {
+    .product-container .text-accent {
         font-size: 24px;
     } 
   }
   
-  .app-container .text-large-accent {
+  .product-container .text-large-accent {
     font-size: 22px;
     margin-top: 30px;
   }
   
-  .app-container hr {
+  .product-container hr {
     width: 280px;
     margin-left: 0;
     margin-top: 40px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
   }
-  
-  .app-image {
-    width: 60%;
-    margin-left: -20px;
+
+  .product-image-container {
+    background: url('../images/NetMinded_Circle_Bk.svg') left no-repeat;
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
   }
-  
-  @media screen and (max-width: 550px) {
-    .app-image {
-        margin-left: auto;
-        margin-right: auto;
-    }
-  }
-  
-  @media screen and (min-width: 992px) {
-    .app-image {
-        width: 90%;
-        margin-left: -35px;
-    } 
-  }
-  
-  .app-text {
-    margin-top: 40px;
-  }
-  
-  @media screen and (min-width: 992px) and (max-width: 1199px) {
-    .app-text {
-        margin-top: 20px;
-    }
-  }
-  
-  @media screen and (min-width: 1200px) {
-    .app-text {
-        margin-top: 60px;
+
+  @media screen and (max-width: 1199px) {
+    .product-image-container {
+      padding-top: 0;
     }
   }
 
-  .app-text p {
+  @media screen and (max-width: 767px) {
+    .product-image-container {
+      padding-top: 15px;
+    }
+  }
+  
+  .product-image {
+    position: relative;
+    left: 10%;
+    bottom: 18%;
+    width: 80%;
+  }
+
+  @media screen and (max-width: 1399px) {
+    .product-image {
+      left: 12%;
+      bottom: 24%;
+    }
+  }
+
+  @media screen and (max-width: 1199px) {
+    .product-image {
+      left: 17%;
+      bottom: 4%;
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    .product-image {
+      left: 9%;
+      bottom: 18%;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .product-image {
+      left: 12%;
+      bottom: 22%;
+    }
+  }
+
+  .product-image img {
+    width: 100%;
+  }
+  
+  .product-text {
+    margin-top: 60px;
+  }
+  
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    .product-text {
+        margin-top: -20px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .product-text {
+        margin-top: -20px;
+    }
+  }
+  
+  @media screen and (min-width: 1399px) {
+    .product-text {
+        margin-top: 0;
+    }
+  }
+
+  .product-text p {
       display: flex;
   }
   
-  .app-container p {
+  .product-container p {
     font-size: 20px;
     font-weight: 400;
     color: #4C4D55;
-    margin-left: 45px;
   }
   
-  .app-container p span {
+  .product-container p span {
     font-weight: 600;
   }
-  
-  .app-container .fa-check {
-    color: #7EEA88;
-    font-size: 58px;
-    margin-top: -10px;
-    margin-right: 8px;
+
+  .product-banner {
+    text-align: center;
+    margin-top: 60px;
+    background: linear-gradient(274.71deg, rgba(246, 240, 237, 0.4) 8.9%, #EDF2F6 92.49%);
+    border-radius: 15px;
+    padding: 30px;
   }
   
   /* DASHBOARD SECTION */
@@ -727,6 +786,13 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
     padding-top: 120px;
     padding-bottom: 120px;
     min-height: 100%;
+  }
+
+  @media screen and (max-width: 991px) {
+    .trust-container {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
   }
 
   .trust-container .col-lg-6:last-child {

@@ -6,6 +6,7 @@ import NetMindedDashboardImg from '../images/NetMinded_Dashboard.svg'
 import NetMindedPTIImg from '../images/NetMinded_Mike_Bohndiek.svg'
 import NetMindedTriangleImg from '../images/NetMinded_Paul_Anslow.svg'
 import NetMindedGrowImg from '../images/NetMinded_Llew_Nicholls.svg'
+import NetMindedAppDashImg from '../images/NetMinded_App_Dashboard.svg'
 import { useState } from 'react'
 import { openPopupWidget } from 'react-calendly'
 import { Waypoint } from 'react-waypoint'
@@ -121,33 +122,33 @@ const IndexPage = () => {
                     </div>
                 </div>
             </div>
-            <div id="productSection" className="app-container">
+            <div id="productSection" className="product-container">
                 <div className="container">
                     <div className="row">
                         <div className="col-12">
                             <h5 className="text-accent">How Do We Do All of This?</h5>
+                            <p><span>We do this with our simple to use web Dashboard and mobile App (available on both iOS and Android).</span></p>
                             <hr />
                         </div>
                     </div>
-                </div>
-                <div className="app-container-sub">
-                    <div className="container">
-                        <div className='row'>
-                            <div className="col-lg-5">
-                                <div className="app-image">
-                                    <img src={NetMindedAppImg} alt="NetMinded App" />
+                    <div className="row">
+                        <div className="col-lg-6">
+                            <div className="product-image-container">
+                                <div className="product-image">
+                                    <img src={NetMindedAppDashImg} alt="NetMinded App and Dashboard" />
                                 </div>
                             </div>
-                            <div className="col-lg-7 app-text">
-                            <p><span>We do this with our simple to use web Dashboard and mobile App (available on both iOS and Android).</span></p>
-                                <br />
-                                <p>We’ve built a customer support platform to help you better assist your stakeholders, and to save you time and money.
-                                   Our App and web Dashboard gives a full view of customer connection and service state. Use it to automate message delivery for common problems and send group targeted messaging (Is it just me?). </p>
-                                <br />
-                                <p>Information is communicated through a jargon free interface using tiles along with red, amber and green colours to indicate service status. </p>
-                                <br />
-                                <p>NetMinded is available for same day setup at a low monthly cost which scales according to customer acquisition. The App and Dashboard can carry your branding, and additional services can be readily developed and integrated to meet your specific needs.</p>                              
-                            </div>
+                        </div>
+                        <div className="col-lg-6 product-text">
+                            <p>We’ve built a customer support platform to help you better assist your stakeholders, and to save you time and money.
+                                Our App and web Dashboard gives a full view of customer connection and service state. Use it to automate message delivery for common problems and send group targeted messaging (Is it just me?). </p>
+                            <br />
+                            <p>Information is communicated through a jargon free interface using tiles along with red, amber and green colours to indicate service status. </p>                             
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-12">
+                            <p className="product-banner"><span>NetMinded is available for same day setup at a low monthly cost which scales according to customer acquisition. The App and Dashboard can carry your branding, and additional services can be readily developed and integrated to meet your specific needs.</span></p> 
                         </div>
                     </div>
                 </div>
