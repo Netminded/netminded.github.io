@@ -41,10 +41,10 @@ function Footer() {
                     <div className='col-md-2'>
                         <h5>Support</h5>
                         <ul>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="https://forms.clickup.com/20532630/f/kjkcp-548/3BQZVT0C3LE05OLX0X" target="_blank" rel="noreferrer">Contact</a></li>
                             <li><a href="https://netminded.freshdesk.com/support/home" target="_blank" rel="noreferrer">FAQs</a></li>
                             {/* <li><a href="#">Guides</a></li> */}
-                            <li><a href="#">Open Ticket</a></li>
+                            <li><a href="https://netminded.freshdesk.com/support/tickets/new" target="_blank" rel="noreferrer">Open Ticket</a></li>
                             {/* <li><a href="#">Status</a></li> */}
                         </ul>
                     </div>
