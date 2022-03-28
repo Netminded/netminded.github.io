@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `NetMinded · Create Innovative Customer Support Applications`,
+    title: `NetMinded · Develop a Resilient Support Process With NetMinded`,
     shortTitle: `NetMinded`,
     siteUrl: `https://netminded.co.uk`,
     titleTemplate: `%s · NetMinded`,
     description:
-      `NetMinded automates your customer support and reduces the cost of scaling your business.`,
+      `Protect your reputation and reduce operational costs by sharing status information with the right stakeholders at the right time.`,
     image: `/netminded-og-image.jpg`,
     keywords: `Status,Services,Monitors,Internet,WiFi,Network,IT,Branded,Support,Productivity,NetMinder,NetMinded`,
     maskedIcon: `/safari-pinned-tab.svg`,
