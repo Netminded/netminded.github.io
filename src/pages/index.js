@@ -40,7 +40,7 @@ const IndexPage = () => {
   const [testiMonialGrow, setTestiMonialGrow] = useState(false)
   const [testiMonialTriangle, setTestiMonialTriangle] = useState(false)
   return (
-    <Layout isArticle={false} isHero={isHero} scrollToComm={scrollToComm}>
+    <Layout isArticle={false} isHero={isHero}>
       <div className="hero-container">
                 <div className="hero-container-sub">
                     <div className="container">

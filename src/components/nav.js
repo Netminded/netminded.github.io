@@ -8,7 +8,7 @@ const toggleNav = (e, setShowCollapsedNav, showCollapsedNav) => {
     setShowCollapsedNav(!showCollapsedNav)
 }
 
-const Nav = ({simpleNav, isHero, scrollToComm }) => {
+const Nav = ({simpleNav, isHero}) => {
     const [showCollapsedNav, setShowCollapsedNav] = useState(false)
     return (
         <nav className={`navbar fixed-top navbar-expand-xl navbar-dark ${isHero ? "menu-scrolling-hero" : "menu-scrolling-content"}`}>
@@ -23,7 +23,7 @@ const Nav = ({simpleNav, isHero, scrollToComm }) => {
             <div className={`collapse navbar-collapse nav-collapse ${showCollapsedNav ? "show" : ""}`} id="navbarCollapse">
                 {!simpleNav ? <ul className="navbar-nav ms-auto">
                     <li className="nav-item">
-                        <a className="nav-link text-accent" href="#" onClick={(e) => scrollToComm(e)}>Solutions</a>
+                        <Link className="nav-link text-accent" to="/features">Features</Link>
                     </li>
                     <li className="nav-item">
                         <Link className="nav-link text-accent" to="/blog">Blog</Link>
