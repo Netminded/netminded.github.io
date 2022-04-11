@@ -23,6 +23,10 @@ module.exports = {
         social: `https://www.linkedin.com/in/ross-loveridge-65159619b`,
       },
       {
+        name: `Tom Collins`,
+        social: `https://www.linkedin.com/company/40932026`,
+      },
+      {
         name: `NetMinded`,
         social: `https://www.linkedin.com/company/40932026`,
       },
