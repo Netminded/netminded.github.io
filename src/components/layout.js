@@ -4,11 +4,11 @@ import Footer from './footer'
 import SEO from './seo'
 import CookieBanner from './cookies'
 
-const Layout = ({ pTitle, pDescription, pKeywords, pImage, isArticle, simpleNav, isHero, scrollToComm, children }) => {
+const Layout = ({ pTitle, pDescription, pKeywords, pImage, isArticle, simpleNav, isHero, children }) => {
   return (
     <>
       <SEO title={pTitle} description={pDescription} image={pImage} article={isArticle} keywords={pKeywords} />
-      <Nav simpleNav={simpleNav} isHero={isHero} scrollToComm={scrollToComm} />
+      <Nav simpleNav={simpleNav} isHero={isHero} />
       <main>
         {children}
         <Footer />
