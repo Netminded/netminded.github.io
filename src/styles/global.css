@@ -1662,9 +1662,15 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
   margin-bottom: 50px;
 }
 
-.team-profile {
+.team-container {
   margin-bottom: 15px;
   text-align: center;
+}
+
+@media screen and (max-width: 991px) {
+  .team-container .col-md-6 {
+    margin-bottom: 30px;
+  }
 }
 
 .team-profile-img-container {

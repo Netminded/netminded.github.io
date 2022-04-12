@@ -62,7 +62,7 @@ const FeaturesPage = () => {
                             <h6>Dependencies View and Editor</h6>
                             <p><span>Aid your support staff with our dependencies view and editor.</span></p> 
                             <hr />
-                            <p>Our platform gives added clarity to any service faults by showing what each monitor is dependant on. Easily identify which part of a service has gone down — your support team will be able to spot the fault immediately, esculate the issue to the right person and help minimise the costs associated with downtime immediately.</p>
+                            <p>Our platform gives added clarity to any service faults by showing what each monitor is dependant on. Easily identify which part of a service has gone down — your support team will be able to spot the fault immediately, escalate the issue to the right person and help minimise the costs associated with downtime immediately.</p>
                         </div>
                     </div>
                     <div className="row mb-5">

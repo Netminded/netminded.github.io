@@ -29,6 +29,9 @@ const Nav = ({simpleNav, isHero}) => {
                         <Link className="nav-link text-accent" to="/blog">Blog</Link>
                     </li>
                     <li className="nav-item">
+                        <Link className="nav-link text-accent" to="/About">About</Link>
+                    </li>
+                    <li className="nav-item">
                         <a className="nav-link text-accent" href="https://forms.clickup.com/20532630/f/kjkcp-548/3BQZVT0C3LE05OLX0X" target="_blank" rel="noreferrer">Contact</a>
                     </li>
                     <li>
