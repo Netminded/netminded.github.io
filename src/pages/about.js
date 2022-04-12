@@ -19,7 +19,7 @@ const AboutPage = () => {
                 <div className="container">
                     <div className="row about-content mb-5">
                         <div className="col-lg-6">
-                            <p><span>NetMinded was founded in 2018 when we established there was a lack of transparency around status information within customer support and between stakeholders. We found that status information is often only accessible to just a couple of individuals leaving many others in the dark. Partnering with small ISP's and MSP's we devised a goal and a solution to make status information more accessible and transparent.</span></p>
+                            <p><span>NetMinded was founded in 2018 when we established there was a lack of transparency around status information. We discovered this commonly occured within customer support and between stakeholders — with status information often only being accessible to just a couple of individuals, leaving many others in the dark. Partnering with small ISP's and MSP's we devised a goal and a solution to make status information more accessible and transparent.</span></p>
                             <p>Fast forward to today and our initial goal has been realised resulting in a web Dashboard with multiple features and integrations, companion Apps on iOS and Android along with a full pipeline of future developments.</p>
                         </div>
                         <div className="offset-lg-1 col-lg-5">
