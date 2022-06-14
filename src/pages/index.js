@@ -22,7 +22,7 @@ import {
 import Cta from '../components/cta'
 
 const launchCalendar = (e) => {
-  const calURL = 'https://calendly.com/seethru/seethru-demo'
+  const calURL = 'https://calendly.com/netminded/seethru-demo'
   e.preventDefault()
   openPopupWidget({url: calURL })
 }

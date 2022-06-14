@@ -25,13 +25,13 @@ const FeaturesPage = () => {
             <Waypoint onEnter={() => setIsHero(true)} onLeave={() => setIsHero(false)} topOffset={100} />
             <div className="features-container">
                 <div className="container">
-                    <div className="row">
+                    {/* <div className="row">
                         <div className="col-12">
                             <div className="features-image">
                                 <img src={NetMindedAppDashImg} alt="NetMinded App and Dashboard" />
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                     <div className="row mb-5">
                         <div className="col-md-2">
                             <span className="features-icon"><FontAwesomeIcon icon={faGaugeHigh}/></span>

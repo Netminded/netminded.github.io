@@ -186,7 +186,7 @@ const PrivacyPage = () => {
                                         party for such purposes. You can exercise your right to prevent such
                                         processing at any time by contacting us at: 7a Triangle Centre, Kenn
                                         Road, Clevedon, North Somerset, BS21 6HX or
-                                        support@seethrunetworks.com.</p>
+                                        support[@]netminded.co.uk.</p>
 
                                     <p>Our site may, from time to time,
                                         contain links to and from the websites of our partner networks,
@@ -221,7 +221,7 @@ const PrivacyPage = () => {
                                     comments and requests regarding this privacy policy are welcomed and
                                     should be addressed to SeeThru Networks Ltd, 7a Triangle Centre, Kenn
                                     Road, Clevedon, North Somerset, BS21 6HX or
-                                    support@seethrunetworks.com.</p>
+                                    support[@]netminded.co.uk.</p>
                                 </div>
                             </div>
                         </div>

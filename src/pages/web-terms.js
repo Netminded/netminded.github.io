@@ -114,7 +114,7 @@ const WebTermsPage = () => {
 
                             <p>Our site must not be framed on any other site, nor may you create a link to any part of our site other than the home page. We reserve the right to withdraw linking permission without notice.</p>
 
-                            <p>If you wish to make any use of material on our site other than that set out above, please address your request to support@seethrunetworks.com.</p>
+                            <p>If you wish to make any use of material on our site other than that set out above, please address your request to support[@]netminded.co.uk.</p>
 
                             <br />
                             <br />
@@ -138,7 +138,7 @@ const WebTermsPage = () => {
                             <br />
 
                             <h4 className="text-accent">Your concerns</h4>
-                            <p>If you have any concerns about material which appears on our site, please contact support@seethrunetworks.com. We have the right and the ability to remove immediately from our site any material that is defamatory, offensive, abusive, harming, deceptive, threatening or otherwise illegal.</p>
+                            <p>If you have any concerns about material which appears on our site, please contact support[@]netminded.co.uk. We have the right and the ability to remove immediately from our site any material that is defamatory, offensive, abusive, harming, deceptive, threatening or otherwise illegal.</p>
 
                             <br />
                             <br />
