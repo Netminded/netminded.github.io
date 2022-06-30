@@ -1724,6 +1724,115 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
   }
 }
 
+/* ISP/MSP Pages */
+.isp-msp-container {
+  padding-top: 120px;
+  padding-bottom: 100px;
+}
+
+@media screen and (max-width: 991px) {
+  .isp-msp-container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.isp-msp-page-header {
+  background: linear-gradient(111.61deg, #2897F3 7.92%, #826EF5 55.99%) no-repeat;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.isp-msp-page-header h1 {
+  color: #FFFFFF;
+  font-weight: 800;
+  font-size: 44px;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+@media screen and (max-width: 1199px) {
+  .isp-msp-page-header h1 {
+      font-size: 38px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .isp-msp-page-header h1 {
+      font-size: 34px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .isp-msp-page-header h1 {
+      font-size: 26px;
+  }
+}
+
+.isp-msp-page-header h3 {
+  color: #FFFFFF;
+  font-size: 24px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  font-weight: 300;
+  line-height: 1.5;
+  font-family: "Karla", sans-serif;
+  text-transform: capitalize;
+}
+
+@media screen and (max-width: 600px) {
+  .isp-msp-page-header h3 {
+      font-size: 22px;
+  }
+}
+
+.isp-msp-container p {
+  font-size: 20px;
+  font-weight: 400;
+  color: #4C4D55;
+}
+
+.isp-msp-container p span {
+  font-weight: 600;
+}
+
+.isp-msp-container h6 {
+  font-size: 24px;
+  font-weight: 800;
+  color: #4C4D55;
+  margin-bottom: 15px;
+}
+
+.isp-msp-container .isp-msp-image, .isp-msp-container .isp-msp-image img {
+  width: 100%;
+} 
+
+@media screen and (max-width: 991px) {
+  .isp-msp-container .isp-msp-image {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .isp-msp-container .isp-msp-app-image {
+    margin-bottom: 50px;
+    width: 100%;
+  }
+  .isp-msp-container .isp-msp-app-image img {
+    width: 100%;
+  }
+}
+
+.isp-msp-container .text-last {
+  margin-top: 44px;
+}
+
+@media screen and (max-width: 991px) {
+  .isp-msp-container .text-last {
+    margin-top: 0;
+  }
+}
+
   
   /* Contact */
   .clickup-embed .inside-iframe {
