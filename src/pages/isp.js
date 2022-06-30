@@ -20,7 +20,7 @@ const IspPage = () => {
                     <div className="row mb-5">
                         <div className="col-lg-3">
                             <div className="isp-image-container text-center">
-                                <div className="isp-image">
+                                <div className="isp-msp-image">
                                     <img src={ISPCustomerImg} alt="WiFi Linking to ISP Customers" />
                                 </div>
                             </div>
@@ -44,7 +44,7 @@ const IspPage = () => {
                             <br />
                         </div>
                         <div className="col-lg-6">
-                            <div className="isp-app-image text-center">
+                            <div className="isp-msp-app-image text-center">
                                 <img src={NetMindedWhiteLabelAppImg} alt="NetMinded White Label App" />
                             </div>
                         </div>
@@ -53,7 +53,7 @@ const IspPage = () => {
                         <div className="col-lg-6">
                         <h6>Network Connection Testing</h6>
                             <p>The first thing a new customer typically does is run a speed test. However, speed tests are often unreliable as they don’t take the device, router or network capacity into account.</p>
-                            <p>So we built one from the ground up. It’s integrated into both the app and dashboard so your support team can remotely run tests, have full visibility of a clients’ connection, network, devices and router — enabling you to accurately test their connection.</p>
+                            <p>So we built one from the ground up. It’s integrated into both the app and dashboard so your support team can remotely run tests, have full visibility of a customers’ connection, network, devices and router — enabling you to accurately test their connection.</p>
                         </div>
                         <div className="col-lg-6">
                             <p className="text-last">Communicating speed test results in the context of the device, router type or network capacity is vital to reduce support resources, so we include contextual results explaining how many HD streams the customer could watch at once, how good their results are for their model of phone or how the results have been impacted by network capacity. Giving context sensitive advice to end users vastly reduces support calls.</p>

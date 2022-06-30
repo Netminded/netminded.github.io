@@ -1803,22 +1803,22 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
   margin-bottom: 15px;
 }
 
-.isp-msp-container .isp-image, .isp-msp-container .isp-image img {
+.isp-msp-container .isp-msp-image, .isp-msp-container .isp-msp-image img {
   width: 100%;
 } 
 
 @media screen and (max-width: 991px) {
-  .isp-msp-container .isp-image {
+  .isp-msp-container .isp-msp-image {
     margin-bottom: 50px;
   }
 }
 
 @media screen and (max-width: 991px) {
-  .isp-msp-container .isp-app-image {
+  .isp-msp-container .isp-msp-app-image {
     margin-bottom: 50px;
     width: 100%;
   }
-  .isp-msp-container .isp-app-image img {
+  .isp-msp-container .isp-msp-app-image img {
     width: 100%;
   }
 }

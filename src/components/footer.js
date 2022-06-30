@@ -29,7 +29,7 @@ function Footer() {
                         <a href="https://twitter.com/netmindeduk" target="_blank" rel="noreferrer">
                             <FontAwesomeIcon icon={faTwitter} />
                         </a>
-                        <a href="https://linkedin.com/company/seethrunetworks" target="_blank" rel="noreferrer">
+                        <a href="https://linkedin.com/company/getnetminded" target="_blank" rel="noreferrer">
                             <FontAwesomeIcon icon={faLinkedin} />
                         </a>
                         <a href="https://www.youtube.com/channel/UCMye-tTUwQfWAEJ2FQR1ofQ" target="_blank" rel="noreferrer">
