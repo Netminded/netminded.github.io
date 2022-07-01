@@ -115,6 +115,12 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
   .navbar {
     padding: 12px 1rem;
   }
+
+  @media screen and (max-width: 1199px) {
+    .navbar {
+      background: linear-gradient(111.61deg, #2897F3 7.92%, #826EF5 55.99%) no-repeat;
+    }
+  }
   
   .navbar-brand img {
     width: 160px;
@@ -224,6 +230,41 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
     .nav-btn {
         margin: 15px auto !important;
         width: 240px;
+    }
+  }
+
+  .dropdown-item {
+    color: #4C4D55;
+  }
+
+  .dropdown-item:hover {
+    color: #4C4D55;
+    background-color: #e0dbf7;
+  }
+
+  @media screen and (max-width: 1199px) {
+    .dropdown {
+      width: 200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .navbar-nav .dropdown-menu {
+      text-align: center;
+    }
+
+    .dropdown-menu {
+      background: transparent;
+      border: 0;
+    }
+
+    .dropdown-item {
+      color: #FFFFFF;
+    }
+
+    .dropdown-item:hover {
+      color: #FFFFFF;
+      background-color: transparent;
     }
   }
   

@@ -8,8 +8,14 @@ const toggleNav = (e, setShowCollapsedNav, showCollapsedNav) => {
     setShowCollapsedNav(!showCollapsedNav)
 }
 
+const toggleNavDropdown = (e, setShowDropdownNav, showDropdownNav) => {
+    e.preventDefault()
+    setShowDropdownNav(!showDropdownNav)
+}
+
 const Nav = ({simpleNav, isHero}) => {
     const [showCollapsedNav, setShowCollapsedNav] = useState(false)
+    const [showDropdownNav, setShowDropdownNav] = useState(false)
     return (
         <nav className={`navbar fixed-top navbar-expand-xl navbar-dark ${isHero ? "menu-scrolling-hero" : "menu-scrolling-content"}`}>
             <div className="me-auto tog-container">
@@ -24,6 +30,15 @@ const Nav = ({simpleNav, isHero}) => {
                 {!simpleNav ? <ul className="navbar-nav ms-auto">
                     <li className="nav-item">
                         <Link className="nav-link text-accent" to="/features">Features</Link>
+                    </li>
+                    <li className="nav-item dropdown" onMouseEnter={(e) => toggleNavDropdown(e, setShowDropdownNav, showDropdownNav)} onMouseLeave={(e) => toggleNavDropdown(e, setShowDropdownNav, showDropdownNav)}>
+                        <a className="nav-link text-accent dropdown-toggle" href="#" onClick={(e) => toggleNavDropdown(e, setShowDropdownNav, showDropdownNav)} id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Solutions
+                        </a>
+                        <div className={`dropdown-menu ${showDropdownNav ? "show" : ""}`} aria-labelledby="navbarDropdown">
+                            <Link className="dropdown-item" to="/isp">ISP White Label App</Link>
+                            <Link className="dropdown-item" to="/msp">MSP White Label App</Link>
+                        </div>
                     </li>
                     <li className="nav-item">
                         <Link className="nav-link text-accent" to="/blog">Blog</Link>
