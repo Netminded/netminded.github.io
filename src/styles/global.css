@@ -543,21 +543,20 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
     color: #826EF5;
   }
 
-  .communication-icon .fa-phone-slash {
+  .communication-icon .fa-clock-rotate-left {
     font-size: 32px;
     margin-top: 22px;
   }
 
-  .communication-icon .fa-user-check {
+  .communication-icon .fa-piggy-bank {
     font-size: 32px;
     margin-top: 22px;
-    margin-left: 5px;
+    margin-left: -1px;
   }
 
-  .communication-icon .fa-paper-plane {
+  .communication-icon .fa-star {
     font-size: 32px;
     margin-top: 22px;
-    margin-right: 5px;
   }
 
   .communication-container h6 {
@@ -913,19 +912,18 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
     color: #2897F3;
   }
 
-  .trust-icon .fa-hand-holding-dollar {
-    font-size: 32px;
-    margin-top: 22px;
-    margin-left: 3px;
-  }
-
   .trust-icon .fa-arrow-trend-down {
     font-size: 32px;
     margin-top: 22px;
     margin-left: 3px;
   }
 
-  .trust-icon .fa-user-plus {
+  .trust-icon .fa-hourglass-start {
+    font-size: 32px;
+    margin-top: 22px;
+  }
+
+  .trust-icon .fa-user-minus {
     font-size: 32px;
     margin-top: 22px;
     margin-left: 5px;

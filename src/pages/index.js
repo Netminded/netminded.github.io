@@ -12,12 +12,12 @@ import { openPopupWidget } from 'react-calendly'
 import { Waypoint } from 'react-waypoint'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
-  faPhoneSlash,
-  faUserCheck,
-  faPaperPlane,
-  faHandHoldingDollar,
   faArrowTrendDown,
-  faUserPlus
+  faHourglassStart,
+  faUserMinus,
+  faClockRotateLeft,
+  faPiggyBank,
+  faStar,
 } from '@fortawesome/free-solid-svg-icons'
 import Cta from '../components/cta'
 
@@ -47,8 +47,8 @@ const IndexPage = () => {
                         <div className="row">
                             <div className="col-lg-5">
                                 <div className="hero-content">
-                                    <h1>Develop a Resilient Support Process With NetMinded</h1>
-                                    <h3 className="dark-text"><span>Protect your reputation</span> and <span>reduce operational costs</span> by <span>sharing status information</span> with the right stakeholders at the right time.</h3>
+                                    <h1>Get More From Your Existing Monitoring Solution</h1>
+                                    <h3 className="dark-text"><span>Save time</span> and <span>protect your reputation</span> for service delivery. <span>Get better business outcomes</span> by <span>enhancing your existing monitoring data</span>.</h3>
                                     <div className="hero-cta">
                                         <a className="btn" href="#" onClick={(e) => scrollToComm(e)}>Learn More</a>
                                         <a className="btn hero-btn-last" href="" onClick={(e) => launchCalendar(e)}>Request Demo</a>
@@ -783,26 +783,26 @@ const IndexPage = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-12 communication-header">
-                            <h5 className="text-accent">Communication Made Easy</h5>
-                            <p><span>No matter what the situation, stay in control. Share status information and updates when you want and with whoever you want — your customers, teams, suppliers, investors, partners and more.</span></p>
+                            <h5 className="text-accent">Enhanced Service Assurance</h5>
+                            <p><span>No matter what the situation, stay in control. Connect your I.T. and Network monitoring systems to more stakeholders. Share status information when you want and with whoever you want. Keep your customers, teams, suppliers, partners and more updated.</span></p>
                             <hr />
                         </div>
                     </div>
                     <div className="row">
                         <div className="col-lg-4">
-                            <span className="communication-icon"><FontAwesomeIcon icon={faPhoneSlash}/></span>
-                            <h6>Reduce Support Calls</h6>
-                            <p>With 24/7 status information and timely notifications your stakeholders have less reasons to call you.</p>
+                            <span className="communication-icon"><FontAwesomeIcon icon={faClockRotateLeft}/></span>
+                            <h6>Save Time</h6>
+                            <p>Reduce reactive inbound/outbound service related contact from your end users and partners.</p>
                         </div>
                         <div className="col-lg-4">
-                            <span className="communication-icon communication-icon--middle"><FontAwesomeIcon icon={faUserCheck}/></span>
-                            <h6>Escalate to the Right Person</h6>
-                            <p>With a full picture of your status information and a dependency view it’s simple to determine where issues originate. </p>
+                            <span className="communication-icon communication-icon--middle"><FontAwesomeIcon icon={faPiggyBank}/></span>
+                            <h6>Save Money</h6>
+                            <p>Reduce the time spent on diagnostics for you, your end users and your partners.</p>
                         </div>
                         <div className="col-lg-4">
-                            <span className="communication-icon"><FontAwesomeIcon icon={faPaperPlane}/></span>
-                            <h6>Automate Communication</h6>
-                            <p>With automatic status message delivery and custom first-line prompts your support team save valuable time. </p>
+                            <span className="communication-icon"><FontAwesomeIcon icon={faStar}/></span>
+                            <h6>Build Reputation</h6>
+                            <p>Communicate in real time and be transparent. Be a better partner than your competitors!</p>
                         </div>
                     </div>
                 </div>
@@ -811,15 +811,15 @@ const IndexPage = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-12">
-                            <h5 className="text-accent">Reduce Strain on Your Support Team</h5>
-                            <p><span>Use NetMinded to build your automated customer support solution. Drive the real-time customer support conversation with your existing network management systems. Add information from Cloud controller APIs, PRTG, HP Aruba, Nagios, UniFi, AAA systems, Ethernet Connectivity, Fault Management and more.</span></p>
+                            <h5 className="text-accent">More Automated Responses, Fewer Unplanned Reactions</h5>
+                            <p><span>Use NetMinded to build a responsive Service Assurance environment. Build partnerships between your internal and external stakeholder groups. Reduce unplanned, reactive communication between stakeholders which wastes time and creates friction.</span></p>
                         </div>
                     </div>
                     <div className="row">
                         <div className="col-lg-6">
-                            <p>Our easy to use platform enables you to create a custom picture of your status information for your team and stakeholders. You can also use it to model your key services to work through common fault scenarios.</p>
-                            <p>Quickly identify where a service issue is using our dependencies view (which automates second-line support) and boost response and resolution time.</p>
-                            <p>Diagnose service issues and alert your customers quickly and en-masse. In addition, resolve speed-test issues with our comprehensive router/device test framework (supporting TR143, iPerf etc).</p>
+                            <p>Create custom pictures of your status information for all of your stakeholders. You can also use NetMinded to model your key services to work through common fault scenarios.</p>
+                            <p>Identify where a service issue is using our Dependencies view. Automate support input from specialist second-line support teams. Reduce response and resolution times.</p>
+                            <p>Diagnose service issues and alert your customers individually or en-masse, in real time. Drive the real-time customer support conversation with your existing network management systems.</p>
                             {/* <Link className="btn" to="/integrations">Integrations</Link>
                             <Link className="btn" to="/test-framework">Test Framework</Link> */}
                         </div>
@@ -851,15 +851,18 @@ const IndexPage = () => {
                             </div>
                         </div>
                         <div className="col-lg-6 product-text">
-                            <p>We’ve built a customer support platform to help you better assist your stakeholders, and to save you time and money.
-                                Our App and web Dashboard gives a full view of customer connection and service state. Use it to automate message delivery for common problems and send group targeted messaging — answer the common customer question 'Is it just me?'. </p>
+                            <p>Use our platform to supercharge your monitoring data.</p>
                             <br />
-                            <p>Information is communicated through a jargon free interface using tiles along with red, amber and green colours to indicate service status. </p>                             
+                            <p>Translate it so that it has meaning for the different stakeholder groups it needs to serve.</p>
+                            <br />
+                            <p>Stream it to those stakeholder groups in a controlled manner.</p>      
+                            <br />
+                            <p>Automate responses to the data such as outbound messaging that help you meet you business objectives.</p>                       
                         </div>
                     </div>
                     <div className="row">
                         <div className="col-12">
-                            <p className="product-banner"><span>NetMinded is available for same day setup at a low monthly cost which scales according to customer acquisition. The App and Dashboard can carry your branding, and additional services can be readily developed and integrated to meet your specific needs.</span></p> 
+                            <p className="product-banner"><span>NetMinded is available for same day setup at a low monthly cost which scales according to requirements. The App and Dashboard can carry your branding, and additional services can be readily developed and integrated to meet your specific needs.</span></p> 
                         </div>
                     </div>
                 </div>
@@ -868,12 +871,12 @@ const IndexPage = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-6">
-                            <h5 className="text-accent">Give Your Customers a Reason to Trust You</h5>
-                            <p><span>The NetMinded platform provides clarity. Your customers are more empowered which promotes a healthy relationship between you and them.</span></p>
+                            <h5 className="text-accent">Be Easier to Work With. Build Reputation. Reduce Costs.</h5>
+                            <p><span>The NetMinded platform provides clarity. Your teams, partners and customers are more empowered. This builds your reputation as a reliable partner that is easy to do business with.</span></p>
                             <div className="trust-items">
-                                <h6><span className="trust-icon"><FontAwesomeIcon icon={faHandHoldingDollar}/></span><span className="trust-item-text">Prove your reliability and show constant value for service</span></h6>
-                                <h6><span className="trust-icon trust-icon--middle"><FontAwesomeIcon icon={faArrowTrendDown}/></span><span className="trust-item-text">Reduce customer churn</span></h6>
-                                <h6><span className="trust-icon"><FontAwesomeIcon icon={faUserPlus}/></span><span className="trust-item-text">Focus on acquisition rather than retainment</span></h6>
+                                <h6><span className="trust-icon"><FontAwesomeIcon icon={faArrowTrendDown}/></span><span className="trust-item-text">NetMinded reduces diagnostic times for the most common wholesale FTTH faults from days to minutes.</span></h6>
+                                <h6><span className="trust-icon trust-icon--middle"><FontAwesomeIcon icon={faHourglassStart}/></span><span className="trust-item-text">In the UK, OFCOM use ISP service desk call waiting time as metric of quality.</span></h6>
+                                <h6><span className="trust-icon"><FontAwesomeIcon icon={faUserMinus}/></span><span className="trust-item-text">Connectwise report that 20% of MSPs face staff retention problems, with 30% focusing on deploying productivity tools.</span></h6>
                             </div>
                             <a className="btn" href="" onClick={(e) => launchCalendar(e)}>Request Demo</a>
                         </div>
