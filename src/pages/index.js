@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import { StaticImage } from 'gatsby-plugin-image'
 import NetMindedHero from '../images/NetMinded_Translate_Share_Automate.svg'
+import NetMindedHeroSm from '../images/NetMinded_Hero_Small.svg'
 import NetMindedDepsImg from '../images/NetMinded_Dependencies.svg'
 import NetMindedPTIImg from '../images/NetMinded_Mike_Bohndiek.svg'
 import NetMindedTriangleImg from '../images/NetMinded_Paul_Anslow.svg'
@@ -59,7 +60,8 @@ const IndexPage = () => {
                             <div className="col-lg-7">
                                 <div className="hero-image">
                                     <div className="hero-image-container">
-                                        <img src={NetMindedHero} alt="NetMinded - Translate, Share and Automate"/>
+                                        <img className="d-block d-sm-block d-md-block d-lg-none d-xl-none" src={NetMindedHeroSm} alt="NetMinded - Translate, Share and Automate"/>
+                                        <img className="d-none d-sm-none d-md-none d-lg-block d-xl-block" src={NetMindedHero} alt="NetMinded - Translate, Share and Automate"/>
                                     </div>
                                 </div>
                             </div>
