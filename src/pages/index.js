@@ -1,13 +1,9 @@
 import * as React from 'react'
-import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import { StaticImage } from 'gatsby-plugin-image'
 import NetMindedHero from '../images/NetMinded_Translate_Share_Automate.svg'
 import NetMindedHeroSm from '../images/NetMinded_Hero_Small.svg'
 import NetMindedDepsImg from '../images/NetMinded_Dependencies.svg'
-import NetMindedPTIImg from '../images/NetMinded_Mike_Bohndiek.svg'
-import NetMindedTriangleImg from '../images/NetMinded_Paul_Anslow.svg'
-import NetMindedGrowImg from '../images/NetMinded_Llew_Nicholls.svg'
 import NetMindedAppDashImg from '../images/NetMinded_App_Dashboard.svg'
 import { useState } from 'react'
 import { openPopupWidget } from 'react-calendly'
@@ -21,6 +17,7 @@ import {
   faPiggyBank,
   faStar,
 } from '@fortawesome/free-solid-svg-icons'
+import TestimonialSwiper from '../components/testimonial-slider'
 import Cta from '../components/cta'
 
 const launchCalendar = (e) => {
@@ -36,11 +33,20 @@ const scrollToComm = (e) => {
      commSection.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
+const selectedTest = (swiper, index) => {
+    if (swiper?.current?.swiper?.slideTo) {
+        swiper.current.swiper.slideTo(index, 500)
+    }
+}
+
 const IndexPage = () => {
   const [isHero, setIsHero] = useState(true)
-  const [testiMonialPTI, setTestiMonialPTI] = useState(true)
-  const [testiMonialGrow, setTestiMonialGrow] = useState(false)
-  const [testiMonialTriangle, setTestiMonialTriangle] = useState(false)
+  const [testimonialSlider, setTestimonialSlider] = useState(null) 
+  const [testimonialPosition, setTestimonialPosition] = useState(0) 
+testimonialSlider?.current?.swiper?.on('slideChange', () => {
+    setTestimonialPosition(testimonialSlider?.current?.swiper?.realIndex)
+  })
+
   return (
     <Layout isArticle={false} isHero={isHero}>
       <div className="hero-container">
@@ -424,42 +430,19 @@ const IndexPage = () => {
                                     <h1 className="text-accent">What Our Customers Think</h1>
                                     <h3>Our customers are implementing improved support strategies with NetMinded.</h3>
                                     <div className="testimonial-selector">
-                                        <a href="#" onClick={(e) => {e.preventDefault(); setTestiMonialPTI(true); setTestiMonialGrow(false); setTestiMonialTriangle(false)}}><span className={`${testiMonialPTI ? `testimonial-selector--active` : ``}`}></span></a>
-                                        <a href="#" onClick={(e) => {e.preventDefault(); setTestiMonialPTI(false); setTestiMonialGrow(true); setTestiMonialTriangle(false)}}><span className={`${testiMonialGrow ? `testimonial-selector--active` : ``}`}></span></a>
-                                        <a href="#" onClick={(e) => {e.preventDefault(); setTestiMonialPTI(false); setTestiMonialGrow(false); setTestiMonialTriangle(true)}}><span className={`${testiMonialTriangle ? `testimonial-selector--active` : ``}`}></span></a>
+                                        <a href="javascript:void(0)" onClick={() => {selectedTest(testimonialSlider, 0)}}><span className={`${testimonialPosition === 0 ? `testimonial-selector--active` : ``}`}></span></a>
+                                        <a href="javascript:void(0)" onClick={() => {selectedTest(testimonialSlider, 1)}}><span className={`${testimonialPosition === 1 ? `testimonial-selector--active` : ``}`}></span></a>
+                                        <a href="javascript:void(0)" onClick={() => {selectedTest(testimonialSlider, 2)}}><span className={`${testimonialPosition === 2 ? `testimonial-selector--active` : ``}`}></span></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div className="col-lg-8 testimonial-text">
-                            {testiMonialPTI && <div>
-                                <div className="testimonial-image">
-                                    <img src={NetMindedPTIImg} alt="Mike Bohndiek - PTI Digital" />
-                                </div>
-                                <p>Leveraging the NetMinded platforms, PTI are able to deliver impactful, relevant and clear communication. NetMinded really enables complex IT messages to be translated into understandable – and usable – communications. This enables a focus on the most important tasks and keenly reduces speed of resolution in business-critical moments.</p>
-                                <hr />
-                                <p className="text-large-accent">Mike Bohndiek, PTI Digital</p>
-                            </div>}
-                            {testiMonialGrow && <div>
-                                <div className="testimonial-image">
-                                    <img src={NetMindedGrowImg} alt="Llew Nicholls - Grow Marketing / Grow Coffee House" />
-                                </div>
-                                <p>As with most businesses, we rely on robust internet connectivity and with 3 businesses on one site that adds to the intricacy. With NetMinded we resolved a complex service issue affecting our network. Having a view of the service status across many providers was key in the speedy resolution of this issue.</p>
-                                <hr />
-                                <p className="text-large-accent">Llew Nicholls, Grow Marketing / Grow Coffee House</p>
-                            </div>}
-                            {testiMonialTriangle && <div>
-                                <div className="testimonial-image">
-                                    <img src={NetMindedTriangleImg} alt="Paul Anslow - Triangle Networks" />
-                                </div>
-                                <p>We’re offering this platform to our customers to help them provide the very best service to their end-users, giving end users control of their services for the first time ever. The NetMinded app allows users to know exactly which service is causing an issue through a simple notification, allowing the problem to be resolved in a fraction of the time.</p>
-                                <hr />
-                                <p className="text-large-accent">Paul Anslow, Triangle Networks</p>
-                            </div>}
+                            <TestimonialSwiper setTestimonialSlider={setTestimonialSlider} />
                             <ul className="testimonial-logos">
-                                <li><a href="#" onClick={(e) => {e.preventDefault(); setTestiMonialPTI(true); setTestiMonialGrow(false); setTestiMonialTriangle(false)}}><StaticImage src='../images/PTI_NetMinded.png' /></a></li>
-                                <li><a href="#" onClick={(e) => {e.preventDefault(); setTestiMonialPTI(false); setTestiMonialGrow(true); setTestiMonialTriangle(false)}}><StaticImage src='../images/Grow_Marketing_NetMinded.png' /></a></li>
-                                <li><a href="#" onClick={(e) => {e.preventDefault(); setTestiMonialPTI(false); setTestiMonialGrow(false); setTestiMonialTriangle(true)}}><StaticImage src='../images/Triangle_Networks_NetMinded.png' /></a></li>
+                                <li><a href="javascript:void(0)" onClick={() => {selectedTest(testimonialSlider, 0)}}><StaticImage src='../images/PTI_NetMinded.png' /></a></li>
+                                <li><a href="javascript:void(0)" onClick={() => {selectedTest(testimonialSlider, 1)}}><StaticImage src='../images/Grow_Marketing_NetMinded.png' /></a></li>
+                                <li><a href="javascript:void(0)" onClick={() => {selectedTest(testimonialSlider, 2)}}><StaticImage src='../images/Triangle_Networks_NetMinded.png' /></a></li>
                             </ul>
                         </div>
                     </div>
