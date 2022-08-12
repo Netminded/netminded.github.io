@@ -7,14 +7,14 @@ import Pagination from '../components/blog/pagination'
 import Tags from '../components/blog/tags'
 import AuthorSection from '../components/blog/author'
 import { Waypoint } from 'react-waypoint'
+import SEO from '../components/seo'
 
 const BlogPage = ({data, pageContext}) => {
     const [isHero, setIsHero] = useState(true)
     const {currentPage, numPages} = pageContext
     const firstPost = data.allMdx.nodes[0]
-    const blogKeywords = "NetMinded, Blog, News, Articles, Internet, Networking, Status, Communication"
     return (
-        <Layout pTitle="Blog" pDescription="Articles, news, musings and more" pKeywords={blogKeywords} isArticle={false} isHero={isHero} simpleNav={true}>
+        <Layout isHero={isHero} simpleNav={true}>
             <header className="blog-page-header">
                 <h1>NetMinded Blog</h1>
                 <h3>Articles, news, musings and more</h3>
@@ -131,3 +131,7 @@ export const query = graphql`
 `
 
 export default BlogPage
+
+export const Head = () => (
+    <SEO title="Blog" description="Articles, news, musings and more" keywords="NetMinded, Blog, News, Articles, Internet, Networking, Status, Communication" article={false} />
+)

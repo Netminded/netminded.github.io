@@ -19,6 +19,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import TestimonialSwiper from '../components/testimonial-slider'
 import Cta from '../components/cta'
+import SEO from '../components/seo'
 
 const launchCalendar = (e) => {
   const calURL = 'https://calendly.com/netminded/seethru-demo'
@@ -48,7 +49,7 @@ testimonialSlider?.current?.swiper?.on('slideChange', () => {
   })
 
   return (
-    <Layout isArticle={false} isHero={isHero}>
+    <Layout isHero={isHero}>
       <div className="hero-container">
                 <div className="hero-container-sub">
                     <div className="container">
@@ -454,3 +455,7 @@ testimonialSlider?.current?.swiper?.on('slideChange', () => {
 }
 
 export default IndexPage
+
+export const Head = () => (
+    <SEO article={false} />
+)
