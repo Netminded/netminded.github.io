@@ -321,6 +321,86 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
     margin-left: auto;
     margin-right: auto;
   }
+
+  #GreenTile {
+    animation: tile-opacity 7s ease-in infinite;
+    animation-delay: 2.5s;
+  }
+
+  #Automate {
+    clip-path: inset(0 0 0 100%);
+    animation: clip-line-left 7s ease-out infinite;
+    animation-delay: 3.5s;
+  }
+
+  #Notification {
+    clip-path: inset(0 0 0 100%);
+    animation: notification-animation 7s ease-out infinite;
+    animation-delay: 3.5s;
+  }
+
+  @keyframes tile-opacity {
+    0% {
+      /* opacity: 1; */
+      visibility: visible;
+    }
+    8% {
+      /* opacity: 0; */
+      visibility: hidden;
+    }
+    40% {
+      /* opacity: 1; */
+      visibility: hidden;
+    }
+    78% {
+      visibility: hidden;
+    }
+    83% {
+      /* opacity: 1; */
+      visibility: visible;
+    }
+    100% {
+      /* opacity: 1; */
+      visibility: visible;
+    }
+  }
+
+  @keyframes clip-line-left {
+    0% {
+      clip-path: inset(0 100% 100% 0);
+    }
+    8% {
+      clip-path: inset(0 0 0 0);
+    }
+    40% {
+      clip-path: inset(0 0 0 0);
+    }
+    90% {
+      clip-path: inset(0 100% 100% 0);
+    }
+    100% {
+      clip-path: inset(0 100% 100% 0);
+    }
+  }
+
+
+  @keyframes notification-animation {
+    0% {
+      clip-path: inset(0 100% 0 0);
+    }
+    8% {
+      clip-path: inset(0 0 0 0);
+    }
+    40% {
+      clip-path: inset(0 0 0 0);
+    }
+    80% {
+      clip-path: inset(0 100% 0 0);
+    }
+    100% {
+      clip-path: inset(0 100% 0 0);
+    }
+  }
   
   .hero-container h1 {
     color: #FFFFFF;
