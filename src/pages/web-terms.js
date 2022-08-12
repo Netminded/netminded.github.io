@@ -1,9 +1,10 @@
 import * as React from 'react'
 import Layout from '../components/layout'
+import SEO from '../components/seo'
 
 const WebTermsPage = () => {
     return (
-        <Layout pTitle="Website Terms of Use" isArticle={false} isHero={true} simpleNav={true}>
+        <Layout isHero={true} simpleNav={true}>
             <div className="policy">
                 <div className="container">
                     <div className="policies-container">
@@ -152,3 +153,7 @@ const WebTermsPage = () => {
 }
 
 export default WebTermsPage
+
+export const Head = () => (
+    <SEO title="Website Terms of Use" article={false} />
+)

@@ -1,9 +1,10 @@
 import * as React from 'react'
 import Layout from '../components/layout'
+import SEO from '../components/seo'
 
 const PrivacyPage = () => {
     return (
-        <Layout pTitle="Privacy Policy" isArticle={false} isHero={true} simpleNav={true}>
+        <Layout isHero={true} simpleNav={true}>
             <div className='policy'>
                         <div className="container">
                             <div className="policies-container">
@@ -231,3 +232,7 @@ const PrivacyPage = () => {
 }
 
 export default PrivacyPage
+
+export const Head = () => (
+    <SEO title="Privacy Policy" article={false} />
+)

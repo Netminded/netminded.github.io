@@ -1,4 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css"
+import "swiper/css"
 import "./src/styles/normalize.css"
 import "./src/styles/global.css"
 import "./src/styles/blog.css"

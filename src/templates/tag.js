@@ -11,13 +11,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faChevronRight
 } from '@fortawesome/free-solid-svg-icons'
+import SEO from '../components/seo'
 
 const Tags = ({ pageContext, data }) => {
   const [isHero, setIsHero] = useState(true)
   const { tag, currentPage, numPages } = pageContext
   const { edges, totalCount } = data.allMdx
   return (
-    <Layout pTitle={`Tag: ${tag}`} isArticle={false} isHero={isHero} simpleNav={true}>
+    <Layout isHero={isHero} simpleNav={true}>
       <header className="blog-page-header">
         <h1>{tag}</h1>
         <h3>{`${totalCount} article${totalCount === 1 ? "" : "'s"} tagged with "${tag}"`}</h3>
@@ -115,3 +116,7 @@ export const pageQuery = graphql`
     }
   }
 `
+
+export const Head = ({pageContext}) => (
+  <SEO title={`Tag: ${pageContext.tag}`}  article={false} />
+)

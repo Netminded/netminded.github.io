@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faChevronRight
 } from '@fortawesome/free-solid-svg-icons'
+import SEO from '../components/seo'
 
 const TagsPage = ({data, pageContext}) => {
   const [isHero, setIsHero] = useState(true)
@@ -19,7 +20,7 @@ const TagsPage = ({data, pageContext}) => {
   const tags = tagsNum < limit ? group.slice(skip, tagsNum + skip) : group.slice(skip, limit + skip)
 
   return (
-    <Layout pTitle="Tags" pDescription="Discover more articles and content from NetMinded" isHero={isHero} isArticle={false} simpleNav={true}>
+    <Layout isHero={isHero} simpleNav={true}>
       <header className="blog-page-header">
         <h1>Tags</h1>
         <h3>Looking to read more?</h3>
@@ -77,3 +78,7 @@ export const pageQuery = graphql`
     }
   }
 `
+
+export const Head = () => (
+  <SEO title="Tags" description="Discover more articles and content from NetMinded" article={false} />
+)

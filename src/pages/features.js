@@ -13,11 +13,12 @@ import {
         faTable,
         faWindowMaximize, 
         faMobile } from '@fortawesome/free-solid-svg-icons'
+import SEO from '../components/seo'
 
 const FeaturesPage = () => {
     const [isHero, setIsHero] = useState(true)
     return (
-        <Layout pTitle="Features" pDescription="A Comprehensive Test Framework, White Label App, Integrations & so much more" isHero={isHero} isArticle={false}>
+        <Layout isHero={isHero}>
             <header className="features-page-header">
                 <h1>NetMinded Features</h1>
                 <h3>A Comprehensive Test Framework, White Label App, Integrations & so much more</h3>
@@ -118,3 +119,7 @@ const FeaturesPage = () => {
 }
 
 export default FeaturesPage
+
+export const Head = () => (
+    <SEO title="Features" description="A Comprehensive Test Framework, White Label App, Integrations & so much more" article={false} />
+)

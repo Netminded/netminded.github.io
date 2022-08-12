@@ -10,21 +10,20 @@ import AfterPostEntry from '../components/blog/post-after-entry'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import { Disqus } from 'gatsby-plugin-disqus'
+import SEO from '../components/seo'
 
 const BlogPost = ({data}) => {
     const fmatter = data.mdx.frontmatter
     const heroImage = getImage(fmatter.hero_image)
     const tags = fmatter.tags
-    const tagsList = `${tags}`
     const { previous, next } = data
     let disqusConfig = {
         url: `${data.site.siteMetadata.siteUrl}${data.mdx.fields.slug}`,
         identifier: data.mdx.id,
         title: fmatter.title,
     }
-    console.log(data.mdx.fields.slug)
     return (
-        <Layout pTitle={fmatter.title} pDescription={data.mdx.excerpt} pImage={getSrc(fmatter.hero_image)} pKeywords={tagsList} isArticle={true} simpleNav={true} >
+        <Layout simpleNav={true} >
             <div className="container">
                 <div className="row">
                     <article className="offset-lg-2 col-lg-8 col-sm-12 blog-post" itemScope itemType="http://schema.org/Article">
@@ -120,3 +119,7 @@ export const query = graphql`
 `
 
 export default BlogPost
+
+export const Head = ({data}) => (
+    <SEO title={data.mdx.frontmatter.title} description={data.mdx.excerpt} image={getSrc(data.mdx.frontmatter.hero_image)} article={true} keywords={`${data.mdx.frontmatter.tags}`} />
+)

@@ -5,11 +5,12 @@ import MSPCustomerImg from '../images/NetMinded_MSP.svg'
 import Cta from '../components/cta'
 import { useState } from 'react'
 import { Waypoint } from 'react-waypoint'
+import SEO from '../components/seo'
 
 const MspPage = () => {
     const [isHero, setIsHero] = useState(true)
     return (
-        <Layout pTitle="White-Label Support App For MSPs" pDescription="The NetMinded app and support tools fully automate fault diagnosis and customer communications to help IT partners and MSPs provide a more professional service." isHero={isHero} isArticle={false}>
+        <Layout isHero={isHero}>
             <header className="isp-msp-page-header">
                 <h1>White-Label Support App For MSPs</h1>
                 <h3>Provide a superior customer experience by automating fault diagnosis & end-user communications</h3>
@@ -70,3 +71,7 @@ const MspPage = () => {
 }
 
 export default MspPage
+
+export const Head = () => (
+    <SEO title="White-Label Support App For MSPs" description="The NetMinded app and support tools fully automate fault diagnosis and customer communications to help IT partners and MSPs provide a more professional service." article={false} />
+)

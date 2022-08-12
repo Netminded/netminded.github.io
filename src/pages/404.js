@@ -2,10 +2,11 @@ import * as React from 'react'
 import Layout from '../components/layout'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserNinja } from '@fortawesome/free-solid-svg-icons'
+import SEO from '../components/seo'
 
 const NotFoundPage = () => {
     return (
-        <Layout pTitle="404 Page Not Found" isArticle={false} simpleNav={true}>
+        <Layout simpleNav={true}>
             <div className="page-not-found-div">
                 <div>
                     <p className="page-not-found-icon"><FontAwesomeIcon icon={faUserNinja} /></p>
@@ -18,3 +19,7 @@ const NotFoundPage = () => {
 }
 
 export default NotFoundPage
+
+export const Head = () => (
+    <SEO title="404 Page Not Found" article={false} />
+)

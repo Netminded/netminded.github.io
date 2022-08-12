@@ -1,6 +1,5 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Helmet } from "react-helmet"
 import { useLocation } from "@reach/router"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -17,9 +16,11 @@ const SEO = ({ title, description, image, article, keywords }) => {
     shortTitle,
     maskedIcon
   } = site.siteMetadata
+
+  const templateTitle = `${titleTemplate.replace('%s', title)}`
   
   const seo = {
-    title: title || defaultTitle,
+    title: title ? templateTitle : defaultTitle,
     description: description || defaultDescription,
     image: `${siteUrl}${image || defaultImage}`,
     url: `${siteUrl}${pathname}`,
@@ -27,7 +28,8 @@ const SEO = ({ title, description, image, article, keywords }) => {
   }
 
   return (
-    <Helmet title={seo.title} titleTemplate={title ? titleTemplate : ""}>
+    <>
+      <title>{seo.title}</title>
       <link rel="mask-icon" href={`${siteUrl}${maskedIcon}`} color="#7b61ff"></link>  
       <meta name="apple-mobile-web-app-title" content={shortTitle}></meta>
       <meta name="application-name" content={shortTitle}></meta>  
@@ -44,7 +46,7 @@ const SEO = ({ title, description, image, article, keywords }) => {
       )}
       {seo.image && <meta property="og:image" content={seo.image} />}
       {/* <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/25589929.js"></script> */}
-    </Helmet>
+    </>
   )
 }
 

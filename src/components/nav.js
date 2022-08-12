@@ -36,8 +36,8 @@ const Nav = ({simpleNav, isHero}) => {
                         Solutions
                         </a>
                         <div className={`dropdown-menu ${showDropdownNav ? "show" : ""}`} aria-labelledby="navbarDropdown">
-                            <Link className="dropdown-item" to="/isp">ISP White Label App</Link>
-                            <Link className="dropdown-item" to="/msp">MSP White Label App</Link>
+                            <Link className="dropdown-item" to="/isp">We Are an ISP</Link>
+                            <Link className="dropdown-item" to="/msp">We Are an MSP</Link>
                         </div>
                     </li>
                     <li className="nav-item">

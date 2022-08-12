@@ -5,11 +5,12 @@ import Cta from '../components/cta'
 import { useState } from 'react'
 import { Waypoint } from 'react-waypoint'
 import TeamSection from '../components/team-profile'
+import SEO from '../components/seo'
 
 const AboutPage = () => {
     const [isHero, setIsHero] = useState(true)
     return (
-        <Layout pTitle="About" pDescription="We pride ourselves on giving businesses the ability to share status information with the people who matter." isHero={isHero} isArticle={false}>
+        <Layout isHero={isHero}>
             <header className="about-page-header">
                 <h1>About NetMinded</h1>
                 <h3>Learn more about us & our team</h3>
@@ -67,3 +68,7 @@ const AboutPage = () => {
 }
 
 export default AboutPage
+
+export const Head = () => (
+    <SEO title="About" description="We pride ourselves on giving businesses the ability to share status information with the people who matter." article={false} />
+)
