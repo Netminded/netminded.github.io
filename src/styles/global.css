@@ -322,6 +322,11 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
     margin-right: auto;
   }
 
+  #DataUp {
+    animation: tile-opacity 7s ease-out infinite;
+    animation-delay: 2.5s;
+  }
+
   #GreenTile {
     animation: tile-opacity 7s ease-in infinite;
     animation-delay: 2.5s;

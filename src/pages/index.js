@@ -54,7 +54,7 @@ const useWndowWidth = () => {
         return () => window.removeEventListener("resize", handleResize)
     }, [])
 
-    return (windowWidth !== typeof 'undefined' ? windowWidth : 0)
+    return (windowWidth !== typeof 'undefined' ? windowWidth : 992)
 }
 
 const IndexPage = () => {
