@@ -1776,8 +1776,8 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
   text-align: center;
 }
 
-@media screen and (max-width: 991px) {
-  .team-container .col-md-6 {
+@media screen and (max-width: 767px) {
+  .team-container .col-md-4 {
     margin-bottom: 30px;
   }
 }

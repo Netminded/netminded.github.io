@@ -20,8 +20,6 @@ const TeamSection = ({teamName, role}) => {
             <div className="team-profile-img-container"><StaticImage className="team-profile-image" src="../images/blog/NetMinded_Tam_Love.png" alt={`NetMinded Team - ${name}`} /> </div>
             : teamName === teamBio[2].name ? 
             <div className="team-profile-img-container"><StaticImage className="team-profile-image" src="../images/blog/NetMinded_Ross_Loveridge.png" alt={`NetMinded Team - ${name}`} /> </div>
-            : teamName === teamBio[3].name ? 
-            <div className="team-profile-img-container"><StaticImage className="team-profile-image" src="../images/blog/NetMinded_Placeholder.png" alt={`NetMinded Team - ${name}`} /> </div>
             : <div className="team-profile-img-container"><StaticImage className="team-profile-image" src="../images/icon.png" alt={name} /></div>}
             <div className="team-profile-content">
               <p className="team-profile-name"><a href={social} target="_blank"><FontAwesomeIcon className="team-profile-social" icon={faLinkedin} /></a> {name}</p>
