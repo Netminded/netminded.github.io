@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `NetMinded · Develop a Resilient Support Process With NetMinded`,
@@ -98,21 +102,12 @@ module.exports = {
       },
     },
     "gatsby-plugin-fontawesome-css",
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [
-          `karla\:300,400,500,600`,
-          `poppins\:400,500,600,700,800`
-        ],
-        display: 'swap'
-      }
-    },
+    `gatsby-plugin-preload-fonts`,
     {
       resolve: `gatsby-plugin-gdpr-cookies`,
       options: {
         googleAnalytics: {
-          trackingId: 'UA-123068375-4',
+          trackingId: process.env.GATSBY_ANALYTICS_ID,
           cookieName: 'gatsby-gdpr-google-analytics',
           anonymize: true,
           allowAdFeatures: false
@@ -157,6 +152,6 @@ module.exports = {
       options: {
           shortname: `netminded`
       }
-    },
+    }
   ]
 };

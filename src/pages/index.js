@@ -1,8 +1,6 @@
 import * as React from 'react'
 import Layout from '../components/layout'
 import { StaticImage } from 'gatsby-plugin-image'
-import NetMindedHero from '../images/NetMinded_Translate_Share_Automate.svg'
-import NetMindedHeroSm from '../images/NetMinded_Hero_Small.svg'
 import NetMindedDepsImg from '../images/NetMinded_Dependencies.svg'
 import NetMindedAppDashImg from '../images/NetMinded_App_Dashboard.svg'
 import { useState, useEffect } from 'react'
@@ -74,10 +72,10 @@ testimonialSlider?.current?.swiper?.on('slideChange', () => {
                             <div className="col-lg-5">
                                 <div className="hero-content">
                                     <h1>Get More From Your Existing Monitoring Solution</h1>
-                                    <h3 className="dark-text"><span>Save time</span> and <span>protect your reputation</span> for service delivery. <span>Get better business outcomes</span> by <span>enhancing your existing monitoring data</span>.</h3>
+                                    <p className="dark-text"><span>Save time</span> and <span>protect your reputation</span> for service delivery. <span>Get better business outcomes</span> by <span>enhancing your existing monitoring data</span>.</p>
                                     <div className="hero-cta">
-                                        <a className="btn" href="#" onClick={(e) => scrollToComm(e)}>Learn More</a>
-                                        <a className="btn hero-btn-last" href="" onClick={(e) => launchCalendar(e)}>Request Demo</a>
+                                        <a className="btn" href="javascript:void(0)" onClick={(e) => scrollToComm(e)} rel="nofollow">Learn More</a>
+                                        <a className="btn hero-btn-last" href="javascript:void(0)" onClick={(e) => launchCalendar(e)} rel="nofollow">Request Demo</a>
                                     </div>
                                 </div>
                             </div>
@@ -988,7 +986,7 @@ testimonialSlider?.current?.swiper?.on('slideChange', () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-12 communication-header">
-                            <h5 className="text-accent">Enhanced Service Assurance</h5>
+                            <h2 className="text-accent">Enhanced Service Assurance</h2>
                             <p><span>No matter what the situation, stay in control. Connect your I.T. and Network monitoring systems to more stakeholders. Share status information when you want and with whoever you want. Keep your customers, teams, suppliers, partners and more updated.</span></p>
                             <hr />
                         </div>
@@ -996,17 +994,17 @@ testimonialSlider?.current?.swiper?.on('slideChange', () => {
                     <div className="row">
                         <div className="col-lg-4">
                             <span className="communication-icon"><FontAwesomeIcon icon={faClockRotateLeft}/></span>
-                            <h6>Save Time</h6>
+                            <h3>Save Time</h3>
                             <p>Reduce reactive inbound/outbound service related contact from your end users and partners.</p>
                         </div>
                         <div className="col-lg-4">
                             <span className="communication-icon communication-icon--middle"><FontAwesomeIcon icon={faPiggyBank}/></span>
-                            <h6>Save Money</h6>
+                            <h3>Save Money</h3>
                             <p>Reduce the time spent on diagnostics for you, your end users and your partners.</p>
                         </div>
                         <div className="col-lg-4">
                             <span className="communication-icon"><FontAwesomeIcon icon={faStar}/></span>
-                            <h6>Build Reputation</h6>
+                            <h3>Build Reputation</h3>
                             <p>Communicate in real time and be transparent. Be a better partner than your competitors!</p>
                         </div>
                     </div>
@@ -1016,7 +1014,7 @@ testimonialSlider?.current?.swiper?.on('slideChange', () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-12">
-                            <h5 className="text-accent">More Automated Responses, Fewer Unplanned Reactions</h5>
+                            <h2 className="text-accent">More Automated Responses, Fewer Unplanned Reactions</h2>
                             <p><span>Use NetMinded to build a responsive Service Assurance environment. Build partnerships between your internal and external stakeholder groups. Reduce unplanned, reactive communication between stakeholders which wastes time and creates friction.</span></p>
                         </div>
                     </div>
@@ -1042,7 +1040,7 @@ testimonialSlider?.current?.swiper?.on('slideChange', () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-12">
-                            <h5 className="text-accent">How Do We Do All of This?</h5>
+                            <h2 className="text-accent">How Do We Do All of This?</h2>
                             <p><span>We do this with our simple to use web Dashboard and mobile App (available on both iOS and Android).</span></p>
                             <hr />
                         </div>
@@ -1076,14 +1074,14 @@ testimonialSlider?.current?.swiper?.on('slideChange', () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-6">
-                            <h5 className="text-accent">Be Easier to Work With. Build Reputation. Reduce Costs.</h5>
+                            <h2 className="text-accent">Be Easier to Work With. Build Reputation. Reduce Costs.</h2>
                             <p><span>The NetMinded platform provides clarity. Your teams, partners and customers are more empowered. This builds your reputation as a reliable partner that is easy to do business with.</span></p>
                             <div className="trust-items">
-                                <h6><span className="trust-icon"><FontAwesomeIcon icon={faArrowTrendDown}/></span><span className="trust-item-text">NetMinded reduces diagnostic times for the most common wholesale FTTH faults from days to minutes.</span></h6>
-                                <h6><span className="trust-icon trust-icon--middle"><FontAwesomeIcon icon={faHourglassStart}/></span><span className="trust-item-text">In the UK, OFCOM use ISP service desk call waiting time as metric of quality.</span></h6>
-                                <h6><span className="trust-icon"><FontAwesomeIcon icon={faUserMinus}/></span><span className="trust-item-text">Connectwise report that 20% of MSPs face staff retention problems, with 30% focusing on deploying productivity tools.</span></h6>
+                                <h3><span className="trust-icon"><FontAwesomeIcon icon={faArrowTrendDown}/></span><span className="trust-item-text">NetMinded reduces diagnostic times for the most common wholesale FTTH faults from days to minutes.</span></h3>
+                                <h3><span className="trust-icon trust-icon--middle"><FontAwesomeIcon icon={faHourglassStart}/></span><span className="trust-item-text">In the UK, OFCOM use ISP service desk call waiting time as metric of quality.</span></h3>
+                                <h3><span className="trust-icon"><FontAwesomeIcon icon={faUserMinus}/></span><span className="trust-item-text">Connectwise report that 20% of MSPs face staff retention problems, with 30% focusing on deploying productivity tools.</span></h3>
                             </div>
-                            <a className="btn" href="" onClick={(e) => launchCalendar(e)}>Request Demo</a>
+                            <a className="btn" href="javascript:void(0)" onClick={(e) => launchCalendar(e)} rel="nofollow">Request Demo</a>
                         </div>
                         <div className="col-lg-6">
                                 <div className="trust-image">
@@ -1335,22 +1333,22 @@ testimonialSlider?.current?.swiper?.on('slideChange', () => {
                         <div className="col-lg-4">
                             <div className="testimonial-panel-container">
                                 <div className="testimonial-panel">
-                                    <h1 className="text-accent">What Our Customers Think</h1>
-                                    <h3>Our customers are implementing improved support strategies with NetMinded.</h3>
+                                    <h2 className="text-accent">What Our Customers Think</h2>
+                                    <p>Our customers are implementing improved support strategies with NetMinded.</p>
                                     <div className="testimonial-selector">
-                                        <a href="javascript:void(0)" onClick={() => {selectedTest(testimonialSlider, 0)}}><span className={`${testimonialPosition === 0 ? `testimonial-selector--active` : ``}`}></span></a>
-                                        <a href="javascript:void(0)" onClick={() => {selectedTest(testimonialSlider, 1)}}><span className={`${testimonialPosition === 1 ? `testimonial-selector--active` : ``}`}></span></a>
-                                        <a href="javascript:void(0)" onClick={() => {selectedTest(testimonialSlider, 2)}}><span className={`${testimonialPosition === 2 ? `testimonial-selector--active` : ``}`}></span></a>
+                                        <a href="javascript:void(0)" onClick={() => {selectedTest(testimonialSlider, 0)}}aria-label="Testimonial Navigation" role="navigation" rel="nofollow"><span className={`${testimonialPosition === 0 ? `testimonial-selector--active` : ``}`}></span></a>
+                                        <a href="javascript:void(0)" onClick={() => {selectedTest(testimonialSlider, 1)}}aria-label="Testimonial Navigation" role="navigation" rel="nofollow"><span className={`${testimonialPosition === 1 ? `testimonial-selector--active` : ``}`}></span></a>
+                                        <a href="javascript:void(0)" onClick={() => {selectedTest(testimonialSlider, 2)}}aria-label="Testimonial Navigation" role="navigation" rel="nofollow"><span className={`${testimonialPosition === 2 ? `testimonial-selector--active` : ``}`}></span></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div className="col-lg-8 testimonial-text">
                             <TestimonialSwiper setTestimonialSlider={setTestimonialSlider} />
-                            <ul className="testimonial-logos">
-                                <li><a href="javascript:void(0)" onClick={() => {selectedTest(testimonialSlider, 0)}}><StaticImage src='../images/PTI_NetMinded.png' /></a></li>
-                                <li><a href="javascript:void(0)" onClick={() => {selectedTest(testimonialSlider, 1)}}><StaticImage src='../images/Grow_Marketing_NetMinded.png' /></a></li>
-                                <li><a href="javascript:void(0)" onClick={() => {selectedTest(testimonialSlider, 2)}}><StaticImage src='../images/Triangle_Networks_NetMinded.png' /></a></li>
+                            <ul className="testimonial-logos" role="tablist">
+                                <li role="tab"><a href="javascript:void(0)" onClick={() => {selectedTest(testimonialSlider, 0)}} aria-label="Testimonial Logo Tab" rel="nofollow"><StaticImage src='../images/PTI_NetMinded.png' /></a></li>
+                                <li role="tab"><a href="javascript:void(0)" onClick={() => {selectedTest(testimonialSlider, 1)}} aria-label="Testimonial Logo Tab" rel="nofollow"><StaticImage src='../images/Grow_Marketing_NetMinded.png' /></a></li>
+                                <li role="tab"><a href="javascript:void(0)" onClick={() => {selectedTest(testimonialSlider, 2)}} aria-label="Testimonial Logo Tab" rel="nofollow"><StaticImage src='../images/Triangle_Networks_NetMinded.png' /></a></li>
                             </ul>
                         </div>
                     </div>

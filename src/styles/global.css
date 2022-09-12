@@ -1,4 +1,6 @@
 /* General */
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600&family=Poppins:wght@400;500;600;700;800&display=swap');
+
 html, body, #gatsby-focus-wrapper, #___gatsby {
     height: 100%;
     width: 100%;
@@ -414,7 +416,7 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
     margin-bottom: 40px;
   }
   
-  .hero-container h3 {
+  .hero-container p {
     color: #FFFFFF;
     font-size: 24px;
     margin-top: 50px;
@@ -424,7 +426,7 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
     font-family: "Karla", sans-serif;
   }
   
-  .hero-container h3 span {
+  .hero-container p span {
     font-weight: 600;
   }
   
@@ -435,7 +437,7 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
   }
   
   @media screen and (max-width: 991px) {
-    .hero-container h1, .hero-container h3 {
+    .hero-container h1, .hero-container p {
         text-align: center;
     }
   
@@ -449,7 +451,7 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
         font-size: 34px;
     }
   
-    .hero-container h3 {
+    .hero-container p {
         font-size: 22px;
     }
   }
@@ -629,7 +631,7 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
     margin-top: 22px;
   }
 
-  .communication-container h6 {
+  .communication-container h3 {
     text-align: center;
     font-size: 24px;
     font-weight: 800;
@@ -1004,7 +1006,7 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
     margin-top: -30px;
   }
 
-  .trust-container .trust-items h6 {
+  .trust-container .trust-items h3 {
     display: flex;
     font-size: 24px;
     font-weight: 800;
@@ -1223,7 +1225,7 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
     }
   }
 
-  .testimonial-container h3 {
+  .testimonial-container .testimonial-panel p {
     font-family: 'Karla', sans-serif;
     font-weight: 300;
     font-size: 24px;
@@ -1231,7 +1233,7 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
   }
 
   @media screen and (max-width: 1199px) {
-    .testimonial-container h3 {
+    .testimonial-container .testimonial-panel p {
       font-size: 20px;
     }
   }
@@ -2014,13 +2016,14 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
     }
   }
 
-  .footer-container h5 {
+  .footer-container h2 {
+    font-size: 20px;
     color: #FFFFFF;
     font-weight: 700;
   }
 
   @media screen and (max-width: 768px) {
-    .footer-container h5{
+    .footer-container h2{
       text-align: center;
       margin-left: 0px;
     }
@@ -2042,6 +2045,10 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
   .footer-container .app-badges {
     margin-top: 15px;
     margin-bottom: 20px;
+  }
+
+  .footer-container .app-badges li {
+    display: inline-block;
   }
 
   .footer-container img {
@@ -2105,6 +2112,9 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
     }
   }
 
+  .footer-container .social-icons li {
+    display: inline-block;
+  }
   
   .footer-container .fa-facebook {
     font-size: 28px;

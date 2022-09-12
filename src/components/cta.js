@@ -6,7 +6,7 @@ const Cta = ({ctaText, ctaBtnText, ctaBtnUrl}) => {
             <div className="container">
                 <div className="row">
                     <div className="col-12 text-center">
-                        <h5 className="text-accent">{ctaText}</h5>
+                        <h2 className="text-accent">{ctaText}</h2>
                         <a className="btn" href={ctaBtnUrl} target="_blank" rel="noreferrer">{ctaBtnText}</a>
                     </div>
                 </div>
