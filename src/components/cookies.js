@@ -21,7 +21,7 @@ const CookieBanner = () => {
             onAccept={() => initializeAndTrack(location)}
             >
             🍪 We use both necessary cookies and optional Google Analytics cookies. To allow optional cookies select 'Accept'. {" "}
-            <Link style={{color: "#826EF5"}} to="/privacy">More Information</Link>
+            <Link style={{color: "#826EF5"}} to="/privacy">More Info in Privacy Policy</Link>
         </CookieConsent>
     )
 }

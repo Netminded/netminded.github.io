@@ -17,29 +17,39 @@ function Footer() {
             <div className="container-fluid">
                 <div className="row">
                     <div className='offset-md-1 col-md-4'>
-                        <h5>Download NetMinded</h5>
+                        <h2>Download NetMinded</h2>
                         <ul className="app-badges">
-                            <a href="https://apps.apple.com/gb/app/netminded/id1562004480" target="_blank" rel="noreferrer"><img src={AppleStoreLogo} alt="Download on the App Store"/></a>
-                            <a href="https://play.google.com/store/apps/details?id=com.seethrunetworks.seethrusays" target="_blank" rel="noreferrer"><img src={GooglePlayLogo} alt="Get it on Google Play" className='google-play-button'/></a>
+                            <li>
+                                <a href="https://apps.apple.com/gb/app/netminded/id1562004480" target="_blank" rel="noreferrer"><img src={AppleStoreLogo} alt="Download on the App Store"/></a>
+                            </li>
+                            <li>
+                                <a href="https://play.google.com/store/apps/details?id=com.seethrunetworks.seethrusays" target="_blank" rel="noreferrer"><img src={GooglePlayLogo} alt="Get it on Google Play" className='google-play-button'/></a>
+                            </li>
                         </ul>
                         <ul className="social-icons">
-                        {/* <a href="https://facebook.com/SeeThruNetworks" target="_blank" rel="noreferrer">
+                        {/* <li><a href="https://facebook.com/SeeThruNetworks" target="_blank" rel="noreferrer">
                             <FontAwesomeIcon icon={faFacebook} />
-                        </a>  */}
-                        <a href="https://twitter.com/netmindeduk" target="_blank" rel="noreferrer">
-                            <FontAwesomeIcon icon={faTwitter} />
-                        </a>
-                        <a href="https://linkedin.com/company/getnetminded" target="_blank" rel="noreferrer">
-                            <FontAwesomeIcon icon={faLinkedin} />
-                        </a>
-                        <a href="https://www.youtube.com/channel/UCMye-tTUwQfWAEJ2FQR1ofQ" target="_blank" rel="noreferrer">
-                            <FontAwesomeIcon icon={faYoutube} />
-                        </a>
+                        </a></li>  */}
+                            <li>
+                                <a href="https://twitter.com/netmindeduk" target="_blank" rel="noreferrer" aria-label="Twitter Social Link" role="link">
+                                    <FontAwesomeIcon icon={faTwitter} />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://linkedin.com/company/getnetminded" target="_blank" rel="noreferrer" aria-label="LinkedIn Social Link" role="link">
+                                    <FontAwesomeIcon icon={faLinkedin} />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/channel/UCMye-tTUwQfWAEJ2FQR1ofQ" target="_blank" rel="noreferrer" aria-label="YouTube Social Link" role="link">
+                                    <FontAwesomeIcon icon={faYoutube} />
+                                </a>
+                            </li>
                         </ul>
                     </div>
 
                     <div className='col-md-2'>
-                        <h5>Support</h5>
+                        <h2>Support</h2>
                         <ul>
                             <li><a href="https://forms.clickup.com/20532630/f/kjkcp-548/3BQZVT0C3LE05OLX0X" target="_blank" rel="noreferrer">Contact</a></li>
                             <li><a href="https://netminded.freshdesk.com/support/home" target="_blank" rel="noreferrer">FAQs</a></li>
@@ -50,7 +60,7 @@ function Footer() {
                     </div>
 
                     <div className='col-md-2'>
-                        <h5>Resources</h5>
+                        <h2>Resources</h2>
                         <ul>
                             {/* <li><a href="#">About</a></li>
                             <li><Link to="/blog">Blog</Link></li>
@@ -64,7 +74,7 @@ function Footer() {
                     </div>
 
                     <div className='col-md-2'>
-                        <h5></h5>
+                        <h2></h2>
                         <ul className="footer-last-list">
                             {/* <li><Link to="/privacy">Privacy Policy</Link></li>
                             <li><Link to="/terms">Terms</Link></li>
