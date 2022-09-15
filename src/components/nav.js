@@ -28,9 +28,6 @@ const Nav = ({simpleNav, isHero}) => {
             </div>
             <div className={`collapse navbar-collapse nav-collapse ${showCollapsedNav ? "show" : ""}`} id="navbarCollapse">
                 {!simpleNav ? <ul className="navbar-nav ms-auto">
-                    <li className="nav-item">
-                        <Link className="nav-link text-accent" to="/features">Features</Link>
-                    </li>
                     <li className="nav-item dropdown" onMouseEnter={(e) => toggleNavDropdown(e, setShowDropdownNav, showDropdownNav)} onMouseLeave={(e) => toggleNavDropdown(e, setShowDropdownNav, showDropdownNav)}>
                         <a className="nav-link text-accent dropdown-toggle" href="#" onClick={(e) => toggleNavDropdown(e, setShowDropdownNav, showDropdownNav)} id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Solutions
