@@ -2,6 +2,7 @@ import * as React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { Waypoint } from 'react-waypoint'
+import { isEmpty } from '../utils/utils'
 
 const sendForm = (e, formData, formErrors, setFormErrors) => {
     e.preventDefault()
@@ -45,10 +46,6 @@ const validateForm = (formData, formErrors, setFormErrors) => {
 
     console.log(formErrors)
     return formPass
-}
-
-const isEmpty = (formField) => {
-    return formField === null || formField.trim() === "" ? true : false 
 }
 
 const charactersOnly = (formField) => {
