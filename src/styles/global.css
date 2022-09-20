@@ -1764,6 +1764,10 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
   font-weight: 400;
   color: #4C4D55;
 }
+
+.contact-container form div:nth-child(3), .contact-container form div:nth-child(5) {
+  display: none;
+}
   
   /* Legal / Policies */
   .policy {
