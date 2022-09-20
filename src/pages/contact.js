@@ -123,7 +123,7 @@ const ContactPage = () => {
             <Waypoint onEnter={() => setIsHero(true)} onLeave={() => setIsHero(false)} topOffset={100}>
                 <header className="contact-page-header">
                     <h1>Contact Us</h1>
-                    <h3>If you're interested in partnering with us get in touch!</h3>
+                    <h3>Whether you're interested in partnering with us, adopting our eco-system or just have a general enquiry get in touch!</h3>
                 </header>
             </Waypoint>
             <div className='contact-container'>
@@ -131,26 +131,26 @@ const ContactPage = () => {
                     <form className='row'>
                         <div className="offset-3 col-6">
                             <label for="formName" className="form-label">Name</label>
-                            <input type="text" name="name" class="form-control" id="formName" value={formData.name} onChange={(e) => {setFormData({...formData, name: e.target.value}); setFormErrors({...formErrors, nameError: ''})}} required />
+                            <input placeholder="d'Artagnan" type="text" name="name" class="form-control" id="formName" value={formData.name} onChange={(e) => {setFormData({...formData, name: e.target.value}); setFormErrors({...formErrors, nameError: ''})}} required />
                             {formErrors.nameError.length > 0 && <p>{formErrors.nameError}</p>}
                         </div>
-                        <div className="offset-3 col-6">
+                        <div className="offset-3 col-6 mt-5">
                             <label for="formEmail" className="form-label">Email Address</label>
-                            <input type="email" name="email" class="form-control" id="formEmail" value={formData.email} onChange={(e) => {setFormData({...formData, email: e.target.value}); setFormErrors({...formErrors, emailError: ''})}} required />
+                            <input placeholder="d.artagnan@musketeer.com" type="email" name="email" class="form-control" id="formEmail" value={formData.email} onChange={(e) => {setFormData({...formData, email: e.target.value}); setFormErrors({...formErrors, emailError: ''})}} required />
                             {formErrors.emailError.length > 0 && <p>{formErrors.emailError}</p>}
                         </div>
                         <div className="offset-3 col-6">
                             <input type="text" name="subject" class="form-control" id="formSubject" value={formData.subject} required disabled/>
                         </div>
-                        <div className="offset-3 col-6">
+                        <div className="offset-3 col-6 mt-5">
                             <label for="formMessage" className="form-label">Message</label>
-                            <textarea name="message" class="form-control" id="formMessage" value={formData.message} onChange={(e) => {setFormData({...formData, message: e.target.value}); setFormErrors({...formErrors, messageError: ''})}} required />
+                            <textarea placeholder="All for one and one for all!" name="message" class="form-control" id="formMessage" value={formData.message} onChange={(e) => {setFormData({...formData, message: e.target.value}); setFormErrors({...formErrors, messageError: ''})}} required />
                             {formErrors.messageError.length > 0 && <p>{formErrors.messageError}</p>}
                         </div>
                         <div className='offset-3 col-6'>
                             <input type="text" name="_gotcha" class="form-control" id="formContact" value={formData._gotcha} onChange={(e) => setFormData({...formData, _gotcha: e.target.value})} />
                         </div>
-                        <div className='offset-3 col-6'>
+                        <div className='offset-3 col-6 mt-5'>
                             <button className='btn' formnovalidate onClick={(e) => sendForm(e, formData, setFormData, setFormErrors, setFormStatus)}>
                                 Send Message
                             </button>
