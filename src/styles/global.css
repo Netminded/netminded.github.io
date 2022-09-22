@@ -66,6 +66,18 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
   
   .btn:focus, .btn:active:focus {
     outline: none;
+    box-shadow: none;
+  }
+
+  .btn-secondary, .btn-secondary:focus, .btn-secondary:active, .btn-secondary:active:focus {
+    color: #1B1A4B;
+    border: 3px solid #1B1A4B;
+    background: transparent;
+  }
+
+  .btn-secondary:hover {
+    color: #FFFFFF;
+    background: #1B1A4B;
   }
   
   hr {
@@ -1750,7 +1762,6 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
   font-weight: 300;
   line-height: 1.5;
   font-family: "Karla", sans-serif;
-  text-transform: capitalize;
 }
 
 @media screen and (max-width: 600px) {
@@ -1763,6 +1774,62 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
   font-size: 20px;
   font-weight: 400;
   color: #4C4D55;
+}
+
+.contact-container form div:nth-child(3), .contact-container form div:nth-child(5) {
+  display: none;
+}
+
+.contact-container form label {
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #4C4D55;
+  font-size: 14px;
+}
+
+.contact-container form input, .contact-container form textarea {
+  color: #4C4D55;
+  font-family: 'Karla', sans-serif;
+  font-size: 18px;
+  padding: 10px 20px 10px 0;
+  border-radius: 0;
+  border-bottom: 3px solid #1B1A4B;
+  border-left: transparent;
+  border-right: transparent;
+  border-top: transparent;
+}
+
+.contact-container form input::placeholder, .contact-container form textarea::placeholder {
+  color: #797a81;
+}
+
+.contact-container .form-control:focus {
+  box-shadow: none;
+  border-bottom: 3px solid #58416F;
+}
+
+.contact-container .form-error-text {
+  color: #797a81;
+  font-weight: 600;
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
+.contact-container .form-status {
+  padding: 20px;
+  border-radius: 15px;
+  color: #FFFFFF;
+  margin-top: 40px;
+  font-weight: 600;
+}
+
+.contact-container .form-status-good {
+  background: linear-gradient(90deg, #76DE80 0%, #4FA53E 100%);
+}
+
+.contact-container .form-status-bad {
+  background: linear-gradient(90deg, #F4693C 0%, #C84114 100%);
 }
   
   /* Legal / Policies */
