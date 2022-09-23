@@ -2,7 +2,7 @@ import * as React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { Waypoint } from 'react-waypoint'
-import { isEmpty } from '../utils/utils'
+import { isEmpty, charactersOnly, validEmailFormat } from '../utils/utils'
 import axios from 'axios'
 
 const sendForm = (e, formData, setFormData, setFormErrors, setFormStatus) => {
@@ -94,15 +94,6 @@ const validateForm = (formData, setFormErrors) => {
     })
 
     return formPass
-}
-
-const charactersOnly = (formField) => {
-    return /^[a-zA-Z\s-'.]+$/.test(formField)
-}
-
-const validEmailFormat = (formField) => {
-    // Just test the email has the correct structure so as not to exclude obscure email address use cases
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formField)
 }
 
 const formFeedback = [
