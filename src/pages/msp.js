@@ -65,7 +65,7 @@ const MspPage = () => {
                     </div>
                 </div>
             </div>
-            <Cta ctaText="Contact Us Today, Deploy Tomorrow" ctaBtnText="Contact Us" ctaBtnUrl="https://forms.clickup.com/20532630/f/kjkcp-548/3BQZVT0C3LE05OLX0X"/>
+            <Cta ctaText="Contact Us Today, Deploy Tomorrow" ctaBtnText="Contact Us" />
         </Layout>
     )
 }
