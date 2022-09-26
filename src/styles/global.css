@@ -351,14 +351,19 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
 	  animation: float 4s ease-in-out infinite;
   }
 
-  #CircleOneWaveOne {
-    animation: wave-opacity 4s infinite ease-in;
+  #CircleOneCenter {
+    animation: green-cycle 5s infinite ease-in;
     animation-delay: 2s;
   }
 
+  #CircleOneWaveOne {
+    animation: wave-opacity-green 5s infinite ease-in;
+    animation-delay: 4s;
+  }
+
   #CircleOneWaveTwo {
-    animation: wave-opacity 4s infinite ease-in;
-    animation-delay: 3s;
+    animation: wave-opacity-green 5s infinite ease-in;
+    animation-delay: 5s;
   }
 
   .hero-container .amber-status {
@@ -371,14 +376,19 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
     animation-delay: 4s;
   }
 
+  #CircleTwoCenter {
+    animation: amber-cycle 5s infinite ease-in;
+    animation-delay: 7s;
+  }
+
   #CircleTwoWaveOne {
-    animation: wave-opacity 4s infinite ease-in;
-    animation-delay: 4s;
+    animation: wave-opacity-amber 5s infinite ease-in;
+    animation-delay: 9s;
   }
 
   #CircleTwoWaveTwo {
-    animation: wave-opacity 4s infinite ease-in;
-    animation-delay: 5s;
+    animation: wave-opacity-amber 5s infinite ease-in;
+    animation-delay: 10s;
   }
 
   .hero-container .red-status {
@@ -391,19 +401,63 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
     animation-delay: 2s;
   }
 
+  #CircleThreeCenter {
+    animation: red-cycle 5s infinite ease-in;
+    animation-delay: 3s;
+  }
+
   #CircleThreeWaveOne {
-    animation: wave-opacity 4s infinite ease-in;
-    animation-delay: 1s;
+    animation: wave-opacity-red 5s infinite ease-in;
+    animation-delay: 3s;
   }
 
   #CircleThreeWaveTwo {
-    animation: wave-opacity 4s infinite ease-in;
-    animation-delay: 2s;
+    animation: wave-opacity-red 5s infinite ease-in;
+    animation-delay: 4s;
   }
 
-  @keyframes wave-opacity {
+  @keyframes wave-opacity-green {
     0% {
       opacity: 1;
+      stroke: #77DF81;
+    }
+    33% {
+      stroke: #FFB74D;
+    }
+    66% {
+      stroke: #F3693D;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes wave-opacity-amber {
+    0% {
+      opacity: 1;
+      stroke: #FFB74D;
+    }
+    33% {
+      stroke: #F3693D;
+    }
+    66% {
+      stroke: #77DF81;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes wave-opacity-red {
+    0% {
+      opacity: 1;
+      stroke: #F3693D;
+    }
+    33% {
+      stroke: #77DF81;
+    }
+    66% {
+      stroke: #FFB74D;
     }
     100% {
       opacity: 0;
@@ -419,6 +473,42 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
     }
     100% {
       transform: translatey(0px);
+    }
+  }
+
+  @keyframes green-cycle {
+    0% {
+      fill: #77DF81;
+    }
+    33% {
+      fill: #FFB74D;
+    }
+    66% {
+      fill: #F3693D;
+    }
+  }
+
+  @keyframes amber-cycle {
+    0% {
+      fill: #FFB74D;
+    }
+    33% {
+      fill: #F3693D;
+    }
+    66% {
+      fill: #77DF81;
+    }
+  }
+
+  @keyframes red-cycle {
+    0% {
+      fill: #F3693D;
+    }
+    33% {
+      fill: #77DF81;
+    }
+    66% {
+      fill: #FFB74D;
     }
   }
   
