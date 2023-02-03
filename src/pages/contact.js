@@ -42,14 +42,20 @@ const sendForm = (e, formData, setFormData, setFormErrors, setFormStatus) => {
                         })
                     }
                 }
-                setTimeout(() => setFormStatus('') , 8000)
+                setTimeout(() => setFormStatus({
+                    statusMessage: '',
+                    statusState: 'default',
+                }) , 8000)
             })
             .catch((error) => {
                 setFormStatus({
                     statusMessage: formFeedback[5],
                     statusState: 'bad',
                 })
-                setTimeout(() => setFormStatus('') , 8000)
+                setTimeout(() => setFormStatus({
+                    statusMessage: '',
+                    statusState: 'default',
+                }) , 8000)
             })
     }
 }

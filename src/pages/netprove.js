@@ -17,7 +17,7 @@ const sendForm = (e, formData, setFormData, setFormErrors, setFormStatus) => {
 
     if(validateForm(formData, setFormErrors)) {
         axios
-            .post(`https://formspree.io/f/${process.env.GATSBY_FORMSPREE_ID_NETPLAYBOOK}`, formData, {
+            .post(`https://formspree.io/f/${process.env.GATSBY_FORMSPREE_ID_NETPROVE}`, formData, {
                 headers: {
                     Accept: "application/json",
                 }
@@ -32,7 +32,7 @@ const sendForm = (e, formData, setFormData, setFormErrors, setFormStatus) => {
                     setFormData({
                         name: '',
                         email: '',
-                        subject: 'NetMinded: NetPlaybook Interest Registered',
+                        subject: 'NetMinded: NetProve Interest Registered',
                         company: '',
                         _gotcha: ''
                     })
@@ -112,12 +112,12 @@ const formFeedback = [
     'Thank you for registering your interest, we\'ll be in touch soon!'
 ]
 
-const NetPlaybookPage = () => {
+const NetProvePage = () => {
 const [isHero, setIsHero] = useState(true)
 const [formData, setFormData] = React.useState({
     name: '',
     email: '',
-    subject: 'NetMinded: NetPlaybook Interest Registered',
+    subject: 'NetMinded: NetProve Interest Registered',
     company: '',
     _gotcha: ''
 })
@@ -149,7 +149,7 @@ return (
                                 </div>
                                 <div className='offset-lg-1 col-lg-5'>
                                     <div className='contact-container'>
-                                        <h2>Register Your Interest in NetPlaybook</h2>
+                                        <h2>Register Your Interest in NetProve</h2>
                                         <form>
                                             <div>
                                                 <label htmlFor="formName" className="form-label">Name</label>
@@ -190,7 +190,7 @@ return (
   )
 }
 
-export default NetPlaybookPage
+export default NetProvePage
 
 export const Head = () => (
     <SEO article={false} />

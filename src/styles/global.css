@@ -488,6 +488,20 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
     }
   }
 
+  /* Landing Page */
+  @media screen and (max-width: 1199px) {
+    .landing-page h1 {
+      font-size: 250%;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .landing-page h1 {
+      font-size: 175%;
+      margin-top: 80px;
+    }
+  }
+
   .hero-container .benefit-items h3 {
     font-family: 'Poppins', sans-serif;
     font-size: 22px;
@@ -518,6 +532,12 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
     border-radius: 15px;
     padding: 50px;
     margin-top: 10px;
+  }
+
+  @media screen and (max-width: 991px) {
+    .hero-container .contact-container {
+      margin-bottom: 80px;
+    }
   }
 
   .hero-container .contact-container h2 {
@@ -552,6 +572,14 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
     background: #0D6AF6;
     border: 0px solid transparent;
     box-shadow: 0px 4px 16px rgba(32, 19, 104, 0.5);
+  }
+
+  .hero-container .contact-container .form-status {
+    font-size: 16px;
+    background: #4c4d55;
+    padding: 16px;
+    border-radius: 15px;
+    font-weight: 300;
   }
 
   /* Communication Section */
