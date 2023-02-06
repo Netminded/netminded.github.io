@@ -51,7 +51,7 @@ const AboutPage = () => {
                             <TeamSection teamName="Nick Randall" role="Managing Director" />
                         </div>
                         <div className="col-md-4">
-                            <TeamSection teamName="Tam Love" role="Head of UX & Digital" />
+                            <TeamSection teamName="Tam Love" role="Head of Design & Development" />
                         </div>
                         <div className="col-md-4">
                             <TeamSection teamName="Ross Loveridge" role="Marketing Lead" />
