@@ -86,6 +86,7 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
     background-color: #826EF5;
     height: 4px !important;
     opacity: 1;
+    border-top: 0;
   }
   
   .link {
@@ -416,12 +417,12 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
 
   #CircleOneWaveOne {
     animation: wave-opacity 5s infinite ease-in;
-    animation-delay: 2s;
+    animation-delay: 1s;
   }
 
   #CircleOneWaveTwo {
     animation: wave-opacity 5s infinite ease-in;
-    animation-delay: 3s;
+    animation-delay: 2s;
   }
 
   .hero-container .amber-status {
@@ -450,8 +451,8 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
   }
 
   #CircleTwoWaveOne {
-    animation: wave-opacity 5s infinite ease-in;
-    animation-delay: 4s;
+    animation: wave-opacity 4s infinite ease-in;
+    animation-delay: 3s;
   }
 
   #CircleTwoWaveTwo {
@@ -500,41 +501,22 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
   @media screen and (max-width: 330px) {
     .hero-container .red-status {
       bottom: 0;
-
-  @keyframes wave-opacity-green {
-    0% {
-      opacity: 1;
-      stroke: #77DF81;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-
-  @keyframes wave-opacity-amber {
-    0% {
-      opacity: 1;
-      stroke: #FFB74D;
-    }
-    100% {
-      opacity: 0;
     }
   }
 
   #CircleThreeWaveOne {
     animation: wave-opacity 5s infinite ease-in;
-    animation-delay: 1s;
+    animation-delay: 0s;
   }
 
   #CircleThreeWaveTwo {
     animation: wave-opacity 5s infinite ease-in;
-    animation-delay: 2s;
+    animation-delay: 1s;
   }
 
   @keyframes wave-opacity {
     0% {
       opacity: 1;
-      stroke: #F3693D;
     }
     100% {
       opacity: 0;
@@ -890,7 +872,7 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
     background: url('../images/NetMinded_Circle_Bk.svg') left no-repeat;
     width: 100%;
     height: 100%;
-    padding-top: 20px;
+    padding-top: 10px;
   }
 
   @media screen and (max-width: 1199px) {
@@ -899,30 +881,48 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
     }
   }
 
+  @media screen and (max-width: 991px) {
+    .product-image-container {
+      padding-top: 20px;
+    }
+  }
+
   @media screen and (max-width: 767px) {
     .product-image-container {
-      padding-top: 15px;
+      padding-top: 42px;
+    }
+  }
+
+  @media screen and (max-width: 575px) {
+    .product-image-container {
+      padding-top: 55px;
+    }
+  }
+
+  @media screen and (max-width: 345px) {
+    .product-image-container {
+      padding-top: 60px;
     }
   }
   
   .product-image {
     position: relative;
     left: 10%;
-    bottom: 18%;
+    bottom: 25%;
     width: 80%;
   }
 
   @media screen and (max-width: 1399px) {
     .product-image {
       left: 12%;
-      bottom: 24%;
+      bottom: 12%;
     }
   }
 
   @media screen and (max-width: 1199px) {
     .product-image {
       left: 17%;
-      bottom: 4%;
+      bottom: -20%;
     }
   }
 
@@ -937,6 +937,13 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
     .product-image {
       left: 12%;
       bottom: 22%;
+    }
+  }
+
+  @media screen and (max-width: 575px) {
+    .product-image {
+      left: 15%;
+      bottom: 28%;
     }
   }
 
@@ -1164,14 +1171,14 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
   }
 
   .trust-icon {
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
     display: block;
     background: #EEECFB;
     color: #826EF5;
     border-radius: 50px;
     text-align: center;
-    margin: 0 15px 30px 0;
+    margin: 0 15px 5px 0;
     flex: 0 0 auto;
   }
 
@@ -1180,34 +1187,27 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
     color: #2897F3;
   }
 
-  .trust-icon .fa-arrow-trend-down {
-    font-size: 32px;
-    margin-top: 22px;
-    margin-left: 3px;
-  }
-
-  .trust-icon .fa-hourglass-start {
-    font-size: 32px;
-    margin-top: 22px;
-  }
-
-  .trust-icon .fa-user-minus {
-    font-size: 32px;
-    margin-top: 22px;
-    margin-left: 5px;
-  }
-
-  .trust-items .trust-item-text {
-    align-self: center;
-    margin-top: -30px;
+  .trust-items .trust-icon svg {
+    margin-top: 14px;
   }
 
   .trust-container .trust-items h3 {
     display: flex;
-    font-size: 24px;
-    font-weight: 800;
+    font-size: 22px;
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
     color: #FFFFFF;
-    margin-bottom: 15px;
+  }
+
+  @media screen and (max-width: 600px) {
+    .trust-container .trust-items h3 {
+      font-size: 18px;
+    }
+  }
+
+  .trust-container .trust-items h3:nth-child(2) {
+    margin-top: 20px;
+    margin-bottom: 28px;
   }
   
   .trust-container p {
