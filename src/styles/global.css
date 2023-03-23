@@ -67,6 +67,8 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
   .btn:focus, .btn:active:focus {
     outline: none;
     box-shadow: none;
+    color: #FFFFFF;
+    background: #0D6AF6;
   }
 
   .btn-secondary, .btn-secondary:focus, .btn-secondary:active, .btn-secondary:active:focus {
@@ -102,7 +104,7 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
   }
   
   .link:hover {
-    color: #2897F3; 
+    color: #0D6AF6; 
   }
   
   @media screen and (max-width: 550px) {
@@ -234,7 +236,7 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
   }
   
   .nav-btn:hover {
-    color: #826EF5 !important;
+    color: #092842 !important;
     background: #FFFFFF;
     border: 3px solid #FFFFFF;
   }
@@ -308,12 +310,45 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
     display: block;
     width: 100%;
   }
+
+  @media screen and (max-width: 930px) {
+    .hero-container .hero-content {
+      max-width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    .hero-container .hero-content {
+      max-width: 96%;
+      margin-top: -40px;
+    }
+  }
   
   .hero-container h1 {
     color: #FFFFFF;
     font-weight: 800;
-    font-size: 320%;
+    font-size: 52px;
     margin-bottom: 10px;
+  }
+
+  @media screen and (max-width: 991px) {
+    .hero-container h1 {
+      font-size: 46px;
+    }
+  }
+
+  @media screen and (max-width: 780px) {
+    .hero-container h1 {
+      font-size: 38px;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .hero-container h1 {
+      font-size: 28px;
+    }
   }
   
   .hero-container p {
@@ -325,139 +360,161 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
     line-height: 1.5;
     font-family: "Karla", sans-serif;
   }
+
+  @media screen and (max-width: 600px) {
+    .hero-content p {
+      margin-top: 15px;
+      margin-bottom: 25px;
+    }
+  }
   
   .hero-container p span {
     font-weight: 600;
   }
   
-  @media screen and (max-width: 991px) {
-    .hero-container h1, .hero-container p {
-        text-align: center;
-    }
-  }
-  
   @media screen and (max-width: 600px) {
     .hero-container p {
-        font-size: 22px;
+        font-size: 20px;
+        line-height: 1.3;
     }
   }
 
   .hero-container .green-status {
-    width: 148px;
+    width: 18%;
     position: relative;
-    left: -55%;
+    left: -15%;
     bottom: 200px;
     transform: translatey(0px);
 	  animation: float 4s ease-in-out infinite;
   }
 
-  #CircleOneCenter {
-    animation: green-cycle 5s infinite ease-in;
-    animation-delay: 2s;
+  @media screen and (max-width: 767px) {
+    .hero-container .green-status {
+      width: 22%;
+      left: -25%;
+    }
+  }
+
+  @media screen and (max-width: 680px) {
+    .hero-container .green-status {
+      left: -3%;
+      bottom: -160px;
+    }
+  }
+
+  @media screen and (max-width: 360px) {
+    .hero-container .green-status {
+      bottom: -140px;
+    }
+  }
+
+  @media screen and (max-width: 330px) {
+    .hero-container .green-status {
+      bottom: -120px;
+    }
   }
 
   #CircleOneWaveOne {
-    animation: wave-opacity-green 5s infinite ease-in;
-    animation-delay: 4s;
+    animation: wave-opacity 5s infinite ease-in;
+    animation-delay: 2s;
   }
 
   #CircleOneWaveTwo {
-    animation: wave-opacity-green 5s infinite ease-in;
-    animation-delay: 5s;
+    animation: wave-opacity 5s infinite ease-in;
+    animation-delay: 3s;
   }
 
   .hero-container .amber-status {
-    width: 100px;
+    width: 12%;
     position: relative;
-    left: -10%;
+    left: 30%;
     margin-top: 50px;
     transform: translatey(0px);
 	  animation: float 3s ease-in-out infinite;
     animation-delay: 4s;
   }
 
-  #CircleTwoCenter {
-    animation: amber-cycle 5s infinite ease-in;
-    animation-delay: 7s;
+  @media screen and (max-width: 767px) {
+    .hero-container .amber-status {
+      width: 16%;
+    }
+  }
+
+  @media screen and (max-width: 680px) {
+    .hero-container .amber-status {
+      width: 22%;
+      left: calc(50% - 11%);
+      bottom: -50px;
+      margin-top: 0;
+    }
   }
 
   #CircleTwoWaveOne {
-    animation: wave-opacity-amber 5s infinite ease-in;
-    animation-delay: 9s;
+    animation: wave-opacity 5s infinite ease-in;
+    animation-delay: 4s;
   }
 
   #CircleTwoWaveTwo {
-    animation: wave-opacity-amber 5s infinite ease-in;
-    animation-delay: 10s;
+    animation: wave-opacity 5s infinite ease-in;
+    animation-delay: 5s;
   }
 
   .hero-container .red-status {
-    width: 124px;
+    width: 15%;
     position: relative;
-    left: 45%;
-    bottom: 120px;
+    left: 85%;
+    bottom: 250px;
     transform: translatey(0px);
 	  animation: float 4s ease-in-out infinite;
     animation-delay: 2s;
   }
 
-  #CircleThreeCenter {
-    animation: red-cycle 5s infinite ease-in;
-    animation-delay: 3s;
+  @media screen and (max-width: 767px) {
+    .hero-container .red-status {
+      width: 19%;
+      bottom: 150px;
+    }
+  }
+
+  @media screen and (max-width: 680px) {
+    .hero-container .red-status {
+      width: 22%;
+      left: 80%;
+      bottom: 40px;
+    }
+  }
+
+  @media screen and (max-width: 460px) {
+    .hero-container .red-status {
+      bottom: 10px;
+    }
+  }
+
+  @media screen and (max-width: 380px) {
+    .hero-container .red-status {
+      bottom: -10px;
+    }
+  }
+
+  @media screen and (max-width: 330px) {
+    .hero-container .red-status {
+      bottom: 0;
+    }
   }
 
   #CircleThreeWaveOne {
-    animation: wave-opacity-red 5s infinite ease-in;
-    animation-delay: 3s;
+    animation: wave-opacity 5s infinite ease-in;
+    animation-delay: 1s;
   }
 
   #CircleThreeWaveTwo {
-    animation: wave-opacity-red 5s infinite ease-in;
-    animation-delay: 4s;
+    animation: wave-opacity 5s infinite ease-in;
+    animation-delay: 2s;
   }
 
-  @keyframes wave-opacity-green {
+  @keyframes wave-opacity {
     0% {
       opacity: 1;
-      stroke: #77DF81;
-    }
-    33% {
-      stroke: #FFB74D;
-    }
-    66% {
-      stroke: #F3693D;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-
-  @keyframes wave-opacity-amber {
-    0% {
-      opacity: 1;
-      stroke: #FFB74D;
-    }
-    33% {
-      stroke: #F3693D;
-    }
-    66% {
-      stroke: #77DF81;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-
-  @keyframes wave-opacity-red {
-    0% {
-      opacity: 1;
-      stroke: #F3693D;
-    }
-    33% {
-      stroke: #77DF81;
-    }
-    66% {
-      stroke: #FFB74D;
     }
     100% {
       opacity: 0;
@@ -475,52 +532,28 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
       transform: translatey(0px);
     }
   }
-
-  @keyframes green-cycle {
-    0% {
-      fill: #77DF81;
-    }
-    33% {
-      fill: #FFB74D;
-    }
-    66% {
-      fill: #F3693D;
-    }
-  }
-
-  @keyframes amber-cycle {
-    0% {
-      fill: #FFB74D;
-    }
-    33% {
-      fill: #F3693D;
-    }
-    66% {
-      fill: #77DF81;
-    }
-  }
-
-  @keyframes red-cycle {
-    0% {
-      fill: #F3693D;
-    }
-    33% {
-      fill: #77DF81;
-    }
-    66% {
-      fill: #FFB74D;
-    }
-  }
   
   .hero-container .hero-cta {
     padding-bottom: 50px;
   }
+
+  @media screen and (max-width: 680px) {
+    .hero-container .hero-cta {
+      padding-bottom: 120px;
+    }
+  }
   
-  @media screen and (max-width: 550px) {
+  @media screen and (max-width: 450px) {
     .hero-container a {
         width: 80%;
         margin-left: auto;
         margin-right: auto;  
+    }
+  }
+
+  @media screen and (max-width: 370px) {
+    .hero-container a {
+        width: 100%; 
     }
   }
 
