@@ -8,8 +8,8 @@ Once on the `development` branch run the following to install necessary packages
 
 ### `npm install`
 
-Create an `.env.production` file in the project root and fill the required variables `GATSBY_ANALYTICS_ID=""` and `GATSBY_FORMSPREE_ID=""` with the NetMinded Google Analytics ID and Formspree ID. 
-An `.env.development` file should also be created too and this needs to contain the Formspree variable `GATSBY_FORMSPREE_ID=""` to test Formspree locally (Formspree domain whitelisting may need to be temporarily disabled to test locally). Variables which are required in the browser should be prefixed with `GATSBY_`. Variables which are to be kept private should not be prefixed.
+Create an `.env.production` file in the project root and fill the required variables `GATSBY_ANALYTICS_ID=""`, `GATSBY_FORMSPREE_ID=""`, `GATSBY_FORMSPREE_ID_NETPLAYBOOK=""` and `GATSBY_FORMSPREE_ID_NETPROVE=""` with the NetMinded Google Analytics ID and Formspree ID. 
+An `.env.development` file should also be created too and this needs to contain the Formspree variables `GATSBY_FORMSPREE_ID=""`, `GATSBY_FORMSPREE_ID_NETPLAYBOOK=""` and `GATSBY_FORMSPREE_ID_NETPROVE=""` to test Formspree locally (Formspree domain whitelisting may need to be temporarily disabled to test locally). Variables which are required in the browser should be prefixed with `GATSBY_`. Variables which are to be kept private should not be prefixed.
 
 To run the app in development mode and to view it in your browser at [http://localhost:8000](http://localhost:8000) run the following. 
 The browser will reload when you make changes. You may also see any lint errors in the console. 
