@@ -29,23 +29,31 @@ const sendForm = (e, formData, setFormData, setFormErrors, setFormStatus) => {
                         message: '',
                         _gotcha: ''
                     })
+                    setTimeout(() => setFormStatus({
+                        statusMessage: '',
+                        statusState: 'default',
+                    }) , 8000)
                 } else {
                     if (Object.hasOwn(data, 'errors')) {
                         setFormStatus({
                             statusMessage: data["errors"].map(error => error["message"]).join(", "),
                             statusState: 'bad',
                         })
+                        setTimeout(() => setFormStatus({
+                            statusMessage: '',
+                            statusState: 'default',
+                        }) , 8000)
                     } else {
                         setFormStatus({
                             statusMessage: formFeedback[5],
                             statusState: 'bad',
                         })
+                        setTimeout(() => setFormStatus({
+                            statusMessage: '',
+                            statusState: 'default',
+                        }) , 8000)
                     }
                 }
-                setTimeout(() => setFormStatus({
-                    statusMessage: '',
-                    statusState: 'default',
-                }) , 8000)
             })
             .catch((error) => {
                 setFormStatus({
@@ -163,12 +171,11 @@ const ContactPage = () => {
                             <input type="text" name="_gotcha" class="form-control" id="formContact" value={formData._gotcha} onChange={(e) => setFormData({...formData, _gotcha: e.target.value})} />
                         </div>
                         <div className='offset-3 col-6 mt-5'>
-                            <button className='btn btn-secondary' formnovalidate onClick={(e) => sendForm(e, formData, setFormData, setFormErrors, setFormStatus)}>
+                            <button className='btn' formnovalidate onClick={(e) => sendForm(e, formData, setFormData, setFormErrors, setFormStatus)}>
                                 Send Message
                             </button>
-                            {formStatus.statusMessage.length > 0 && <p className={`text-center form-status ${formStatus.statusMessage === 'good' ? 'form-status-good' : 'form-status-issue'}`}>{formStatus.statusMessage}</p>}
+                            {formStatus.statusMessage.length > 0 && <p className={`text-center form-status ${formStatus.statusState === 'good' ? 'form-status-good' : 'form-status-bad'}`}>{formStatus.statusMessage}</p>}
                         </div>
-                        
                     </form>
                 </div>
             </div>
