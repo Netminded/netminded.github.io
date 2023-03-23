@@ -6,9 +6,9 @@ import { isEmpty, charactersOnly, validEmailFormat } from '../utils/utils'
 import axios from 'axios'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
-  faArrowTrendDown,
-  faHourglassStart,
-  faUserMinus
+  faPhoneSlash,
+  faHouseSignal,
+  faClock
 } from '@fortawesome/free-solid-svg-icons'
 import SEO from '../components/seo'
 
@@ -138,18 +138,18 @@ return (
                             <div className="row">
                                 <div className="col-lg-6">
                                     <div className="hero-content">
-                                        <h1>Automate Diagnostics and Service Information Flows</h1>
-                                        <p>Deliver the right info to the right people at the right time. Improve productivity, customer experience and job satisfaction for your employees.</p>
+                                        <h1>Vital Demarcation Diagnostics in Real Time From Your FTTH/P Access Network Provider</h1>
+                                        <p>Your Network Provider (e.g. CityFibre) provides an Ethernet testpoint on their ONT. Our solution tests that endpoint and provides real time diagnostics to your ServiceOps solutions.</p>
                                         <div className="benefit-items">
-                                            <h3><span className="benefit-icon"><FontAwesomeIcon icon={faArrowTrendDown}/></span><span className="trust-item-text">Benefit/Stat 1</span></h3>
-                                            <h3><span className="benefit-icon benefit-icon--middle"><FontAwesomeIcon icon={faHourglassStart}/></span><span className="trust-item-text">Benefit/Stat 2</span></h3>
-                                            <h3><span className="benefit-icon"><FontAwesomeIcon icon={faUserMinus}/></span><span className="trust-item-text">Benefit/Stat 3</span></h3>
+                                            <h3><span className="benefit-icon"><FontAwesomeIcon icon={faPhoneSlash}/></span><span className="trust-item-text">No need to call the provider help desk. Understand in real time if the provider ONT is up or down.</span></h3>
+                                            <h3><span className="benefit-icon benefit-icon--middle"><FontAwesomeIcon icon={faHouseSignal}/></span><span className="trust-item-text">See in real time if your customer has connected a device to the ONT.</span></h3>
+                                            <h3><span className="benefit-icon"><FontAwesomeIcon icon={faClock}/></span><span className="trust-item-text">Save hours of time by not having to call the provider to diagnose us/them connectivity issues.</span></h3>
                                         </div>
                                     </div>
                                 </div>
                                 <div className='offset-lg-1 col-lg-5'>
                                     <div className='contact-container'>
-                                        <h2>Register Your Interest in NetProve</h2>
+                                        <h2>Register Your Interest in NetProve - Ethernet CFM</h2>
                                         <form>
                                             <div>
                                                 <label htmlFor="formName" className="form-label">Name</label>
@@ -166,7 +166,7 @@ return (
                                             </div>
                                             <div className="mt-5">
                                                 <label htmlFor="formCompany" className="form-label">Company Name (Optional)</label>
-                                                <input placeholder="All for one and one for all!" type="text" name="company" className="form-control" id="formCompany" value={formData.company} onChange={(e) => {setFormData({...formData, company: e.target.value})}} />
+                                                <input placeholder="Three Musketeers Ltd" type="text" name="company" className="form-control" id="formCompany" value={formData.company} onChange={(e) => {setFormData({...formData, company: e.target.value})}} />
                                             </div>
                                             <div>
                                                 <input type="text" name="_gotcha" className="form-control" id="formContact" value={formData._gotcha} onChange={(e) => setFormData({...formData, _gotcha: e.target.value})} />
@@ -193,5 +193,5 @@ return (
 export default NetProvePage
 
 export const Head = () => (
-    <SEO article={false} />
+    <SEO title="NetProve - Ethernet CFM" description="Vital demarcation diagnostics in real time from your FTTH/P access network provider." article={false} />
 )

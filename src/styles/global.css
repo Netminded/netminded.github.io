@@ -489,9 +489,20 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
   }
 
   /* Landing Page */
+  .landing-page h1 {
+    margin-top: 0;
+    font-size: 220%;
+  }
+
   @media screen and (max-width: 1199px) {
     .landing-page h1 {
-      font-size: 250%;
+      font-size: 200%;
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    .landing-page h1 {
+      margin-top: 40px;
     }
   }
 
@@ -499,6 +510,12 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
     .landing-page h1 {
       font-size: 175%;
       margin-top: 80px;
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    .hero-container .benefit-items {
+      margin-bottom: 40px;
     }
   }
 
@@ -510,6 +527,17 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
     display: flex;
   }
 
+  @media screen and (max-width: 600px) {
+    .hero-container .benefit-items h3 {
+      font-size: 18px;
+    }
+  }
+
+  .hero-container .benefit-items h3:nth-child(2)  {
+    margin-top: 20px;
+    margin-bottom: 28px;
+  }
+
   .hero-container .benefit-icon {
     width: 50px;
     height: 50px;
@@ -518,8 +546,12 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
     color: #826EF5;
     border-radius: 50px;
     text-align: center;
-    margin: -12px 15px 30px 0;
+    margin: 0 15px 5px 0;
     flex: 0 0 auto;
+  }
+
+  .hero-container .benefit-icon svg {
+    margin-top: 14px;
   }
 
   .hero-container .benefit-icon--middle {
@@ -537,6 +569,12 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
   @media screen and (max-width: 991px) {
     .hero-container .contact-container {
       margin-bottom: 80px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .hero-container .contact-container {
+      padding: 30px;
     }
   }
 

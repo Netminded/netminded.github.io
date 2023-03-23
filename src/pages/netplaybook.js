@@ -6,9 +6,9 @@ import { isEmpty, charactersOnly, validEmailFormat } from '../utils/utils'
 import axios from 'axios'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
-  faArrowTrendDown,
-  faHourglassStart,
-  faUserMinus
+  faUserCheck,
+  faPersonArrowUpFromLine,
+  faShareNodes
 } from '@fortawesome/free-solid-svg-icons'
 import SEO from '../components/seo'
 
@@ -138,12 +138,12 @@ return (
                             <div className="row">
                                 <div className="col-lg-6">
                                     <div className="hero-content">
-                                        <h1>Automate Diagnostics and Service Information Flows</h1>
-                                        <p>Deliver the right info to the right people at the right time. Improve productivity, customer experience and job satisfaction for your employees.</p>
+                                        <h1>Your Netplaybooks Are the Foundation of Great Products and the Teams That Deliver Them</h1>
+                                        <p>Modern service delivery doesn’t accept a customer being first to alert you of a service issue. It’s not good enough to spend hours diagnosing and discussing issues between delivery partners.</p>
                                         <div className="benefit-items">
-                                            <h3><span className="benefit-icon"><FontAwesomeIcon icon={faArrowTrendDown}/></span><span className="trust-item-text">Benefit/Stat 1</span></h3>
-                                            <h3><span className="benefit-icon benefit-icon--middle"><FontAwesomeIcon icon={faHourglassStart}/></span><span className="trust-item-text">Benefit/Stat 2</span></h3>
-                                            <h3><span className="benefit-icon"><FontAwesomeIcon icon={faUserMinus}/></span><span className="trust-item-text">Benefit/Stat 3</span></h3>
+                                            <h3><span className="benefit-icon"><FontAwesomeIcon icon={faUserCheck}/></span><span className="trust-item-text">Enable great CX. Shared awareness gets the right information to the right people at the right time.</span></h3>
+                                            <h3><span className="benefit-icon benefit-icon--middle"><FontAwesomeIcon icon={faPersonArrowUpFromLine}/></span><span className="trust-item-text">Be a better place to work! Increase the productivity and the job satisfaction of your own teams.</span></h3>
+                                            <h3><span className="benefit-icon"><FontAwesomeIcon icon={faShareNodes}/></span><span className="trust-item-text">Add shared awareness to your support solution. Be the provider of choice for end users and partners.</span></h3>
                                         </div>
                                     </div>
                                 </div>
@@ -166,7 +166,7 @@ return (
                                             </div>
                                             <div className="mt-5">
                                                 <label htmlFor="formCompany" className="form-label">Company Name (Optional)</label>
-                                                <input placeholder="All for one and one for all!" type="text" name="company" className="form-control" id="formCompany" value={formData.company} onChange={(e) => {setFormData({...formData, company: e.target.value})}} />
+                                                <input placeholder="Three Musketeers Ltd" type="text" name="company" className="form-control" id="formCompany" value={formData.company} onChange={(e) => {setFormData({...formData, company: e.target.value})}} />
                                             </div>
                                             <div>
                                                 <input type="text" name="_gotcha" className="form-control" id="formContact" value={formData._gotcha} onChange={(e) => setFormData({...formData, _gotcha: e.target.value})} />
@@ -193,5 +193,5 @@ return (
 export default NetPlaybookPage
 
 export const Head = () => (
-    <SEO article={false} />
+    <SEO title="NetPlaybook" description="Your NetPlaybooks are the foundation of great products and the teams that deliver them." article={false} />
 )

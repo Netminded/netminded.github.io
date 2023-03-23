@@ -54,7 +54,7 @@ const AboutPage = () => {
                             <TeamSection teamName="Tam Love" role="Head of Design & Development" />
                         </div>
                         <div className="col-md-4">
-                            <TeamSection teamName="Ross Loveridge" role="Marketing Lead" />
+                            <TeamSection teamName="Ross Loveridge" role="Digital Lead" />
                         </div>
                     </div>
                 </div>
