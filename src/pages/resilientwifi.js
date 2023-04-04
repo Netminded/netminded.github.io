@@ -205,5 +205,5 @@ return (
 export default ResilientWifi
 
 export const Head = () => (
-    <SEO title="NetPlaybook" description="Your NetPlaybooks are the foundation of great products and the teams that deliver them." article={false} />
+    <SEO title="Resilient WiFi" description="What Happens if the WiFi Stops Working? NetMinded has you covered." article={false} />
 )
