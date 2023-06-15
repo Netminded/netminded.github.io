@@ -602,6 +602,10 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
     }
   }
 
+  #openvault .benefit-items {
+    margin-bottom: 60px;
+  }
+
   @media screen and (max-width: 991px) {
     .hero-container .benefit-items {
       margin-bottom: 40px;
