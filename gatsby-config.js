@@ -10,7 +10,7 @@ module.exports = {
     titleTemplate: `%s · NetMinded`,
     description:
       `Protect your reputation and reduce operational costs by sharing status information with the right stakeholders at the right time.`,
-    image: `/netminded-og-image.jpg`,
+    image: `/netminded-og.jpg`,
     keywords: `Status,Services,Monitors,Internet,WiFi,Network,IT,Branded,Support,Productivity,NetMinder,NetMinded`,
     maskedIcon: `/safari-pinned-tab.svg`,
     authors: [
