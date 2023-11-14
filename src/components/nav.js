@@ -50,7 +50,7 @@ const Nav = ({simpleNav, isHero}) => {
                         <span className="nav-auth"></span>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link btn nav-btn" href="https://dashboard.seethrunetworks.com/login" rel="noreferrer">Login</a>
+                        <a className="nav-link btn nav-btn" href="https://dashboard.netminded.co.uk/login" rel="noreferrer">Login</a>
                     </li>
                 </ul> : 
                 <ul className="navbar-nav ms-auto">

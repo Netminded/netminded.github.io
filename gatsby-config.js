@@ -19,12 +19,16 @@ module.exports = {
         social: `https://www.linkedin.com/in/nrandall`,
       },
       {
-        name: `Tam Love`,
+        name: `Tam Love-Pryde`,
         social: `https://www.linkedin.com/in/tamlove`,
       },
       {
         name: `Ross Loveridge`,
         social: `https://www.linkedin.com/in/ross-loveridge-65159619b`,
+      },
+      {
+        name: `Callum Randall`,
+        social: `https://www.linkedin.com/in/callum-randall-133068236`,
       },
       {
         name: `NetMinded`,

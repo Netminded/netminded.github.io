@@ -47,14 +47,17 @@ const AboutPage = () => {
                         </div>
                     </div>
                     <div className="row team-container">
-                        <div className="col-md-4">
+                        <div className="col-md-6 col-lg-3">
                             <TeamSection teamName="Nick Randall" role="Managing Director" />
                         </div>
-                        <div className="col-md-4">
-                            <TeamSection teamName="Tam Love" role="Head of Design & Development" />
+                        <div className="col-md-6 col-lg-3">
+                            <TeamSection teamName="Tam Love-Pryde" role="Head of Design & Development" />
                         </div>
-                        <div className="col-md-4">
-                            <TeamSection teamName="Ross Loveridge" role="Digital Lead" />
+                        <div className="col-md-6 col-lg-3">
+                            <TeamSection teamName="Ross Loveridge" role="Customer Experience Lead" />
+                        </div>
+                        <div className="col-md-6 col-lg-3">
+                            <TeamSection teamName="Callum Randall" role="Customer Experience Lead" />
                         </div>
                     </div>
                 </div>

@@ -122,11 +122,11 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
   }
   
   .menu-scrolling-hero {
-    background: linear-gradient(108.69deg, rgb(9, 40, 66, 0.7) 13.22%, rgb(12, 5, 39, 0.7) 86.57%) no-repeat;
+    background: linear-gradient(108.69deg, rgb(18, 44, 84, 0.7) 13.22%, rgb(12, 5, 39, 0.7) 86.57%) no-repeat;
   }
   
   .menu-scrolling-content {
-    background: linear-gradient(108.69deg, #092842 13.22%, #0C0527 86.57%) no-repeat;
+    background: linear-gradient(108.69deg, #122C54 13.22%, #0C0527 86.57%) no-repeat;
   }
   
   .navbar {
@@ -135,12 +135,12 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
 
   @media screen and (max-width: 1199px) {
     .navbar {
-      background: linear-gradient(108.69deg, #092842 13.22%, #0C0527 86.57%) no-repeat;
+      background: linear-gradient(108.69deg, #122C54 13.22%, #0C0527 86.57%) no-repeat;
     }
   }
   
   .navbar-brand img {
-    width: 160px;
+    width: 84px;
     padding-left: 5px;
     position: relative;
     bottom: 2px;
@@ -148,7 +148,7 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
 
   @media screen and (max-width: 1199px) {
     .navbar-brand img {
-      bottom: -1px;
+      bottom: 0;
     }
   }
   
@@ -237,7 +237,7 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
   }
   
   .nav-btn:hover {
-    color: #092842 !important;
+    color: #122C54 !important;
     background: #FFFFFF;
     border: 3px solid #FFFFFF;
   }
@@ -292,7 +292,7 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
   .hero-container {
     width: 100%;
     min-height: 100%;
-    background: url('../images/NetMinded_Hero_Bk.svg') 50% 40% no-repeat, linear-gradient(108.69deg, #092842 13.22%, #0C0527 86.57%);
+    background: url('../images/NetMinded_Hero_Bk.svg') 50% 40% no-repeat, linear-gradient(108.69deg, #122C54 13.22%, #0C0527 86.57%);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -653,7 +653,7 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
 
   .hero-container .benefit-icon--middle {
     background-color: #e9eff4;
-    color: #2897F3;
+    color: #0D6AF6;
   }
 
   .hero-container .benefit-items .rf-item-text {
@@ -802,7 +802,7 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
     background-color: #E9EFF4;
     border-radius: 50px;
     text-align: center;
-    color: #2897F3;
+    color: #0D6AF6;
     margin: 0 auto 30px auto;
   }
 
@@ -1015,7 +1015,7 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
   
   /* DASHBOARD SECTION */
   .dashboard-container {
-    background: linear-gradient(108.69deg, #092842 13.22%, #0C0527 86.57%) no-repeat;
+    background: linear-gradient(108.69deg, #122C54 13.22%, #0C0527 86.57%) no-repeat;
     padding-top: 120px;
     padding-bottom: 120px;
     min-height: 100%;
@@ -1137,7 +1137,7 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
   /* Trust Section */
 
   .trust-container {
-    background: linear-gradient(108.69deg, #092842 13.22%, #0C0527 86.57%) no-repeat;
+    background: linear-gradient(108.69deg, #122C54 13.22%, #0C0527 86.57%) no-repeat;
     padding-top: 120px;
     padding-bottom: 120px;
     min-height: 100%;
@@ -1202,7 +1202,7 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
 
   .trust-icon--middle {
     background-color: #e9eff4;
-    color: #2897F3;
+    color: #0D6AF6;
   }
 
   .trust-items .trust-icon svg {
@@ -1361,7 +1361,7 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
   }
 
   .testimonial-panel {
-    background: linear-gradient(108.69deg, #092842 13.22%, #0C0527 86.57%);
+    background: linear-gradient(108.69deg, #122C54 13.22%, #0C0527 86.57%);
     padding: 30px;
     border-radius: 15px;  
     height: 92%;
@@ -1564,7 +1564,7 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
   
   /* CTA */
   .cta-container {
-    background: linear-gradient(108.69deg, #092842 13.22%, #0C0527 86.57%) no-repeat;
+    background: linear-gradient(108.69deg, #122C54 13.22%, #0C0527 86.57%) no-repeat;
     padding-top: 120px;
     padding-bottom: 120px;
   }
@@ -1634,7 +1634,7 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
 }
 
 .about-page-header {
-  background: linear-gradient(108.69deg, #092842 13.22%, #0C0527 86.57%) no-repeat;
+  background: linear-gradient(108.69deg, #122C54 13.22%, #0C0527 86.57%) no-repeat;
   text-align: center;
   padding: 100px 20px;
 }
@@ -1777,7 +1777,7 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
 }
 
 .team-profile-social {
-  color: #2897F3;
+  color: #0D6AF6;
   font-size: 20px;
   margin-right: 3px;
   margin-bottom: -1px;
@@ -1814,7 +1814,7 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
 }
 
 .isp-msp-page-header {
-  background: linear-gradient(108.69deg, #092842 13.22%, #0C0527 86.57%) no-repeat;
+  background: linear-gradient(108.69deg, #122C54 13.22%, #0C0527 86.57%) no-repeat;
   text-align: center;
   padding: 100px 20px;
 }
@@ -1924,7 +1924,7 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
 }
 
 .contact-page-header {
-  background: linear-gradient(108.69deg, #092842 13.22%, #0C0527 86.57%) no-repeat;
+  background: linear-gradient(108.69deg, #122C54 13.22%, #0C0527 86.57%) no-repeat;
   text-align: center;
   padding: 100px 20px;
 }
@@ -2035,7 +2035,7 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
   
   /* Legal / Policies */
   .policy {
-    background: linear-gradient(108.69deg, #092842 13.22%, #0C0527 86.57%) no-repeat;
+    background: linear-gradient(108.69deg, #122C54 13.22%, #0C0527 86.57%) no-repeat;
     min-height: 100%;
   }
   
@@ -2233,7 +2233,7 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
   }
   
   .cookie-button{
-    background: #2897F3; 
+    background: #0D6AF6; 
     color: #FFFFFF; 
     text-transform: uppercase; 
     font-family: "Poppins", sans-serif; 
@@ -2256,7 +2256,7 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
   .page-not-found-div {
     width: 100%;
     min-height: calc(100% - 60px);
-    background: linear-gradient(108.69deg, #092842 13.22%, #0C0527 86.57%) no-repeat;
+    background: linear-gradient(108.69deg, #122C54 13.22%, #0C0527 86.57%) no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
