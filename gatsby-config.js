@@ -10,7 +10,7 @@ module.exports = {
     titleTemplate: `%s · NetMinded`,
     description:
       `Protect your reputation and reduce operational costs by sharing status information with the right stakeholders at the right time.`,
-    image: `/netminded-og.jpg`,
+    image: `/netminded-og-image.jpg`,
     keywords: `Status,Services,Monitors,Internet,WiFi,Network,IT,Branded,Support,Productivity,NetMinder,NetMinded`,
     maskedIcon: `/safari-pinned-tab.svg`,
     authors: [
@@ -43,8 +43,8 @@ module.exports = {
       name: `NetMinded`,
       short_name: `NetMinded`,
       start_url: `/`,
-      background_color: `#7b61ff`,
-      theme_color: `#7b61ff`,
+      background_color: `#122C54`,
+      theme_color: `#122C54`,
       lang: `en`,
       display: `standalone`,
       icon: `src/images/icon.png`,

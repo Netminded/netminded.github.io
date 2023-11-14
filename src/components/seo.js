@@ -30,7 +30,7 @@ const SEO = ({ title, description, image, article, keywords }) => {
   return (
     <>
       <title>{seo.title}</title>
-      <link rel="mask-icon" href={`${siteUrl}${maskedIcon}`} color="#7b61ff"></link>  
+      <link rel="mask-icon" href={`${siteUrl}${maskedIcon}`} color="#122C54"></link>  
       <meta name="apple-mobile-web-app-title" content={shortTitle}></meta>
       <meta name="application-name" content={shortTitle}></meta>  
       <meta name="description" content={seo.description} />
