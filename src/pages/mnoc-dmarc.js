@@ -2,13 +2,13 @@ import * as React from 'react'
 import Layout from '../components/layout'
 import { useState } from 'react'
 import { Waypoint } from 'react-waypoint'
-import { isEmpty, charactersOnly, validEmailFormat } from '../utils/utils'
+import { isEmpty, charactersOnly, validEmailFormat, ValidDomainFormat } from '../utils/utils'
 import axios from 'axios'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
-  faGauge,
-  faArrowRightArrowLeft,
-  faCommentDots
+  faEnvelopeCircleCheck,
+  faSliders,
+  faCode
 } from '@fortawesome/free-solid-svg-icons'
 import SEO from '../components/seo'
 
@@ -17,7 +17,7 @@ const sendForm = (e, formData, setFormData, setFormErrors, setFormStatus) => {
 
     if(validateForm(formData, setFormErrors)) {
         axios
-            .post(`https://formspree.io/f/${process.env.GATSBY_FORMSPREE_ID_OPENVAULT}`, formData, {
+            .post(`https://formspree.io/f/${process.env.GATSBY_FORMSPREE_ID_MNOC_DMARC}`, formData, {
                 headers: {
                     Accept: "application/json",
                 }
@@ -26,14 +26,14 @@ const sendForm = (e, formData, setFormData, setFormErrors, setFormStatus) => {
                 console.log(data)
                 if(data.ok) {
                     setFormStatus({
-                        statusMessage: formFeedback[6],
+                        statusMessage: formFeedback[7],
                         statusState: 'good',
                     })
                     setFormData({
                         name: '',
                         email: '',
-                        subject: 'NetMinded: OpenVault Interest Registered',
-                        company: '',
+                        subject: 'NetMinded: M-NOC DMARC Interest Registered',
+                        domain: '',
                         _gotcha: ''
                     })
                 } else {
@@ -44,7 +44,7 @@ const sendForm = (e, formData, setFormData, setFormErrors, setFormStatus) => {
                         })
                     } else {
                         setFormStatus({
-                            statusMessage: formFeedback[5],
+                            statusMessage: formFeedback[6],
                             statusState: 'bad',
                         })
                     }
@@ -56,7 +56,7 @@ const sendForm = (e, formData, setFormData, setFormErrors, setFormStatus) => {
             })
             .catch((error) => {
                 setFormStatus({
-                    statusMessage: formFeedback[5],
+                    statusMessage: formFeedback[6],
                     statusState: 'bad',
                 })
                 setTimeout(() => setFormStatus({
@@ -69,7 +69,7 @@ const sendForm = (e, formData, setFormData, setFormErrors, setFormStatus) => {
 
 const validateForm = (formData, setFormErrors) => {
     let formPass = true
-    let errorName = '', errorEmail = '', errorOrg = ''
+    let errorName = '', errorEmail = '', errorDomain = ''
 
     if(isEmpty(formData.name)) {
         formPass = false
@@ -91,9 +91,14 @@ const validateForm = (formData, setFormErrors) => {
         }
     }
 
-    if(isEmpty(formData.company)) {
+    if(isEmpty(formData.domain)) {
         formPass = false
-        errorOrg = formFeedback[4]
+        errorDomain = formFeedback[4]
+    } else {
+        if(!ValidDomainFormat(formData.domain)) {
+            formPass = false
+            errorDomain = formFeedback[5]
+        }
     }
 
     if(!isEmpty(formData._gotcha)) {
@@ -103,7 +108,7 @@ const validateForm = (formData, setFormErrors) => {
     setFormErrors({
         nameError: errorName,
         emailError: errorEmail,
-        orgError: errorOrg
+        domainError: errorDomain
     })
 
     return formPass
@@ -114,24 +119,25 @@ const formFeedback = [
     'Please enter valid characters for your name.',
     'Please enter your email address.',
     'Please enter a valid email address.',
-    'Please enter your company name.',
+    'Please enter your website domain.',
+    'Please enter a valid website domain.',
     'Sorry, there was an issue sending your registration. Please try again later!',
     'Thank you for registering your interest, we\'ll be in touch soon!'
 ]
 
-const OpenVault = () => {
+const MnocDmarc = () => {
 const [isHero, setIsHero] = useState(true)
 const [formData, setFormData] = React.useState({
     name: '',
     email: '',
-    subject: 'NetMinded: OpenVault Interest Registered',
-    company: '',
+    subject: 'NetMinded: M-NOC DMARC Interest Registered',
+    domain: '',
     _gotcha: ''
 })
 const [formErrors, setFormErrors] = React.useState({
     nameError: '',
     emailError: '',
-    orgError: ''
+    domainError: ''
 })
 const [formStatus, setFormStatus] = React.useState({
     statusMessage: '',
@@ -140,24 +146,25 @@ const [formStatus, setFormStatus] = React.useState({
 return (
     <Layout isHero={isHero} simpleNav={true}>
             <Waypoint onEnter={() => setIsHero(true)} onLeave={() => setIsHero(false)} topOffset={100}>
-                <div id="openvault" className="hero-container landing-page">
+                <div id="mnocDmarc" className="hero-container landing-page">
                     <div className="hero-container-sub">
                         <div className="container">
-                            <div className="row">
+                            <div className="row d-flex align-items-center">
                                 <div className="col-lg-6">
                                     <div className="hero-content">
-                                        <h1>Let OpenVault Turbo Charge Your Playbook for Handling Subscriber Speed Tests and Other QoE Issues</h1>
-                                        <p>OpenVault is trusted by Internet providers to help manage over 100 million customers worldwide. OpenVault’s easy-to-deploy, probeless Traffic Analyser is a vital tool for ISPs who want to get ahead of customer QoE issues.</p>
+                                        <h1>Be the first to get our M-NOC DMARC alerts</h1>
+                                        <p>Due to positive feedback, we are launching our no-code function for DMARC reporting. Get alerts about email delivery issues directly into your network or IT monitoring solution.</p>
+                                        <h2>Never miss an email delivery issue again</h2>
                                         <div className="benefit-items">
-                                            <h3><span className="benefit-icon"><FontAwesomeIcon icon={faGauge}/></span><span className="rf-item-text">Alerts when customers run speed tests and proactively manage incoming calls.</span></h3>
-                                            <h3><span className="benefit-icon benefit-icon--middle"><FontAwesomeIcon icon={faArrowRightArrowLeft}/></span><span className="rf-item-text">Understand traffic flows across your infrastructure - manage application usage issues.</span></h3>
-                                            <h3><span className="benefit-icon"><FontAwesomeIcon icon={faCommentDots}/></span><span className="rf-item-text">Respond proactively to customer QoE issues - visualise the traffic across your network.</span></h3>
+                                            <h3><span className="benefit-icon"><FontAwesomeIcon icon={faEnvelopeCircleCheck}/></span><span className="rf-item-text">We check your DMARC emails and turn them into Red, Amber or Green status messages</span></h3>
+                                            <h3><span className="benefit-icon benefit-icon--middle"><FontAwesomeIcon icon={faSliders}/></span><span className="rf-item-text">You configure a monitor on your I.T. monitoring solution</span></h3>
+                                            <h3><span className="benefit-icon"><FontAwesomeIcon icon={faCode}/></span><span className="rf-item-text">No coding or API skills required</span></h3>
                                         </div>
                                     </div>
                                 </div>
                                 <div className='offset-lg-1 col-lg-5'>
                                     <div className='contact-container'>
-                                        <h2>Register Your Interest in Resilient WiFi</h2>
+                                        <h2>Sign up to DMARC alerts and be the first to know about upcoming micro-MNOC features for your I.T. monitoring</h2>
                                         <form>
                                             <div>
                                                 <label htmlFor="formName" className="form-label">Name</label>
@@ -173,9 +180,9 @@ return (
                                                 <input type="text" name="subject" className="form-control" id="formSubject" value={formData.subject} required disabled/>
                                             </div>
                                             <div className="mt-5">
-                                                <label htmlFor="formCompany" className="form-label">Company Name</label>
-                                                <input placeholder="Three Musketeers Ltd" type="text" name="company" className="form-control" id="formCompany" value={formData.company} onChange={(e) => {setFormData({...formData, company: e.target.value}); setFormErrors({...formErrors, orgError: ''})}} required />
-                                                {formErrors.orgError.length > 0 && <p className='form-error-text'>{formErrors.orgError}</p>}
+                                                <label htmlFor="formDomain" className="form-label">Website Address</label>
+                                                <input placeholder="musketeer.com" type="text" name="domain" className="form-control" id="formDomain" value={formData.domain} onChange={(e) => {setFormData({...formData, domain: e.target.value}); setFormErrors({...formErrors, domainError: ''})}} required />
+                                                {formErrors.domainError.length > 0 && <p className='form-error-text'>{formErrors.domainError}</p>}
                                             </div>
                                             <div>
                                                 <input type="text" name="_gotcha" className="form-control" id="formContact" value={formData._gotcha} onChange={(e) => setFormData({...formData, _gotcha: e.target.value})} />
@@ -199,8 +206,8 @@ return (
   )
 }
 
-export default OpenVault
+export default MnocDmarc
 
 export const Head = () => (
-    <SEO title="OpenVault" description="Let OpenVault Turbo Charge Your Playbook for Handling Subscriber Speed Tests and Other QoE Issues" article={false} />
+    <SEO title="M-NOC DMARC" description="Be the first to get our M-NOC DMARC alerts — Due to positive feedback, we are launching our no-code function for DMARC reporting." article={false} />
 )

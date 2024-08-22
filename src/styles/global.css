@@ -602,7 +602,20 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
     }
   }
 
-  #openvault .benefit-items {
+  #mnocDmarc .hero-content p {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  #mnocDmarc .hero-content h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 26px;
+    margin-bottom: 30px;
+    color: #FFFFFF;
+  }
+
+  #mnocDmarc .benefit-items {
     margin-bottom: 60px;
   }
 
@@ -628,7 +641,7 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
 
   .hero-container .benefit-items h3:nth-child(2)  {
     margin-top: 20px;
-    margin-bottom: 28px;
+    margin-bottom: 20px;
   }
 
   .hero-container .benefit-items h3:nth-child(4)  {
@@ -670,7 +683,8 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
     border: 3px solid #FFFFFF;
     border-radius: 15px;
     padding: 50px;
-    margin-top: 10px;
+    margin-top: 40px;
+    margin-bottom: 50px;
   }
 
   @media screen and (max-width: 991px) {
@@ -687,7 +701,7 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
 
   .hero-container .contact-container h2 {
     font-family: 'Poppins', sans-serif;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 22px;
     margin-bottom: 30px;
     color: #FFFFFF;
