@@ -6,10 +6,10 @@ To use the project clone it then cd into to the `netminded-website` folder and c
 
 Once on the `development` branch run the following to install necessary packages. Gatsby can be installed using `npm install -g gatsby-cli` if you don't already have it. 
 
-### `npm install`
+### `npm install --legacy-peer-deps`
 
-Create an `.env.production` file in the project root and fill the required variables `GATSBY_ANALYTICS_ID=""`, `GATSBY_FORMSPREE_ID=""`, `GATSBY_FORMSPREE_ID_NETPLAYBOOK=""`,`GATSBY_FORMSPREE_ID_NETPROVE=""` and `GATSBY_FORMSPREE_ID_OPENVAULT=""` with the NetMinded Google Analytics ID and Formspree ID. 
-An `.env.development` file should also be created too and this needs to contain the Formspree variables `GATSBY_FORMSPREE_ID=""`, `GATSBY_FORMSPREE_ID_NETPLAYBOOK=""`,`GATSBY_FORMSPREE_ID_NETPROVE=""`  and `GATSBY_FORMSPREE_ID_OPENVAULT=""` to test Formspree locally (Formspree domain whitelisting may need to be temporarily disabled to test locally). Variables which are required in the browser should be prefixed with `GATSBY_`. Variables which are to be kept private should not be prefixed.
+Create an `.env.production` file in the project root and fill the required variables `GATSBY_ANALYTICS_ID=""`, `GATSBY_FORMSPREE_ID=""`, `GATSBY_FORMSPREE_ID_MNOC_TRUSTPILOT=""`,`GATSBY_FORMSPREE_ID_NETPROVE=""` and `GATSBY_FORMSPREE_ID_MNOC_DMARC=""` with the NetMinded Google Analytics ID and Formspree ID. 
+An `.env.development` file should also be created too and this needs to contain the Formspree variables `GATSBY_FORMSPREE_ID=""`, `GATSBY_FORMSPREE_ID_MNOC_TRUSTPILOT=""`,`GATSBY_FORMSPREE_ID_NETPROVE=""`  and `GATSBY_FORMSPREE_ID_MNOC_DMARC=""` to test Formspree locally (Formspree domain whitelisting may need to be temporarily disabled to test locally). Variables which are required in the browser should be prefixed with `GATSBY_`. Variables which are to be kept private should not be prefixed.
 
 To run the app in development mode and to view it in your browser at [http://localhost:8000](http://localhost:8000) run the following. 
 The browser will reload when you make changes. You may also see any lint errors in the console. 
