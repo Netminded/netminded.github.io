@@ -1,7 +1,7 @@
 # NetMinded Website Gatsby/React App
 
 
-###### Setup
+## Setup
 
 To use the project clone it then cd into to the `netminded.github.io` folder and checkout the development branch.
 
@@ -33,7 +33,7 @@ Any input fields and other relevant content should be validated and tested. This
 ### `npm test`
 
 
-###### Adding a Blog Post
+## Adding a Blog Post
 
 **Before adding a new blog post/article first do a git pull of the development branch to make sure you have the latest version of the project.**
 
@@ -43,6 +43,7 @@ After creating a folder navigate inside the folder and creade an `index.mdx` fil
 
 An index file should always contain the following header section:
 
+```
 ---
 title: "A Great Blog Title!"
 date: "2024-08-23"
@@ -51,6 +52,7 @@ hero_image: "./Name_Of_Hero_Image.png"
 hero_image_alt: "A description of the hero image"
 tags: ["connectivity", "ethernet", "fault management", "networking"]
 ---
+```
 
 After the header the blog post/article content can be added (see other article/blog posts in the articles directory for examples).
 
@@ -59,7 +61,7 @@ Any images you wish to include (including the blog post/article hero image) shou
 Whilst working on the blog post/article you can preview it at `http://localhost:8000/blog/article-name`. When you're happy with the blog post/article first **commit the changes and merge into to the development branch before deploying**. Then deploy the project.
 
 
-###### Deploying
+## Deploying
 
 When ready to deploy the below command can be run. As part of the deployment a build script runs building the app for production to the `public` folder. 
 Once complete the `public` folder is automatically deployed to the `main` branch on GitHub which has been configured in the `package.json` file.
