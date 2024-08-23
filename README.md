@@ -15,7 +15,7 @@ Create an `.env.production` file in the project root and fill the required varia
 An `.env.development` file should also be created too and this needs to contain the Formspree variables `GATSBY_FORMSPREE_ID=""`, `GATSBY_FORMSPREE_ID_MNOC_TRUSTPILOT=""`,`GATSBY_FORMSPREE_ID_NETPROVE=""`  and `GATSBY_FORMSPREE_ID_MNOC_DMARC=""` to test Formspree locally (Formspree domain whitelisting may need to be temporarily disabled to test locally). Variables which are required in the browser should be prefixed with `GATSBY_`. Variables which are to be kept private should not be prefixed. 
 
 
-###### Running the Project
+## Running the Project
 
 To run the app in development mode and to view it in your browser at [http://localhost:8000](http://localhost:8000) run the below command. 
 The browser will reload when you make changes. You may also see any lint errors in the console. 
