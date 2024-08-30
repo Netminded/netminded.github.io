@@ -27,8 +27,20 @@ module.exports = {
         social: `https://www.linkedin.com/in/ross-loveridge-65159619b`,
       },
       {
-        name: `Callum Randall`,
-        social: `https://www.linkedin.com/in/callum-randall-133068236`,
+        name: `Chris Cottrell`,
+        social: `https://uk.linkedin.com/in/chris-cottrell-7b543916`,
+      },
+      {
+        name: `Aidan Price`,
+        social: `https://uk.linkedin.com/in/justaidanp`,
+      },
+      {
+        name: `Alan Holt`,
+        social: `https://uk.linkedin.com/in/alanholt`,
+      },
+      {
+        name: `Chesca Randall`,
+        social: `https://www.linkedin.com/in/chesca-randall-966308321/`,
       },
       {
         name: `NetMinded`,

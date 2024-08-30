@@ -57,7 +57,18 @@ const AboutPage = () => {
                             <TeamSection teamName="Ross Loveridge" role="Customer Experience Lead" />
                         </div>
                         <div className="col-md-6 col-lg-3">
-                            <TeamSection teamName="Callum Randall" role="Customer Experience Lead" />
+                            <TeamSection teamName="Chris Cottrell" role="Customer Success" />
+                        </div>
+                    </div>
+                    <div className="row team-container">
+                        <div className="col-md-6 col-lg-3">
+                            <TeamSection teamName="Aidan Price" role="Lead Software Engineer" />
+                        </div>
+                        <div className="col-md-6 col-lg-3">
+                            <TeamSection teamName="Alan Holt" role="Network Specialist" />
+                        </div>
+                        <div className="col-md-6 col-lg-3">
+                            <TeamSection teamName="Chesca Randall" role="Product Manager" />
                         </div>
                     </div>
                 </div>
