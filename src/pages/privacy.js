@@ -208,6 +208,12 @@ const PrivacyPage = () => {
                                 <br />
                                 <br />
 
+                                <h4 className="text-accent">Third Party Information</h4>
+                                <p>The use of information received from Google APIs will adhere to the Chrome Web Store User Data Policy, including the Limited Use requirements.</p>
+                                <br />
+                                <br />
+
+
                                 <h4 className="text-accent">Changes to our privacy policy</h4>
 
                                 <p>Any changes we may make to our privacy
