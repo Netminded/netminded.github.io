@@ -1,0 +1,173 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
+module.exports = {
+  siteMetadata: {
+    title: `NetMinded · Develop a Resilient Support Process With NetMinded`,
+    shortTitle: `NetMinded`,
+    siteUrl: `https://netminded.co.uk`,
+    titleTemplate: `%s · NetMinded`,
+    description:
+      `Protect your reputation and reduce operational costs by sharing status information with the right stakeholders at the right time.`,
+    image: `/netminded-og-image.jpg`,
+    keywords: `Status,Services,Monitors,Internet,WiFi,Network,IT,Branded,Support,Productivity,NetMinder,NetMinded`,
+    maskedIcon: `/safari-pinned-tab.svg`,
+    authors: [
+      {
+        name: `Nick Randall`,
+        social: `https://www.linkedin.com/in/nrandall`,
+      },
+      {
+        name: `Tam Love-Pryde`,
+        social: `https://www.linkedin.com/in/tamlove`,
+      },
+      {
+        name: `Ross Loveridge`,
+        social: `https://www.linkedin.com/in/ross-loveridge-65159619b`,
+      },
+      {
+        name: `Chris Cottrell`,
+        social: `https://uk.linkedin.com/in/chris-cottrell-7b543916`,
+      },
+      {
+        name: `Aidan Price`,
+        social: `https://uk.linkedin.com/in/justaidanp`,
+      },
+      {
+        name: `Alan Holt`,
+        social: `https://uk.linkedin.com/in/alanholt`,
+      },
+      {
+        name: `Chesca Randall`,
+        social: `https://www.linkedin.com/in/chesca-randall-966308321/`,
+      },
+      {
+        name: `NetMinded`,
+        social: `https://www.linkedin.com/company/40932026`,
+      },
+    ]
+  },
+  plugins: [ 
+  {
+    resolve: `gatsby-plugin-manifest`,
+    options: {
+      name: `NetMinded`,
+      short_name: `NetMinded`,
+      start_url: `/`,
+      background_color: `#122C54`,
+      theme_color: `#122C54`,
+      lang: `en`,
+      display: `standalone`,
+      icon: `src/images/icon.png`,
+      cache_busting_mode: `query`,
+    },
+  },
+    "gatsby-plugin-sitemap", 
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMdx } }) => {
+              return allMdx.nodes.map(node => {
+                return Object.assign({}, node.frontmatter, {
+                  description: node.excerpt,
+                  date: node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + node.fields.slug,
+                  custom_elements: [{ "content:encoded": node.html }],
+                })
+              })
+            },
+            query: `
+              {
+                allMdx(
+                  sort: { order: DESC, fields: [frontmatter___date] },
+                ) {
+                  nodes {
+                    excerpt
+                    html
+                    fields {
+                      slug
+                    }
+                    frontmatter {
+                      title
+                      date
+                    }
+                  }
+                }
+              }
+            `,
+            output: "/rss.xml",
+            title: "NetMinded Blog RSS Feed",
+          },
+        ],
+      },
+    },
+    "gatsby-plugin-fontawesome-css",
+    `gatsby-plugin-preload-fonts`,
+    {
+      resolve: `gatsby-plugin-gdpr-cookies`,
+      options: {
+        googleAnalytics: {
+          trackingId: process.env.GATSBY_ANALYTICS_ID,
+          cookieName: 'gatsby-gdpr-google-analytics',
+          anonymize: true,
+          allowAdFeatures: false
+        },
+        environments: ['production']
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `blog`,
+        path: `${__dirname}/src/articles`,
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
+    `gatsby-remark-images`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+            },
+          },
+        ],
+      },
+    },
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-remark-reading-time`,
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+          shortname: `netminded`
+      }
+    }
+  ]
+};
