@@ -23,7 +23,7 @@ const PrivacyPage = () => {
                                     how we will treat it.</p>
                                 
                                     <p>For the purpose of data protection the data controller is SeeThru Networks Ltd,
-                                    7a Triangle Centre, Kenn Road, Clevedon, North Somerset, BS21 6HX.</p>
+                                    The Programme Building, 8th Floor, The Pithay, Bristol, BS1 2NB.</p>
                                     <br />
                                     <br />
                                     <h4 className="text-accent">Information we may collect from you</h4>
@@ -185,9 +185,8 @@ const PrivacyPage = () => {
                                         (before collecting your data) if we intend to use your data for such
                                         purposes or if we intend to disclose your information to any third
                                         party for such purposes. You can exercise your right to prevent such
-                                        processing at any time by contacting us at: 7a Triangle Centre, Kenn
-                                        Road, Clevedon, North Somerset, BS21 6HX or
-                                        support[@]netminded.co.uk.</p>
+                                        processing at any time by contacting us at: The Programme Building, 8th Floor, The Pithay, Bristol, BS1 2NB
+					or support[@]netminded.co.uk.</p>
 
                                     <p>Our site may, from time to time,
                                         contain links to and from the websites of our partner networks,
@@ -226,8 +225,8 @@ const PrivacyPage = () => {
                                 <h4 className="text-accent">Contact</h4>
                                 <p>Questions,
                                     comments and requests regarding this privacy policy are welcomed and
-                                    should be addressed to SeeThru Networks Ltd, 7a Triangle Centre, Kenn
-                                    Road, Clevedon, North Somerset, BS21 6HX or
+                                    should be addressed to SeeThru Networks, The Programme Building, 8th Floor, The Pithay, Bristol, BS1 2NB
+				    or
                                     support[@]netminded.co.uk.</p>
                                 </div>
                             </div>
